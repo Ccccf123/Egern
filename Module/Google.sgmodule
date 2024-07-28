@@ -1,24 +1,19 @@
-#!name = Google
-#!desc = 1.Google Redirect（如遇频繁跳转请禁用本插件）；2.Google CAPTCHA（需要在插件参数处填写策略/策略组名的正则表达式）。
-#!openUrl = https://apps.apple.com/app/id284815942
-#!author = @sooyaaabo @NobyDa
-#!keyword = 重定向, 功能增强, NobyDa, sooyaaabo
-#!homepage = https://github.com/sooyaaabo/Loon
-#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Google.png
-#!input = GOOGLE_CAPTCHA_REGEX
-#!date = 2024-07-27 17:30
+#!name=Google
+#!desc=1.Google Redirect（如遇频繁跳转请禁用本插件）；2.Google CAPTCHA（需要在插件参数处填写策略/策略组名的正则表达式）。
+#!author=@sooyaaabo @NobyDa
+#!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Google.png
+#!category=重定向, 功能增强, NobyDa, sooyaaabo
+#!openUrl=https://apps.apple.com/app/id284815942
+#!homepage=https://github.com/sooyaaabo/Egern
+#!date=2024-07-27 17:30
 
-# 2024-05-19 12:00:00
-# https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_Google_CAPTCHA.plugin
-
-[Rewrite]
-;^https?:\/\/(www.)?(g|google)\.(cn|com\.hk) 302 https://www.google.com
-^https?:\/\/(www.)?(g|google)\.cn 302 https://www.google.com
-^https?:\/\/translate\.google\.cn 302 https://translate.google.com
-^https?:\/\/(ditu|maps)\.google\.cn 302 https://maps.google.com
+[URL Rewrite]
+^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+^https?:\/\/translate\.google\.cn https://translate.google.com 302
+^https?:\/\/(ditu|maps)\.google\.cn https://maps.google.com 302
 
 [Script]
-http-response ^https:\/\/www\.google\.com(?:\.[a-z]+|)\/(?:search\?(?:|.+?&)q=|$) script-path = https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Google_CAPTCHA.js, requires-body = true, timeout = 30, tag = Google人机验证
+Google人机验证 = type=http-response, pattern=^https:\/\/www\.google\.com(?:\.[a-z]+|)\/(?:search\?(?:|.+?&)q=|$), script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Google_CAPTCHA.js, requires-body=true, timeout=30
 
-[Mitm]
-hostname = *.google.cn, *.g.cn, www.google.com*
+[MITM]
+hostname = %APPEND% *.google.cn, *.g.cn, www.google.com*

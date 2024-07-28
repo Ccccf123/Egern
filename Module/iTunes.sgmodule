@@ -1,26 +1,21 @@
-#!name = iTunes
-#!desc = Buy iTunes解锁
-#!openUrl = https://apps.apple.com/app/id915061235
-#!author = @chxm1023 @ddgksf2013 @Guding88
-#!keyword = 解锁会员, chxm1023, ddgksf2013, Guding88
-#!homepage = https://github.com/sooyaaabo/Loon
-#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/iTunes.png
-#!date = 2024-07-16 23:00
-
-# 2024-01-10
-# https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
-# 2024-02-06
-# https://gist.githubusercontent.com/ddgksf2013/9e0f6c7341beea09a31aa309d9d7f502/raw/buyitunes.js
-# 2024-02-10
-# https://github.com/Guding88/Script/blob/main/APPheji_iTunes.js
+#!name=iTunes
+#!desc=Buy iTunes解锁
+#!author=@chxm1023 @ddgksf2013 @Guding88
+#!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/iTunes.png
+#!category=解锁会员, chxm1023, ddgksf2013, Guding88
+#!openUrl=https://apps.apple.com/app/id915061235
+#!homepage=https://github.com/sooyaaabo/Egern
+#!date=2024-07-16 23:00
 
 [Script]
 # chxm1023
-http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js, requires-body = true, tag = iTunes解锁系列@chxm1023
-# ddgksf2013
-http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://gist.githubusercontent.com/ddgksf2013/9e0f6c7341beea09a31aa309d9d7f502/raw/buyitunes.js, requires-body = true, tag = iTunes解锁系列@ddgksf2013
-# Guding88
-http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://raw.githubusercontent.com/Guding88/Script/main/APPheji_iTunes.js, requires-body = true, tag = iTunes解锁系列@Guding88
+iTunes解锁系列@chxm1023 = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js, requires-body=true
 
-[Mitm]
-hostname = buy.itunes.apple.com
+# ddgksf2013
+iTunes解锁系列@ddgksf2013 = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://gist.githubusercontent.com/ddgksf2013/9e0f6c7341beea09a31aa309d9d7f502/raw/buyitunes.js, requires-body=true
+
+# Guding88
+iTunes解锁系列@Guding88 = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$, script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_iTunes.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% buy.itunes.apple.com
