@@ -1,7 +1,7 @@
 # Egern
 自用模块（Egern与Shadowrocket均可用），由Script Hub转换而来，不保证有效性。<br>
 
-![Alt](https://repobeats.axiom.co/api/embed/3deb351aeae7762d0a77427ce568557e05d239b0.svg "Repobeats analytics image")
+![Alt](https://repobeats.axiom.co/api/embed/86ba7b2c2643544a7f58764f067961b960afba52.svg "Repobeats analytics image")
 
 ## 使用声明
 - 本资源仅用于测试、学习、研究，严禁用于商业用途或非法目的，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断，否则后果自负。
