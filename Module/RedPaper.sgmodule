@@ -1,0 +1,52 @@
+#!name = 小红书
+#!desc = 移除信息流推广，去除水印
+#!openUrl = https://apps.apple.com/app/id741292507
+#!author = @RuCu6 @fmz200 @可莉🅥
+#!keyword = 去广告, RuCu6, fmz200, 可莉
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/RedBook.png
+#!date = 2024-07-16 23:00
+
+# 2023-12-31 13:20
+# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/xiaohongshu.snippet
+# 2024-04-13 14:20:28
+# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/RedPaper_remove_ads.plugin
+
+[Rule]
+AND, ((PROTOCOL, QUIC), (DOMAIN-SUFFIX, xiaohongshu.com)), REJECT
+
+[Rewrite]
+# 惊喜弹窗
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/surprisebox\/(get_style|open|submit_action) reject-dict
+^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? reject-dict
+
+# 信息流
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/guide\? reject-dict
+^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d+\/(ads\/resource|hey\/\w+\/hey_gallery) reject-dict
+
+[Script]
+# 详情页小部件,关注页感兴趣的人
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/(note\/widgets|user\/followings\/followfeed) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, requires-body = true, tag = 详情页关注页
+
+# 搜索页
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/(banner|hot)_list script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, requires-body = true, tag = 搜索页
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/(hint|trending)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, requires-body = true, tag = 搜索页
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/notes\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, requires-body = true, tag = 搜索页
+
+# 开屏广告
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/system_service\/config\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, requires-body = true, tag = 开屏广告
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/system_service\/splash_config script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, requires-body = true, tag = 开屏广告
+
+# 信息流,详情页感兴趣的人
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/followfeed\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, requires-body = true, tag = 信息流详情页
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/recommend\/user\/follow_recommend\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, requires-body = true, tag = 信息流详情页
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/homefeed\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, requires-body = true, tag = 信息流详情页
+
+# 移除图片视频水印
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/(note\/feed|note\/videofeed)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, requires-body = true, tag = 图片视频水印
+
+# 图片水印,实况照片水印
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/(imagefeed|live_photo\/save) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, requires-body = true, tag = 实况照片水印
+
+[Mitm]
+hostname = edith.xiaohongshu.com, www.xiaohongshu.com

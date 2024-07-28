@@ -1,0 +1,17 @@
+#!name = 入口落地查询
+#!desc = 查看目标节点的入口落地详细信息
+#!openUrl = 
+#!author = @Keywos
+#!keyword = 节点检测, Keywos
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Netisp.png
+#!select = 入口查询超时时间ms, 100, 200, 500, 800, 1000, 1200, 2000, 5000, 10000
+#!select = 落地查询超时时间ms, 100, 200, 500, 1000, 1500, 2000, 3000, 5000, 10000
+#!select = 是否隐藏真实IP, 隐藏, 不隐藏
+#!date = 2024-07-16 23:00
+
+# 2023-09-19 20:07:19
+# https://raw.githubusercontent.com/Keywos/rule/main/script/netisp/netisp.plugin
+
+[Script]
+generic script-path = https://raw.githubusercontent.com/Keywos/rule/master/script/netisp/js/loon.js, tag = 入口落地查询 𝕂, img-url = network
