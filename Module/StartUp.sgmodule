@@ -4,11 +4,11 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Advertising.png
 #!category=去广告, ddgksf2013
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-07-30 22:05
+#!date=2024-08-01 20:30
 
 [Map Local]
 # Version
-^https?:\/\/2024.07.30/v2.0.498 data-type=text data=" " status-code=200
+^https?:\/\/2024.08.01/c324/v2.0.499 data-type=text data=" " status-code=200
 
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer data-type=text data=" " status-code=200
@@ -53,7 +53,6 @@
 
 # 百度翻译
 ^https?:\/\/mime\.baidu\.com\/v\d\/IosStart\/getStartInfo data-type=text data=" " status-code=200
-
 ^https?:\/\/mime\.baidu\.com\/v\d\/activity\/advertisement data-type=text data=" " status-code=200
 
 # 百度文库
@@ -61,9 +60,7 @@
 
 # 百度网盘
 ^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list data-type=text data=" " status-code=200
-
 ^https?:\/\/pan\.baidu\.com\/rest\/2\.0\/pcs\/ad data-type=text data=" " status-code=200
-
 ^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry data-type=text data=" " status-code=200
 
 # 北京首汽
@@ -83,12 +80,10 @@
 
 # 宝宝树孕育
 ^http:\/\/.*babytree\.com/(plough\.do|go_search\/api\/mobile_search_new\/get_multi_search_default_keywords) data-type=text data=" " status-code=200
-
 ^http:\/\/m\.meitun\.com\/newapi\/router\/topic\/hometptf\/feedRecommend data-type=text data=" " status-code=200
 
 # 百词斩
 ^https?:\/\/notify\.baicizhan\.com\/rpc\/notify\/get_latest_notify data-type=text data=" " status-code=200
-
 ^https?://advertise\.bczeducation\.cn\/rpc\/advertise data-type=text data=" " status-code=200
 
 # 百视TV
@@ -99,17 +94,11 @@
 
 # 车来了
 ^https?:\/\/web\.chelaile\.net\.cn\/api\/adpub\/ad data-type=text data=" " status-code=200
-
 ^https?:\/\/cdn\.\w{3}\.chelaileapp\.cn\/(api\/)?adpub data-type=text data=" " status-code=200
-
 ^https?:\/\/api.chelaile.net.cn\/adpub\/ data-type=text data=" " status-code=200
-
 ^https?:\/\/api.chelaile.net.cn\/goocity\/advert\/ data-type=text data=" " status-code=200
-
 ^https?:\/\/atrace.chelaile.net.cn\/adpub\/ data-type=text data=" " status-code=200
-
 ^https?:\/\/atrace.chelaile.net.cn\/exhibit\?&adv_image data-type=text data=" " status-code=200
-
 ^https?:\/\/pic1.chelaile.net.cn\/adv\/ data-type=text data=" " status-code=200
 
 # 超星学习通
@@ -120,9 +109,6 @@
 
 # 财经杂志
 ^https?:\/\/api\.caijingmobile\.com\/(ad|advert)\/ data-type=text data=" " status-code=200
-
-# 彩云
-^https:\/\/api\.caiyunapp\.com\/v1\/activity data-type=text data=" " status-code=200
 
 # 刺猬猫阅读
 ^https?:\/\/app\.hbooker\.com\/setting\/get_startpage_url_list data-type=text data=" " status-code=200
@@ -135,7 +121,6 @@
 
 # 财联社
 ^https?:\/\/api3\.cls\.cn\/v1\/boot\/ad data-type=text data=" " status-code=200
-
 ^https?:\/\/ump\.sz\.creditcard\.ecitic\.com\/citiccard\/cm-ump\/ump-gateway\/ump-net-app\/ump-net-app\/adv data-type=text data=" " status-code=200
 
 # 当当
@@ -146,12 +131,10 @@
 
 # 豆瓣
 ^https?:\/\/api\.douban\.com\/v2\/app_ads\/splash data-type=text data=" " status-code=200
-
 ^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* data-type=text data=" " status-code=200
 
 # 滴滴出行
 ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget data-type=text data=" " status-code=200
-
 ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) data-type=text data=" " status-code=200
 
 # 叨鱼
@@ -171,19 +154,15 @@
 
 # 当当阅读
 ^https?:\/\/e.dangdang.com\/media\/api.+\?action=getDeviceStartPage data-type=text data=" " status-code=200
-
 ^https?:\/\/mapi\.dangdang\.com\/index\.php\?action=init data-type=text data=" " status-code=200
-
 ^https?:\/\/e\.dangdang\.com\/.+?getDeviceStartPage data-type=text data=" " status-code=200
 
 # 电视家
 ^https?:\/\/api\.gaoqingdianshi\.com\/api\/v\d\/ad\/ data-type=text data=" " status-code=200
-
 ^https?:\/\/cdn\.dianshihome\.com\/static\/ad\/ data-type=text data=" " status-code=200
 
 # 大麦
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome data-type=text data=" " status-code=200
-
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.mec\.popup\.get data-type=text data=" " status-code=200
 
 # dami
@@ -194,7 +173,6 @@
 
 # 东方财富
 ^https?:\/\/emdcadvertise\.eastmoney\.com\/infoService\/v2 data-type=text data=" " status-code=200
-
 ^https?:\/\/emdcadvise\.eastmoney\.com\/infoAdviseService$ data-type=text data=" " status-code=200
 
 # 得到
@@ -202,7 +180,6 @@
 
 # 得间
 ^https?:\/\/dj\.palmestore\.com\/zybk\/api\/ad data-type=text data=" " status-code=200
-
 ^https?:\/\/saad\.ms\.zhangyue\.net\/ad\/ data-type=text data=" " status-code=200
 
 # 嘀嗒出行
@@ -213,18 +190,13 @@
 
 # 饿了么
 ^https?:\/\/elemecdn.com\/.+\/sitemap data-type=text data=" " status-code=200
-
 ^https?:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4} data-type=text data=" " status-code=200
-
 ^https?:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4} data-type=text data=" " status-code=200
-
 ^https?:\/\/fuss10.elemecdn.com\/.+.mp4 data-type=text data=" " status-code=200
-
 ^https?:\/\/www1.elecfans.com\/www\/delivery\/ data-type=text data=" " status-code=200
 
 # e充电
 ^https?:\/\/cdn-evone-ceph\.echargenet\.com\/gw-emas-cdn\/63c4e3b558bb610008969f89 data-type=text data=" " status-code=200
-
 ^https?:\/\/cdn-evone-ceph\.echargenet\.com\/gw-emas-cdn data-type=text data=" " status-code=200
 
 # etnet财经
@@ -250,7 +222,6 @@
 
 # 工时记录
 ^https:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg data-type=text data=" " status-code=200
-
 ^https:\/\/open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ data-type=text data=" " status-code=200
 
 # 盖得排行
@@ -264,7 +235,6 @@
 
 # 国家地理
 ^https?:\/\/dili\.bdatu\.com\/jiekou\/ad data-type=text data=" " status-code=200
-
 ^https?:\/\/wap\.ngchina\.cn\/news\/adverts data-type=text data=" " status-code=200
 
 # 国家医保服务平台
@@ -278,13 +248,9 @@
 
 # 虎扑
 ^https?:\/\/i\d\.hoopchina\.com\.cn/blogfile\//d+\//d+\/BbsImg\.(?<=(big.(png|jpg)))$ data-type=tiny-gif status-code=200
-
 ^https?:\/\/games\.mobileapi\.hupu\.com\/.+\/(search|interfaceAdMonitor|status|hupuBbsPm)/(hotkey|init|hupuBbsPm)\. data-type=tiny-gif status-code=200
-
 ^https?:\/\/games\.mobileapi\.hupu\.com\/interfaceAdMonitor data-type=tiny-gif status-code=200
-
 ^https?:\/\/goblin\.hupu\.com\/.+\/interfaceAd\/getOther data-type=text data=" " status-code=200
-
 ^https?:\/\/i1\.hoopchina\.com\.cn\/blogfile\/.+_\d{3}x\d{4} data-type=tiny-gif status-code=200
 
 # 红板报
@@ -316,7 +282,6 @@
 
 # 盒马
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.wdk\.render\.querysinglepage data-type=text data=" " status-code=200
-
 ^https?:\/\/acs-m\.freshippo\.com\/gw\/mtop\.wdk\.render\.querysinglepage data-type=text data=" " status-code=200
 
 # 和风天气
@@ -342,12 +307,10 @@
 
 # 京东读书
 ^https?:\/\/jdread-api\.jd\.com\/jdread\/api\/channel\/module\/opens data-type=text data=" " status-code=200
-
 ^https?:\/\/jdread-api\.jd\.com\/jdread\/api\/popup data-type=text data=" " status-code=200
 
 # 京东[invalid]
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts) data-type=text data=" " status-code=200
-
 ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ data-type=text data=" " status-code=200
 
 # 京东金融
@@ -391,7 +354,6 @@
 
 # KFC肯德基
 ^https?:\/\/res.kfc.com.cn\/advertisement\/ data-type=text data=" " status-code=200
-
 ^https?:\/\/dynamicad\.kfc\.com\.cn\/api\/app5\/homepage\/ai\/popup data-type=text data=" " status-code=200
 
 # 快看
@@ -405,7 +367,6 @@
 
 # 看天下
 ^https?:\/\/open3\.vistastory\.com\/v3\/api\/index\/loading_ad data-type=text data=" " status-code=200
-
 ^https?:\/\/open3\.vistastory\.com\/v3\/api\.*get_popup data-type=text data=" " status-code=200
 
 # 库迪
@@ -464,20 +425,14 @@
 
 # 美团
 ^https?:\/\/peisongapi\.meituan\.com\/client\/getInitiateImage data-type=text data=" " status-code=200
-
 ^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/\w+\.(gif|jpg|jpg\.webp)$ data-type=text data=" " status-code=200
-
 ^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) data-type=text data=" " status-code=200
-
 ^https?:\/\/p\d\.meituan\.net\/(bizad|wmbanner)\/\w+\.jpg data-type=text data=" " status-code=200
-
 ^https?:\/\/p\d\.meituan\.net\/movie\/\w+\.jpg\?may_covertWebp data-type=text data=" " status-code=200
 
 # 美团外卖
 ^https?:\/\/img\.meituan\.net\/(bizad|brandCpt)\/\w+\.(png|jpg) data-type=text data=" " status-code=200
-
 ^https?:\/\/.*\.meituan\.com\/api\/v\d\/(openscreen\?ad|appstatus\?ad|loadInfo\?|startpicture) data-type=text data=" " status-code=200
-
 ^http:\/\/s3plus\.meituan\.net\/.*\/brandcpt-vedio\/.*\?time data-type=text data=" " status-code=200
 
 # 美味不用等
@@ -491,12 +446,10 @@
 
 # 漫画人
 ^https?:\/\/.*mangaapi\.manhuaren\.\w{2,4}\/v\d\/public\/(getStartUpMessage|getStartPageAds|getShelfActivity) data-type=text data=" " status-code=200
-
 ^https?:\/\/.*mangaapi\.manhuaren\.\w{2,4}\/v\d\/ad data-type=text data=" " status-code=200
 
 # MIX滤镜大师
 ^https?:\/\/dispatcher\.camera360\.com\/api\/v1\/list$ data-type=text data=" " status-code=200
-
 ^https?:\/\/mix-api\.camera360\.com\/v\d\/operational-positions data-type=text data=" " status-code=200
 
 # 马卡龙玩图
@@ -504,9 +457,7 @@
 
 # 陌陌
 ^https?:\/\/open\.taou\.com\/maimai\/launch_ad data-type=text data=" " status-code=200
-
 ^https?:\/\/api\.taou\.com\/sdk\/global\/splash_ad data-type=text data=" " status-code=200
-
 ^https?:\/\/track\.mm\.taou\.com/v\d\/track data-type=text data=" " status-code=200
 
 # 买单吧
@@ -542,6 +493,9 @@
 # moomoo
 ^https?:\/\/api\.moomoo\.com(\/v\d)?\/ad data-type=text data=" " status-code=200
 
+# 喵街
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.mos\.app\.homepage\.launch data-type=text data=" " status-code=200
+
 # 南方航空
 ^https?:\/\/3g\.csair\.com\/CSMBP\/bookProcess\/homepopup\/queryAdvertisement data-type=text data=" " status-code=200
 
@@ -553,7 +507,6 @@
 
 # Oray贝锐花生壳管理
 ^https?:\/\/slapi\.oray\.net\/client\/ad data-type=text data=" " status-code=200
-
 ^https?:\/\/slapi\.oray\.net\/adver data-type=text data=" " status-code=200
 
 # one
@@ -594,12 +547,10 @@
 
 # 去哪儿旅行
 ^https:\/\/homefront\.qunar\.com\/front\/splash\/ad data-type=text data=" " status-code=200
-
 ^https?:\/\/client\.qunar\.com\/pitcher-proxy\?qrt=p_splashAd data-type=text data=" " status-code=200
 
 # 汽车之家
 ^https?:\/\/adproxy.autohome.com.cn\/AdvertiseService\/ data-type=text data=" " status-code=200
-
 ^https?:\/\/app2.autoimg.cn\/appdfs\/ data-type=text data=" " status-code=200
 
 # 起点读书
@@ -613,7 +564,6 @@
 
 # 人民日报
 ^https:\/\/app\.peopleapp\.com\/Api\/\d+/HomeApi\/(adv|getAdvertImage) data-type=text data=" " status-code=200
-
 ^https?:\/\/stat\.peopleapp\.com\/ data-type=text data=" " status-code=200
 
 # 瑞幸咖啡
@@ -630,7 +580,6 @@
 
 # Spotify
 ^https?:\/\/spclient\.wg\.spotify\.com\/(ad-logic|ads|.+ad_slot|.+banners|.+canvases|.+cards|.+crashlytics|.+doubleclick.net|.+enabled-tracks|.+promoted_offer) data-type=tiny-gif status-code=200
-
 ^https?:\/\/api\d?\.musical\.ly\/api\/ad\/ data-type=tiny-gif status-code=200
 
 # 三联中读
@@ -638,9 +587,7 @@
 
 # 顺丰
 ^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/appVersion\/detectionUpgrade data-type=text data=" " status-code=200
-
 ^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/queryAdImages data-type=text data=" " status-code=200
-
 ^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen data-type=text data=" " status-code=200
 
 # Soul
@@ -663,7 +610,6 @@
 
 # 搜图神器
 ^https?:\/\/wallpaper\.soutushenqi\.com\/v\d\/dateSignature\/random data-type=text data=" " status-code=200
-
 ^https?:\/\/wallpaper\.soutushenqi\.com\/v\d\/home\/dialog data-type=text data=" " status-code=200
 
 # 食行生鲜
@@ -733,9 +679,7 @@
 
 # 唯品会
 ^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/advertisement\/get data-type=text data=" " status-code=200
-
 ^https:\/\/b\.appsimg\.com\/upload\/momin\/ data-type=text data=" " status-code=200
-
 ^https:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/iosAdInfo\/report data-type=text data=" " status-code=200
 
 # 网易大神
@@ -743,16 +687,12 @@
 
 # 网易邮箱
 ^https?:\/\/appconf\.mail\.163\.com\/mmad\/get\.do data-type=text data=" " status-code=200
-
 ^https?:\/\/client\.mail\.163.com\/apptrack\/confinfo\/(searchMultiAds.do|showAds.do) data-type=text data=" " status-code=200
 
 # 网易严选
 ^https?:\/\/support\.you\.163\.com\/appversync\/check\.do data-type=text data=" " status-code=200
-
 ^https?:\/\/support\.you\.163\.com\/xhr\/boot\/getBootMedia\.json data-type=text data=" " status-code=200
-
 ^https?:\/\/m\.you\.163\.com\/activity\/popWindow data-type=text data=" " status-code=200
-
 ^https?:\/\/yanxuan\.nosdn\.127\.net\/.*\.mp4 data-type=text data=" " status-code=200
 
 # 微信带货
@@ -769,7 +709,6 @@
 
 # 网易考拉
 ^https?:\/\/sp\.kaola\.com\/api\/openad data-type=text data=" " status-code=200
-
 ^https?:\/\/gw\.kaola\.com\/gw\/dgmobile\/newOpenAd data-type=text data=" " status-code=200
 
 # 完美世界电竞
@@ -792,7 +731,6 @@
 
 # 携程旅行
 ^https:\/\/ma-adx\.ctrip\.com\/_ma\.gif data-type=text data=" " status-code=200
-
 ^https:\/\/mbd\.baidu\.com\/newspage\/api\/getmobads\?page\=landingshare data-type=text data=" " status-code=200
 
 # 西窗烛
@@ -800,7 +738,6 @@
 
 # 小蚁科技
 ^https:\/\/api\.xiaoyi\.com\/v5\/app\/mobile\/ads data-type=text data=" " status-code=200
-
 ^https:\/\/api\.xiaoyi\.com\/v5\/app\/config\?userid=.* data-type=text data=" " status-code=200
 
 # 下厨房
@@ -823,7 +760,6 @@
 
 # 向日葵
 ^https?:\/\/client-api\.oray\.com\/materials\/SLCC_IOS_STARTUP\?lang=zh-Hans-CN data-type=text data=" " status-code=200
-
 ^https?:\/\/client-api-v2\.oray\.com\/materials\/(SUNLOGIN_CLIENT_IOS_PROMOTION|SLCC_IOS_DEVICE|SLCC_IOS_STARTUP) data-type=text data=" " status-code=200
 
 # 小爱音箱
@@ -864,12 +800,10 @@
 
 # 1号会员店
 ^https?:\/\/venus\.yhd\.com\/memhome\/launchConfig data-type=text data=" " status-code=200
-
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=home_launchConfig data-type=text data=" " status-code=200
 
 # 医考帮
 ^https?:\/\/api\.yikaobang\.com\.cn\/client\/main\/homePageSmallAd data-type=text data=" " status-code=200
-
 ^https?:\/\/api\.yikaobang\.com\.cn\/index\.php\/Client\/main\/startPage data-type=text data=" " status-code=200
 
 # 友邻优课
@@ -889,7 +823,6 @@
 
 # 萤石云
 ^https?:\/\/(api|i)\.ys7\.com\/api\/ads\/ data-type=text data=" " status-code=200
-
 ^https?:\/\/api\.ys7\.com.*\/getAdvertising data-type=text data=" " status-code=200
 
 # 育学园
@@ -912,12 +845,10 @@
 
 # 医脉通
 ^https?:\/\/api\.medlive\.cn\/promotion-api/adlist data-type=text data=" " status-code=200
-
 ^https?:\/\/promotion\.medlive\.cn\/getcover-v2\?app_name data-type=text data=" " status-code=200
 
 # 有道词典
 ^https?:\/\/cdke\.youdao\.com\/course3\/recommend\/dict\/startup data-type=text data=" " status-code=200
-
 ^https?:\/\/gorgon\.youdao\.com\/gorgon data-type=text data=" " status-code=200
 
 # ycc360
@@ -940,7 +871,6 @@
 
 # 中国联通
 ^https?:\/\/m\.client\.10010\.com\/mobileService\/(activity|customer)\/(accountListData|get_client_adv|get_startadv) data-type=text data=" " status-code=200
-
 ^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd) data-type=text data=" " status-code=200
 
 # 中国移动广西
@@ -954,7 +884,6 @@
 
 # 直播吧
 ^https?:\/\/a\.qiumibao\.com\/activities\/config\.php$ data-type=text data=" " status-code=200
-
 ^https?:\/\/a\.qiumibao\.com\/ios\/config\/\?version_code= data-type=text data=" " status-code=200
 
 # 作业帮
@@ -962,7 +891,6 @@
 
 # 最右
 ^https?:\/\/adapi\.izuiyou\.com\/ data-type=text data=" " status-code=200
-
 ^https?:\/\/api\.izuiyou\.com\/ad\/ data-type=text data=" " status-code=200
 
 # 追书神器
@@ -973,9 +901,7 @@
 
 # 掌阅
 ^https?:\/\/ih2\.ireader\.com\/zyapi\/bookstore\/ad data-type=text data=" " status-code=200
-
 ^https?:\/\/ih2\.ireader\.com\/zyapi\/self\/screen\/ad data-type=text data=" " status-code=200
-
 ^https?:\/\/ih2\.ireader\.com\/zycl\/api\/ad data-type=text data=" " status-code=200
 
 # 自如
@@ -1038,7 +964,6 @@ ahhhhfs = type=http-response, pattern=^https?:\/\/.*(xbwpys|ahhhhfs)\.com\/($|[0
 
 # 飞客茶馆
 飞客茶馆 = type=http-response, pattern=^https?:\/\/www\.flyert\.com\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body=true, argument=adv->ddgksf2013
-
 飞客茶馆 = type=http-response, pattern=^https?:\/\/www\.flyert\.com\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1, script-path=https://github.com/ddgksf2013/Scripts/raw/master/fly.js, requires-body=true
 
 # 航旅纵横
@@ -1055,7 +980,6 @@ ahhhhfs = type=http-response, pattern=^https?:\/\/.*(xbwpys|ahhhhfs)\.com\/($|[0
 
 # 京东lite
 京东lite = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body=true, argument=jdLiteAdvertisingVO->ddgksf2013
-
 京东lite = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body=true, argument=pushData->ddgksf2013
 
 # KFC肯德基
@@ -1063,7 +987,6 @@ KFC肯德基 = type=http-response, pattern=^https?:\/\/res.kfc.com.cn\/CRM\/kfca
 
 # 酷安
 酷安 = type=http-response, pattern=^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList), script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js, requires-body=true
-
 酷安 = type=http-response, pattern=^https?:\/\/api.coolapk.com\/v6\/main\/init, script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js, requires-body=true
 
 # 夸克
@@ -1086,7 +1009,6 @@ Oclean Care = type=http-response, pattern=^https?:\/\/careapi\.oclean\.com\/mall
 
 # Spotify Pro
 Spotify - JSON处理 = type=http-request, pattern=^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js, timeout=10
-
 Spotify - Proto处理 = type=http-response, pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body=true, binary-body-mode=true, timeout=10
 
 # 顺丰
