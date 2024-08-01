@@ -26,11 +26,11 @@ IP-CIDR,47.243.147.125/32,REJECT,no-resolve
 IP-CIDR,120.27.235.201/32,REJECT,no-resolve
 IP-CIDR,121.196.197.147/32,REJECT,no-resolve
 
-[Map Local]
+[URL Rewrite]
 # 开屏广告
-^https:\/\/ssp\.soulapp\.cn\/api\/q data-type=text data="{}" status-code=200
+^https:\/\/ssp\.soulapp\.cn\/api\/q - reject-dict
 
-^https:\/\/chat-live\.soulapp\.cn\/live\/planet\/recListV2 data-type=text data=" " status-code=200
+^https:\/\/chat-live\.soulapp\.cn\/live\/planet\/recListV2 - reject-200
 
 [Script]
 Soul净化及解锁 = type=http-response, pattern=^https:\/\/api-a\.soulapp\.cn\/v2\/post\/gift\/list, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js, requires-body=true
