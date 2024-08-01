@@ -6,7 +6,7 @@
 #!homepage=https://github.com/sooyaaabo/Egern
 #!date=2024-08-01 20:40
 
-[Map Local]
+[URL Rewrite]
 # Version
 ^https?:\/\/2024.08.01/c324/v2.0.499 - reject-200
 
