@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdBlack.png
 #!category=去广告, RuCu6, zZPiglet, app2smile
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-08-02 17:50
+#!date=2024-08-03 09:00
 
 [URL Rewrite]
 # 58同城 //*.58cdn.com.cn, app.58.com, pic?.ajkimg.com
@@ -63,7 +63,7 @@
 # 酷安 //api.coolapk.com
 ^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch - reject-dict
 # 酷狗音乐
-^http:\/\/adserviceretry\.kglink\.cn\/v4\/mobile_splash\? - reject-dict
+^http:\/\/adserviceretry\.kglink\.cn\/v4\/mobile_splash - reject-dict
 # 猫眼 //p0.pipi.cn
 ^https:\/\/p0\.pipi\.cn\/(adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.jpg\?imageMogr2\/quality\/ - reject-dict
 ^https:\/\/p0\.pipi\.cn\/(adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.(jpg|png)\?imageMogr2\/thumbnail\/(860x0|!165x165|!1049x1169) - reject-dict
