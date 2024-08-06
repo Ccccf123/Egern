@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdBlack.png
 #!category=去广告, RuCu6, zZPiglet, app2smile
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-08-03 09:15
+#!date=2024-08-06 19:45
 
 [URL Rewrite]
 # 58同城 //*.58cdn.com.cn, app.58.com, pic?.ajkimg.com
@@ -158,7 +158,7 @@ JavDB = type=http-response, pattern=^https:\/\/(api\.hechuangxinxi\.xyz|jdforrep
 酷安 = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\?, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, requires-body=true
 
 # 酷狗音乐 //adserviceretry.kglink.cn, gateway.kugou.com
-酷狗音乐 = type=http-response, pattern=^https:\/\/gateway\.kugou\.com\/adp\/ad\/v1\/mine_top_banner\?, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/kugou.js, requires-body=true
+酷狗音乐 = type=http-response, pattern=^https:\/\/gateway\.kugou\.com\/(adp\/ad\/v1\/mine_top_banner|ads\.gateway\/v2\/home_card), script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/kugou.js, requires-body=true
 酷狗音乐 = type=http-response, pattern=^https?:\/\/adserviceretry\.kglink\.cn\/v\d\/mobile\w+, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/kugou.js, requires-body=true
 
 # 贴吧全面去广告 //tiebac.baidu.com
