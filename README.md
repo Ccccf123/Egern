@@ -1,5 +1,5 @@
 # Egern
-自用模块（Egern与Shadowrocket均可用），由Script Hub转换而来，不保证有效性。
+自用模块（Egern与Shadowrocket均可用），由Script Hub转换而来，不保证有效性。（不常维护）
 
 ![Alt](https://repobeats.axiom.co/api/embed/86ba7b2c2643544a7f58764f067961b960afba52.svg "Repobeats analytics image")
 
