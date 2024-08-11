@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
 #!category=去广告, fmz200
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-08-11 01:35
+#!date=2024-08-11 11:30
 
 [URL Rewrite]
 # 12123 - gab.122.gov.cn
@@ -1870,6 +1870,7 @@ vgtime = type=http-response, pattern=^https?:\/\/app02\.vgtime\.com:8080\/vgtime
 闲鱼 = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.shade\/, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xianyu/xianyu_ads.js, requires-body = true
 闲鱼 = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xianyu/xianyu_ads.js, requires-body = true
 闲鱼 = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xianyu/xianyu_ads.js, requires-body = true
+闲鱼 = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.home\/, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xianyu/xianyu_ads.js, requires-body = true
 
 # 悠洗APP - api.ulife.group
 悠洗APP = type=http-response, pattern=^https?:\/\/api\.ulife\.group\/market\/homeIconDetail\/list\/v7, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/yx.js, requires-body=true
