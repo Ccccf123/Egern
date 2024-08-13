@@ -5,7 +5,7 @@
 #!category=去广告, ZenmoFeiShi
 #!openUrl=https://apps.apple.com/app/id518213356
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-07-16 23:00
+#!date=2024-08-13 10:20
 
 [Rule]
 DOMAIN,aaid.uyunad.com,REJECT
@@ -20,7 +20,7 @@ DOMAIN,ulogs.umeng.com,REJECT
 DOMAIN,ynuf.aliapp.org,REJECT
 
 [URL Rewrite]
-^https:\/\/haojia\.m\.smzdm\.com\/detail_modul\/(other_modul|wiki_related_modul) - reject-dict
+^https:\/\/haojia\.m\.smzdm\.com\/detail_modul\/(other_modul|wiki_related_modul|user_related_modul) - reject-dict
 ^https:\/\/s3\.zdmimg\.com\/third\/indexreject-dict - reject-dict
 ^https:\/\/app-api\.smzdm\.com\/util\/loading - reject-dict
 

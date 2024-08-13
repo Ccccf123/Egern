@@ -5,10 +5,12 @@
 #!category=去广告, RuCu6, fmz200, 可莉
 #!openUrl=https://apps.apple.com/app/id510909506
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-07-16 23:00
+#!date=2024-08-13 10:20
 
 [URL Rewrite]
 # fmz200 - gw.alicdn.com, heic.alicdn.com, asp.cntv.myalicdn.com
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.item\.search\.activate\/ reject-dict
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.discover\/ reject-dict
 ^https?:\/\/gw\.alicdn\.com\/tfs\/.+?\d{4}-\d{4}\/[a-z]{3}$ - reject-200
 ^https?:\/\/gw\.alicdn\.com\/tfs\/TB1.+?750-\d{4} - reject-200
 ^https?:\/\/heic\.alicdn\.com\/tps\/i4\/.+?\.jpg_1200x1200q90\.jpg_\.heic$ - reject-200
