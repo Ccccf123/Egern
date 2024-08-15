@@ -5,7 +5,7 @@
 #!category=去广告, ZenmoFeiShi, RuCu6, 可莉
 #!openUrl=https://apps.apple.com/app/id1032287195
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-07-19 09:00
+#!date=2024-08-15 19:10
 
 [Rule]
 # 地理位置 - 影响注册账号时的属地判断
@@ -27,9 +27,9 @@ IP-CIDR,120.27.235.201/32,REJECT,no-resolve
 IP-CIDR,121.196.197.147/32,REJECT,no-resolve
 
 [URL Rewrite]
-# 开屏广告
 ^https:\/\/ssp\.soulapp\.cn\/api\/q - reject-dict
-
+^https:\/\/api-chat\.soulapp\.cn\/chat\/quick\/menu\/v2 - reject-dict
+^https:\/\/api-chat\.soulapp\.cn\/chat\/entrance\/first - reject-dict
 ^https:\/\/chat-live\.soulapp\.cn\/live\/planet\/recListV2 - reject-200
 
 [Script]
