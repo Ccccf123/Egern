@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
 #!category=去广告, fmz200
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-08-15 23:15
+#!date=2024-08-16 11:20
 
 [URL Rewrite]
 # 12123 - gab.122.gov.cn
@@ -1389,6 +1389,7 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? - reject-dict
 ^https:\/\/mgesq\.api\.mgtv\.com\/search\/goods\/rank - reject-dict
 ^https:\/\/mgesq\.api\.mgtv\.com\/user\/center\/config - reject-dict
 # 晓晓优选 - xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/vajra - reject-dict
 ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/agent_ad - reject
 # ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/newcomer_ad - reject-dict
 ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/activity\/show - reject
