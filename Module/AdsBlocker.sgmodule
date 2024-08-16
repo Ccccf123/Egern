@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
 #!category=去广告, fmz200
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-08-16 11:20
+#!date=2024-08-16 22:05
 
 [URL Rewrite]
 # 12123 - gab.122.gov.cn
@@ -250,10 +250,10 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 - reject
 ^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/top_notice\? - reject-200
 ^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|version|advert\?position=[^2]+) - reject-200
 # 大智慧 - ssp.dzh.com.cn
-^https?://ssp\.dzh\.com\.cn/v2api/adgroupjson - reject
+^https?:\/\/ssp\.dzh\.com\.cn/v2api/adgroupjson - reject
 # 大众点评 - img.meituan.net
-^https?:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png - reject-dict
-^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) - reject-200
+# ^https?:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png - reject-dict
+# ^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) - reject-200
 # 动卡空间 - ump.sz.creditcard.ecitic.com, m.creditcard.ecitic.com
 ^https?:\/\/ump\.sz\.creditcard\.ecitic\.com\/citiccard\/cm-ump\/ump-gateway\/ump-net-app\/ump-net-app\/adv - reject-dict
 ^https?:\/\/m\.creditcard\.ecitic\.com\/citiccard\/mbk\/appspace-getway\/getWay\/dkkj-system-web\/system\/v\d\/init-config - reject-200
@@ -643,8 +643,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 ^https?:\/\/res\.kfc\.com.\cn\/advertisement\/ - reject
 # 考公雷达/公考雷达 - api.gongkaoleida.com
 ^https?:\/\/api\.gongkaoleida\.com\/api\/v2\/ad\/info - reject-dict
-# > Line
-# hostname = a.line.me, ad.line-scdn.net, buy.line.me, cix.line-apps.com, crs-event.line.me, d.line-scdn.net, gw.line.naver.jp, legy.line-apps.com, nelo2-col.linecorp.com, obs.line-scdn.net, scdn.line-apps.com, sch.line.me, static.line-scdn.net, uts-front.line-apps.com, w.line.me
+# Line - a.line.me, ad.line-scdn.net, buy.line.me, cix.line-apps.com, crs-event.line.me, d.line-scdn.net, gw.line.naver.jp, legy.line-apps.com, nelo2-col.linecorp.com, obs.line-scdn.net, scdn.line-apps.com, sch.line.me, static.line-scdn.net, uts-front.line-apps.com, w.line.me
 https:\/\/a\.line\.me\/er\/lads\/v\d\/ei\? - reject-img
 https:\/\/a\.line\.me\/er\/l.*\/v\d\/event\/image - reject-img
 https:\/\/a\.line\.me\/lass\/api\/v\d\/ads$ - reject
@@ -1706,6 +1705,9 @@ crunchyroll = type=http-response, pattern=^https?:\/\/beta-api\.crunchyroll\.com
 
 # 叮咚买菜 - maicai.api.ddxq.mobi
 叮咚买菜 = type=http-response, pattern=^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/newDetails, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body=true, argument=suspension -> random_body
+
+# 大众点评 - img.meituan.net
+大众点评 = type=http-response, pattern=^https?:\/\/img\.meituan\.net\/dpmobile\/, script-path=https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/dianping.js, requires-body=true
 
 # Flightradar24 - mobile.flightradar24.com
 Flightradar24 = type=http-response, pattern=^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|subscribe), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Flightradar24.js, requires-body=true
