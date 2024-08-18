@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
 #!category=去广告, fmz200
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-08-16 22:05
+#!date=2024-08-18 08:15
 
 [URL Rewrite]
 # 12123 - gab.122.gov.cn
@@ -250,7 +250,7 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 - reject
 ^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/top_notice\? - reject-200
 ^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|version|advert\?position=[^2]+) - reject-200
 # 大智慧 - ssp.dzh.com.cn
-^https?:\/\/ssp\.dzh\.com\.cn/v2api/adgroupjson - reject
+^https?:\/\/ssp\.dzh\.com\.cn\/v2api\/adgroupjson - reject
 # 大众点评 - img.meituan.net
 # ^https?:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png - reject-dict
 # ^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) - reject-200
