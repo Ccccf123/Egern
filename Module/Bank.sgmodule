@@ -4,25 +4,34 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CNY.png
 #!category=去广告, 可莉
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-07-16 23:00
+#!date=2024-08-20 12:50
 
 [Rule]
 # 建设银行
 DOMAIN,adv.ccb.com,REJECT
+
+# 广发银行
 # 内页广告
 URL-REGEX,^http:\/\/mps\.95508\.com\/mps\/icppweb\/images\/mps\/migration\/mpspics\/,REJECT
 
 [URL Rewrite]
+# 广发银行
 # 开屏广告、内页广告
 ^https:\/\/static\.95508\.com\/icppweb\/images\/modelMaterial\/advertising\/ - reject
 # 国寿联盟悬浮组件
 ^https:\/\/unionsr\.chinalifeonline\.com\.cn\/gslm\/upload\/ - reject-200
+
+# 中信银行
 # 开屏广告 @jFrecht
 ^https:\/\/imcs\.citicbank\.com\/cloud\/([a-fA-F0-9]{32})\.(jpg|png)\?width=(1125|1242|750|563|1400|1863)&height=(2436|2688|1624|1218|3031|4032) - reject
+^https:\/\/imcs\.citicbank\.com\/cloud\/([a-fA-F0-9]{32})\.(jpg|jpeg|png)\?width=[0-9]{4}&height=[0-9]{4} - reject
+
 # 浦发银行
 ^https:\/\/lban\.spdb\.com\.cn\/mspmk-web-component\/getAdvertisementList\.ah$ - reject-dict
 ^https:\/\/lban\.spdb\.com\.cn\/mspmk-web-component\/getAdvList\.ah$ - reject-dict
 ^https:\/\/lban\.spdb\.com\.cn\/mspmk-web-component\/prefetchAdvList\.ah - reject-dict
+
+# 招商银行 
 # 开屏广告
 ^https:\/\/s3gw\.cmbimg\.com\/mbappinitads\/ - reject
 
