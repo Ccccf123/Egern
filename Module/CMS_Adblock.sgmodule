@@ -5,14 +5,14 @@
 #!category=去广告, Yswag
 #!openUrl=https://apps.apple.com/app/id6450680262
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-07-27 08:30
+#!date=2024-08-21 19:20
 
 [URL Rewrite]
 # 暴風跑馬燈
 (^https?:\/\/s\d+\.bfengbf\.com\/video)(.+)_z5q\.ts $1$2.ts 302
 
 [Script]
-# http-response ^https?:\/\/m3u8\.hmrvideo\.com\/play\/(.+).m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, timeout = 30, tag = 黑木耳
+黑木耳 = type=http-response, pattern=^https?:\/\/m3u8\.(hmrvideo|heimuertv)\.com\/play\/(.+).m3u8, script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true, timeout=30
 量子资源 = type=http-response, pattern=^https?:\/\/((?:v\.lzcdn|v\.cdnlz|vip.*\.lz[-]?cdn)\d+\.com)\/.+\/hls\/.+\.m3u8, script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true
 
 非凡资源 = type=http-response, pattern=^https?:\/\/(super|svipsvip|vip)\.ffzy[A-Za-z0-9-]+\.com\/.+\/hls\/.+\.m3u8, script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true
@@ -53,4 +53,4 @@ U酷资源 = type=http-response, pattern=^https:\/\/ukzy\.ukubf\d+\.com\/.+\/hls
 黄瓜资源 = type=http-response, pattern=^https:\/\/player\.huangguam3u\.com\/.+\/hls\/.+\.m3u8, script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% m3u8.hmrvideo.com, v.cdnlz*.com, v.lzcdn*.com, vip*.lz-cdn*.com, vip.lzcdn*.com, *.ffzy*.com, s*.bfengbf.com, vip.kuaikan*.com, bfikuncdn.com, play.modujx*.com, vod.lyhuicheng.com, ukzy.ukubf*.com, *.wgslsw.com, askzycdn.com, t0.97img.com, *.bfbfhao.com, player.cl9987.com:188, v.ykv3.com, *.3sybf.com, bfnxxcdn.com, player.huangguam3u.com, leshiyuncdn.36s.top, cs1.feidaozy.com
+hostname = %APPEND% m3u8.heimuertv.com, m3u8.hmrvideo.com, v.cdnlz*.com, v.lzcdn*.com, vip*.lz-cdn*.com, vip.lzcdn*.com, *.ffzy*.com, s*.bfengbf.com, vip.kuaikan*.com, bfikuncdn.com, play.modujx*.com, vod.lyhuicheng.com, ukzy.ukubf*.com, *.wgslsw.com, askzycdn.com, t0.97img.com, *.bfbfhao.com, player.cl9987.com:188, v.ykv3.com, *.3sybf.com, bfnxxcdn.com, player.huangguam3u.com, leshiyuncdn.36s.top, cs1.feidaozy.com
