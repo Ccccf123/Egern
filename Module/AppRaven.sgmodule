@@ -5,10 +5,10 @@
 #!category=解锁会员, Yu9191
 #!openUrl=https://apps.apple.com/app/id1490607195
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-07-16 23:00
+#!date=2024-08-26 12:00
 
 [Script]
-AppRaven解锁 = type=http-response, pattern=^https:\/\/appraven\.net\/appraven\/graphql, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/AppRaven.js, requires-body=true
+AppRaven解锁 = type=http-response, pattern=^https:\/\/appraven\.net\/appraven\/graphql, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/AppRaven.js, requires-body=true
 
 [MITM]
 hostname = %APPEND% appraven.net

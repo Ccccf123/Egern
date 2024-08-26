@@ -13,6 +13,7 @@
 
 [Script]
 黑木耳 = type=http-response, pattern=^https?:\/\/m3u8\.(hmrvideo|heimuertv)\.com\/play\/(.+).m3u8, script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true, timeout=30
+
 量子资源 = type=http-response, pattern=^https?:\/\/((?:v\.lzcdn|v\.cdnlz|vip.*\.lz[-]?cdn)\d+\.com)\/.+\/hls\/.+\.m3u8, script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true
 
 非凡资源 = type=http-response, pattern=^https?:\/\/(super|svipsvip|vip)\.ffzy[A-Za-z0-9-]+\.com\/.+\/hls\/.+\.m3u8, script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true
