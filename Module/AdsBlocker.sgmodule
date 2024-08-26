@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
 #!category=去广告, fmz200
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-08-20 12:50
+#!date=2024-08-26 18:30
 
 [URL Rewrite]
 # 12123 - gab.122.gov.cn
@@ -1729,8 +1729,9 @@ Flightradar24 = type = http-response, pattern = ^https?:\/\/mobile\.flightradar2
 # 盒马 - acs.m.taobao.com, acs-m.freshippo.com
 盒马 = type = http-response, pattern = ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.query(index|my)page, script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/freshippo.js, requires-body = true
 
-# 汇来米 - saas-ad.cloudpnr.com
-汇来米 = type = http-response, pattern = ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad, script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/huifu/huifu_remove_ads.js, requires-body = true
+# 汇付天下 - saas-ad.cloudpnr.com
+汇付天下 = type = http-response, pattern = ^https:\/\/mcsp\.cloudpnr\.com\/api\/miniapp\/popular\/T_MINIAPP$, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/huifutianxia_ads.js, requires-body = true
+汇付天下 = type = http-response, pattern = ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/huifutianxia_ads.js, requires-body = true
 
 # i3 - www.i3zh.com
 i3 = type = http-response, pattern = ^https?:\/\/www\.i3zh\.com, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = cm-pop-up-banners -> fmz200
