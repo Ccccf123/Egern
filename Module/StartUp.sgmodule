@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Advertising.png
 #!category=去广告, ddgksf2013
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-08-24 16:30
+#!date=2024-08-26 21:30
 
 [URL Rewrite]
 # Version
@@ -881,7 +881,7 @@
 ^https?:\/\/m\.api\.shaoxing\.com\.cn\/v\d\/start - reject-200
 
 # 中国移动
-^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) - reject-200
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit - reject-200
 
 # 中国移动云盘
 ^https?:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/adv-filter\/AdInfoFilter\/getAdInfos$ - reject-200
