@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
 #!category=去广告, fmz200
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-08-27 11:00
+#!date=2024-08-27 12:40
 
 [URL Rewrite]
 # 12123 - gab.122.gov.cn
@@ -761,12 +761,10 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 # 全民生活
 ^https?:\/\/rs\.creditcard\.cmbc\.com\.cn\/mmc\/img\/126f35586ece469aa2daf2e451ba7b4d\.jpg - reject-200
 # 马蜂窝 - mapi.mafengwo.cn
-^https?:\/\/mapi\.mafengwo\.cn\/(travelguide\/)?ad - reject-200
+^https?:\/\/mapi\.mafengwo\.cn\/(travelguide\/)?ad - reject
 ^https?:\/\/mapi\.mafengwo\.cn\/widget\/note\/get_widget_note - reject
-^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/mark_alert_config - reject-dict
-^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/get_push_config - reject-dict
-^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/get_alert_config - reject-dict
 ^https?:\/\/mapi\.mafengwo\.cn\/system\/update\/check_update - reject-dict
+^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/(get|mark)_(push|alert)_config - reject-dict
 ^https?:\/\/mapi\.mafengwo\.cn\/system\/push\/get_local_push_config - reject
 # 咪咕 - *.cmvideo.cn
 ^https?:\/\/gg\w+?\.cmvideo\.cn\/v\d\/iflyad\/ - reject-200
@@ -1784,6 +1782,9 @@ keep = type = http-response, pattern = ^https?:\/\/api\.gotokeep\.com\/sportpage
 
 # 买单吧 - creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com
 买单吧 = type = http-response, pattern = ^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/rcg\/index\.html\?callbackurl=rcg\/index\.html&orclogin=1&, script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/mdb.js, requires-body = true
+
+# 马蜂窝 - mapi.mafengwo.cn
+马蜂窝 = type = http-response, pattern = ^https?:\/\/mapi\.mafengwo\.cn\/user\/profile\/get_(list|profile),script-path =  https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/mafengwo.js, requires-body = true
 
 # 脉脉 - open.taou.com, h3.open.taou.com
 脉脉 = type = http-response, pattern = ^https:\/\/(h3\.)?open\.taou\.com\/maimai\/feed\/v6\/detail_recommend_feeds\?, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/maimai/maimai_ads.js, requires-body = true
