@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
 #!category=去广告, fmz200
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-08-27 12:40
+#!date=2024-08-28 19:00
 
 [URL Rewrite]
 # 12123 - gab.122.gov.cn
@@ -439,7 +439,6 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 - reject
 # 高德地图 - m*.amap.com, optimus-ads.amap.com
 ^https?:\/\/m5\.amap\.com\/ws\/shield\/dsp\/app\/startup\/init\? - reject-dict
 ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ - reject
-^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ - reject-200
 ^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/ - reject
 # 国家地理 - dili.bdatu.com, wap.ngchina.cn
 ^https?:\/\/dili\.bdatu\.com\/jiekou\/ad\/ - reject
@@ -1177,7 +1176,7 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? - reject-dict
 # Vista看天下 - open3.vistastory.com
 ^https?:\/\/open3\.vistastory\.com\/v\d\/api\/inde/loading_ad - reject-200
 # Weico(微博客户端) - overseas.weico.cc
-^https?:\/\/overseas.weico.cc\/portal.php\?a=get_coopen_ads - reject
+^https?:\/\/overseas\.weico\.cc\/portal\.php\?a=get_coopen_ads - reject-200
 # WPS - ios.wps.cn, mobile-pic.cache.iciba.com
 ^https?:\/\/ios\.wps\.cn\/ad-statistics-service - reject
 # WIFI万能钥匙 - cds.wifi188.com
@@ -1306,7 +1305,7 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? - reject-dict
 ^https?:\/\/portal-xunyou\.qingcdn\.com\/api\/v\d\/ios\/ads\/ - reject-200
 ^https?:\/\/portal-xunyou\.qingcdn\.com\/api\/v\d\/ios\/configs\/(?>splash_ad|ad_urls) - reject-200
 # 小睡眠 - api.psy-1.com
-^https?:\/\/api.psy-1.com\/cosleep\/startup - reject
+^https?:\/\/api\.psy-1\.com\/cosleep\/startup - reject
 # 小利生活 - mpos-pic.helipay.com
 ^https?:\/\/mpos-pic\.helipay\.com\/upload\/images\/advertisment\/image - reject
 # 小兔充充 - ad.xiaotucc.com, mapi.xiaotucc.com
