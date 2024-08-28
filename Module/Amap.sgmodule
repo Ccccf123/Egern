@@ -5,7 +5,7 @@
 #!category=去广告, RuCu6, kokoryh
 #!openUrl=https://apps.apple.com/app/id461703208
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-08-27 12:05
+#!date=2024-08-28 12:05
 
 [Rule]
 # 移除广告下发请求
@@ -13,6 +13,7 @@ AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-A
 
 DOMAIN,amap-aos-info-nogw.amap.com,REJECT
 DOMAIN,free-aos-cdn-image.amap.com,REJECT
+DOMAIN-SUFFIX,v.smtcdns.com,REJECT
 
 [URL Rewrite]
 # 导航详情页 - 路线规划、地点详情页、搜索详情页、导航结束页
