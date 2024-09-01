@@ -1,12 +1,17 @@
 #!name=WebPage
 #!desc=网页去广告
-#!author=@RuCu6 @limbopro @ddgksf2013
+#!author=@RuCu6 @limbopro @ddgksf2013 @可莉🅥
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdOff.png
 #!category=去广告, RuCu6, limbopro, ddgksf2013
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-07-27 17:50
+#!date=2024-08-29 20:00
 
 [URL Rewrite]
+# -----------可莉🅥----------- #
+# 555电影
+^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/advert\/config reject-dict
+
+# -----------Rucu6----------- #
 # 谷歌服务重定向 //*.google.cn
 ^https?:\/\/www\.google\.cn https://www.google.com 302
 ^https?:\/\/translate\.google\.cn https://translate.google.com 302
@@ -20,6 +25,9 @@
 ^https?:\/\/(cn|www)\.pornhub\.com\/_xa\/ads - reject-dict
 
 [Script]
+# 555电影
+555电影@可莉🅥 = type=http-response, pattern=^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/movie\/index_recommend\?, script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/555DY/555DY_remove_ads.js, requires-body = true
+
 # 百度防跳转
 百度防跳转@RuCu6 = type=http-response, pattern=^https:\/\/boxer\.baidu\.com\/scheme\?scheme, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduNoRedirect.js, requires-body=true
 
@@ -102,4 +110,4 @@ LeZhu@ddgksf2013 = type=http-response, pattern=^https?:/\/.*lezhutv\.com\/($|(ty
 libvio@ddgksf2013 = type=http-response, pattern=^https?:\/\/.*libvio.*me\/($|[0-9a-zA-Z=_/-]+\.html$), script-path=https://github.com/ddgksf2013/Scripts/raw/master/libvio.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, *.pornhub.com, 18comic.org, 18comic.vip, www.javbus.com, javdb.com, *.avple.tv, jable.tv, missav.com, www.zxzjhd.com, m.nivod4.tv, *.freeok.*, *netflix*, *bdys*, *cupfox*, *cokemv*, *lezhutv*, *bimi*, *5y*, *gimy*, *tkznp*, *czzy*, *ikandy*, *libvio*
+hostname = %APPEND% app-v1.ecoliving168.com, boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, *.pornhub.com, 18comic.org, 18comic.vip, www.javbus.com, javdb.com, *.avple.tv, jable.tv, missav.com, www.zxzjhd.com, m.nivod4.tv, *.freeok.*, *netflix*, *bdys*, *cupfox*, *cokemv*, *lezhutv*, *bimi*, *5y*, *gimy*, *tkznp*, *czzy*, *ikandy*, *libvio*
