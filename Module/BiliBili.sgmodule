@@ -5,7 +5,7 @@
 #!category=去广告, Maasea, RuCu6, 可莉
 #!openUrl=https://apps.apple.com/app/id736536022
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-08-27 17:00
+#!date=2024-09-04 16:30
 
 [Rule]
 # 开屏广告
@@ -42,9 +42,9 @@ URL-REGEX,^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH,REJECT-DICT
 ^https:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
 ^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp - reject-200
 # 移除视频链接跟踪参数
-(^https:\/\/(www|m)\.bilibili\.com\/video\/((BV\w{10})|(av\d{9})))(\/\?.*) $1 302
+(^https:\/\/(?:www|m)\.bilibili\.com\/video\/(?:BV\w{10}|av\d{9}))(\/?\?.*) $1 302
 # 移除直播间链接跟踪参数
-(^https:\/\/live\.bilibili\.com\/\d+)((\?.*)) $1 302
+(^https:\/\/live\.bilibili\.com\/\d+)(\/?\?.*) $1 302
 
 [Script]
 # 移除动态页面广告 - 待完善
