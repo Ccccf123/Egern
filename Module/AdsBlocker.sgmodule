@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
 #!category=去广告, fmz200
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-09-04 22:10
+#!date=2024-09-11 00:20
 
 [URL Rewrite]
 # 12123 - gab.122.gov.cn
@@ -1791,7 +1791,7 @@ keep = type = http-response, pattern = ^https?:\/\/api\.gotokeep\.com\/sportpage
 买单吧 = type = http-response, pattern = ^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/rcg\/index\.html\?callbackurl=rcg\/index\.html&orclogin=1&, script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/mdb.js, requires-body = true
 
 # 马蜂窝 - mapi.mafengwo.cn
-马蜂窝 = type = http-response, pattern = ^https?:\/\/mapi\.mafengwo\.cn\/user\/profile\/get_(list|profile),script-path =  https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/mafengwo.js, requires-body = true
+马蜂窝 = type = http-response, pattern = ^https?:\/\/mapi\.mafengwo\.cn\/user\/profile\/get_(list|profile),script-path = https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/mafengwo.js, requires-body = true
 
 # 脉脉 - open.taou.com, h3.open.taou.com
 脉脉 = type = http-response, pattern = ^https:\/\/(h3\.)?open\.taou\.com\/maimai\/feed\/v6\/detail_recommend_feeds\?, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/maimai/maimai_ads.js, requires-body = true
