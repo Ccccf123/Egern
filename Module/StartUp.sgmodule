@@ -4,11 +4,11 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Advertising.png
 #!category=去广告, ddgksf2013
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-09-07 11:25
+#!date=2024-09-11 18:20
 
 [URL Rewrite]
 # Version
-^https?:\/\/2024.09.07/c335/v2.0.522 - reject-200
+^https?:\/\/2024.09.11/c337/v2.0.523 - reject-200
 
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer - reject-200
@@ -526,6 +526,9 @@
 
 # Oclean Care
 ^https?:\/\/careapi\.oclean\.com\/mall\/v\d\/Temporary\/SafetyGetStartAdvert - reject-200
+
+# 朴朴超市
+^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement - reject-200
 
 # PikPak
 ^https:\/\/access\.mypikpak\.com\/access_controller\/v1\/area_accessible - reject-200
