@@ -5,7 +5,7 @@
 #!category=去广告, RuCu6, fmz200, 可莉
 #!openUrl=https://apps.apple.com/app/id510909506
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-08-13 10:20
+#!date=2024-09-12 12:30
 
 [URL Rewrite]
 # fmz200 - gw.alicdn.com, heic.alicdn.com, asp.cntv.myalicdn.com
@@ -27,8 +27,26 @@
 ^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} - reject
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome - reject
 # 可莉🅥
-^https:\/\/iyes\.youku\.com\/uts\/v1\/start\/ - reject-dict
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.get\/ - reject-dict
+# 我的页面横幅
+^https:\/\/dinamicx\.alibabausercontent\.com\/pub\/fish_home_top_kingkong_new\/ - reject
+^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.topic\.banner\/ - reject-dict
+# 搜索页面内容
+^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.discover\/ - reject-dict
+^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.item\.search\.activate\/ - reject-dict
+# 这些宝贝超好卖
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.resell\.recommendorhotcate\/ - reject-dict
+# 用闲鱼币买更便宜
+# ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.idle\.coin\.nextfresh\/ - reject-dict
+
+[Script]
+# RuCu6
+# 移除阿里巴巴通用广告请求
+阿里巴巴通用广告 = type=http-response, pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js
+# 可莉🅥
+# 商品信息流广告
+移除宝贝信息流广 = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/, script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/FleaMarket/FleaMarket_remove_ads.js, requires-body = true
+# 首页标签图片
+移除首页标签图片 = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/, script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/FleaMarket/FleaMarket_remove_ads.js, requires-body = true
 
 [MITM]
-hostname = %APPEND% gw.alicdn.com, heic.alicdn.com, asp.cntv.myalicdn.com, acs.m.taobao.com, acs.m.goofish.com, iyes.youku.com
+hostname = %APPEND% gw.alicdn.com, heic.alicdn.com, asp.cntv.myalicdn.com, acs.m.taobao.com, g-acs.m.goofish.com, iyes.youku.com, dinamicx.alibabausercontent.com
