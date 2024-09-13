@@ -5,7 +5,7 @@
 #!category=去广告, Yswag
 #!openUrl=https://apps.apple.com/app/id6450680262
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-08-21 19:20
+#!date=2024-09-13 19:30
 
 [URL Rewrite]
 # 暴風跑馬燈
@@ -18,7 +18,7 @@
 
 非凡资源 = type=http-response, pattern=^https?:\/\/(super|svipsvip|vip)\.ffzy[A-Za-z0-9-]+\.com\/.+\/hls\/.+\.m3u8, script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true
 
-暴风影视 = type=http-response, pattern=^https?:\/\/s\d+\.bfengbf\.com\/video\/(.+)\.m3u8, script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true
+暴风影视 = type=http-response, pattern=^https?:\/\/c\d+\.rrcdnbf\d+\.com\/video\/(.+)\.m3u8, script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true
 
 快看资源 = type=http-response, pattern=^https?:\/\/vip\.kuaikan-(cdn|play)\d+\.com\/.+\/hls\/.+\.m3u8, script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true
 
@@ -54,4 +54,4 @@ U酷资源 = type=http-response, pattern=^https:\/\/ukzy\.ukubf\d+\.com\/.+\/hls
 黄瓜资源 = type=http-response, pattern=^https:\/\/player\.huangguam3u\.com\/.+\/hls\/.+\.m3u8, script-path=https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% m3u8.heimuertv.com, m3u8.hmrvideo.com, v.cdnlz*.com, v.lzcdn*.com, vip*.lz-cdn*.com, vip.lzcdn*.com, *.ffzy*.com, s*.bfengbf.com, vip.kuaikan*.com, bfikuncdn.com, play.modujx*.com, vod.lyhuicheng.com, ukzy.ukubf*.com, *.wgslsw.com, askzycdn.com, t0.97img.com, *.bfbfhao.com, player.cl9987.com:188, v.ykv3.com, *.3sybf.com, bfnxxcdn.com, player.huangguam3u.com, leshiyuncdn.36s.top, cs1.feidaozy.com
+hostname = %APPEND% m3u8.heimuertv.com, m3u8.hmrvideo.com, v.cdnlz*.com, v.lzcdn*.com, vip*.lz-cdn*.com, vip.lzcdn*.com, *.ffzy*.com, *.rrcdnbf*.com, vip.kuaikan*.com, bfikuncdn.com, play.modujx*.com, vod.lyhuicheng.com, ukzy.ukubf*.com, *.wgslsw.com, askzycdn.com, t0.97img.com, *.bfbfhao.com, player.cl9987.com:188, v.ykv3.com, *.3sybf.com, bfnxxcdn.com, player.huangguam3u.com, leshiyuncdn.36s.top, cs1.feidaozy.com
