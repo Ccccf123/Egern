@@ -5,7 +5,7 @@
 #!category=去广告, RuCu6, Keywos, ddgksf2013
 #!openUrl=https://apps.apple.com/app/id951610982
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-08-27 12:05
+#!date=2024-09-27 13:00
 
 [Rule]
 # 移除广告下发请求
@@ -25,6 +25,8 @@ DOMAIN,yk-ssp.ad.youku.com,REJECT
 DOMAIN,ykad-data.youku.com,REJECT
 
 [URL Rewrite]
+# 底部发现页 - 角标
+^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.app\.home\.tabbar\.marketing\.get\.cn - reject-dict
 # 首页 - 好物推荐、商品推广、底部标签页、快递详情页、问卷调查、主页图标
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword\.get\.cn - reject-dict
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.cncommunity\.my\.station\.query\.cn - reject-dict
@@ -52,6 +54,9 @@ DOMAIN,ykad-data.youku.com,REJECT
 [Script]
 # 移除阿里巴巴通用广告请求
 移除阿里巴巴通用广告请求@RuCu6 = type=http-response, pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js
+
+# 我的页面
+http-response ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.app\.mine\.main\.cn script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/cainiao.js, requires-body = true, tag = 移除我的页面推广
 
 # 首页 - 好物推荐、商品推广、底部标签页、快递详情页、问卷调查、主页图标
 移除首页推广@RuCu6 = type=http-response, pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body=true
