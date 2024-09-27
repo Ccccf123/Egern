@@ -5,7 +5,7 @@
 #!category=去广告, 功能增强, RuCu6, zZPiglet, 可莉
 #!openUrl=https://apps.apple.com/app/id414478124
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-09-25 13:00
+#!date=2024-09-27 22:30
 
 [Rule]
 DOMAIN,badjs.weixinbridge.com,REJECT
@@ -19,6 +19,8 @@ DOMAIN,wxsnsdythumb.wxs.qq.com,REJECT
 DOMAIN,ads-shopping.shouqianba.com,REJECT
 # 猫眼电影
 DOMAIN,ad.maoyan.com,REJECT
+# 捷停车 @怎么肥事
+DOMAIN, e.jparking.cn, REJECT
 
 [URL Rewrite]
 # 移除公众号中的推广内容 //mp.weixin.qq.com
