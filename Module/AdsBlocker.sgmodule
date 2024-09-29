@@ -4,11 +4,11 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
 #!category=去广告, fmz200
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-09-28 22:10
+#!date=2024-09-29 23:15
 
 [URL Rewrite]
 # 12123 - gab.122.gov.cn
-^https?:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery - reject
+^https?:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ reject
 # 21经济网 - api.21jingji.com
 ^https?:\/\/api\.21jingji\.com\/ad\/ - reject
 # 2345天气王 - tianqi.2345.com
@@ -182,11 +182,6 @@
 ^https?:\/\/h5app\.kuwo\.cn\/m\/bdvipact2205\/index\.html\?fromsrc=huodong - reject-dict
 ^https?:\/\/bodianimgcdn\.kuwo\.cn\/images\/0e83c1821cd2681de08e20bec73d1e75 - reject-dict
 ^https?:\/\/bodianimgcdn\.kuwo\.cn\/images\/198c0b313fe9e53b03240c7b30b4acc9 - reject-dict
-# 薄荷健康 - bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn, api.boohee.com
-^https?:\/\/api\.boohee\.com\/shop-interface\/api\/v1\/home\/index - reject-dict
-^https?:\/\/bohe\.sfo-tx-shanghai-01\.saas\.sensorsdata\.cn\/api\/v2\/sfo\/user_popup_configs - reject-dict
-^https?:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/(discover_chosen|page_float_bubbles) - reject-dict
-^https?:\/\/api\.boohee\.com\/app-interface\/v1\/record\/record_tool(_pop)?_ad - reject-dict
 # 薄荷 - api.boohee.com, bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn, lego.boohee.com, status.boohee.com
 ^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/page_float_bubbles\? - reject-dict
 ^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/tool_buttons\? - reject-dict
@@ -296,8 +291,6 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 - reject
 ^https?:\/\/mapi\.dangdang\.com\/index\.php\?action=init - reject
 # 叮咚买菜 - maicai.api.ddxq.mobi
 ^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/ - reject
-# ^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/startUpScreen - reject-dict
-# ^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/getPreloadAd\?ad_id - reject-dict
 ^https?:\/\/maicai\.api\.ddxq\.mobi\/vip\/getVipAd - reject-dict
 ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/getHomeAdPop - reject
 # 叮嗒出行 - img.admobile.top, webcdn.m.qq.com
@@ -517,7 +510,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 ^https?:\/\/smkmp\.96225\.com\/smkcenter\/ad/ - reject
 # 杭州公交 - m.ibuscloud.com
 ^https?:\/\/m\.ibuscloud\.com\/v\d\/app\/getStartPage - reject
-# 红版报 - fbchina.flipchina.cn
+# 红板报 - fbchina.flipchina.cn
 ^https?:\/\/fbchina\.flipchina\.cn\/v\d\/ad\/query - reject
 # 虎嗅 - api-ad-product.huxiu.com
 ^https?:\/\/api-ad-product\.huxiu\.com\/Api\/Product\/SDK\/Advert\/Query\/queryAdvertListInfo - reject
@@ -525,7 +518,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 ^https?:\/\/api4\.bybutter\.com\/v\d\/app\/placements\/\d\/advertisements - reject
 # 华宝智投 - api.touker.com
 ^https?:\/\/api\.touker\.com\/v2\/IAdvertisementAPI\.queryStartAdvertisement - reject-200
-# 航旅纵横 - home.umetrip.com, discardrp.umetrip.com, startup.umetrip.com,
+# 航旅纵横 - home.umetrip.com, discardrp.umetrip.com, startup.umetrip.com
 ^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native - reject
 # 汇丰汇选 - m.prod.app.hsbcfts.com.cn
 ^https?:\/\/m\.prod\.app\.hsbcfts\.com\.cn\/api\/sapp\/biz\/config\/open\/queryappversion\?channelCode= - reject-dict
@@ -543,7 +536,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 ^https?:\/\/.*\.townmalls\.cn:1890\/mossapi\/mossp\.BannerManager\/activityList.* - reject
 # 海尔服务小程序 - service.haiersmarthomes.com
 ^https?:\/\/service\.haiersmarthomes\.com\/management\/banner\/getBannerList\?source=4 - reject-dict
-# haoxingtizhongcheng - open.fitdays.cn
+# 好型体重秤 - open.fitdays.cn
 ^https?:\/\/open\.fitdays\.cn\/uploads\/ad\/ - reject
 # 横店电影小程序 - api.hengdianfilm.com
 ^https?:\/\/api\.hengdianfilm\.com\/\/cinema\/queryAvailableBannerInfo\/1 https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/hengdian.json 302
@@ -716,6 +709,13 @@ https:\/\/nelo2-col\.linecorp\.com\/_store$ - reject
 ^https?:\/\/cdn-oss\.00bang\.cn\/image\/LLB_OSSC8A54C9913CA475DABECA1054A219CA2\.jpg - reject-200
 ^https?:\/\/cdn-oss\.00bang\.cn\/image\/LLB_OSS2FC543D52E7447678660A4D9EC4F6C60\.jpg - reject-200
 ^https?:\/\/api\.00bang\.cn\/llb\/baseinfo\/advertise\/getAdvertiseByPageCode - reject-200
+# LING Club - cdn-oss.00bang.cn, api.00bang.cn
+# ^https?:\/\/cdn-oss\.00bang\.cn\/image\/LLB_OSS[A-Z0-9]{32}.jpg - reject-200
+^https?:\/\/cdn-oss\.00bang\.cn\/image\/LLB_OSS50140C35669841B7A4218215C8C5338A\.jpg - reject-200
+^https?:\/\/cdn-oss\.00bang\.cn\/image\/LLB_OSS32D553B6981546909417BEF3B7A3BC4D\.jpg - reject-200
+^https?:\/\/cdn-oss\.00bang\.cn\/image\/LLB_OSSC8A54C9913CA475DABECA1054A219CA2\.jpg - reject-200
+^https?:\/\/cdn-oss\.00bang\.cn\/image\/LLB_OSS2FC543D52E7447678660A4D9EC4F6C60\.jpg - reject-200
+^https?:\/\/api\.00bang\.cn\/llb\/baseinfo\/advertise\/getAdvertiseByPageCode - reject-200
 # LocSim - app.aa-ab.com
 ^https?:\/\/app\.aa-ab\.com\/home - reject-200
 # lofter - ad.lofter.com, images.pinduoduo.com, lofter.lf127.net
@@ -724,8 +724,7 @@ https:\/\/nelo2-col\.linecorp\.com\/_store$ - reject
 ^https?:\/\/lofter\.lf127\.net\/ad\-material - reject-200
 # linxi - api.internetofcity.cn
 ^https?:\/\/api\.internetofcity\.cn\/api\/resource\/anon\/popups\/(getSplashList|getList) - reject
-# domain-suffix, admobile.top, reject
-https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSplashFrequencyStatistics|getPopInfo|getAppEntranceConfig|promote\/list|getSplash|outing\/reqFoundNewList|outing\/reqIndex) - reject
+^https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSplashFrequencyStatistics|getPopInfo|getAppEntranceConfig|promote\/list|getSplash|outing\/reqFoundNewList|outing\/reqIndex) - reject
 # 猎聘 - api-ac.liepin.com, api-wanda.liepin.com
 ^https?:\/\/api-ac\.liepin\.com\/api\/com\.liepin\.cyclops\.live\.get-ad-cards - reject-dict
 ^https?:\/\/api-wanda\.liepin\.com\/api\/com\.liepin\.cbp\.baizhong\.op\.v2-show-4app - reject-200
@@ -744,7 +743,6 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 ^https?:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg - reject-dict
 ^https?:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json - reject-dict
 ^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ - reject-dict
-# 美团订单详情页更多推荐
 ^https?:\/\/apimobile\.meituan\.com\/group\/v1\/recommend\/unity\/recommends - reject-dict
 # 美团众包 - peisongapi.meituan.com
 ^https?:\/\/peisongapi\.meituan\.com\/client\/getInitiateImage - reject-200
@@ -1202,7 +1200,6 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? - reject-dict
 ^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/app-act\/act-list.+ - reject-dict
 ^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/content-recommend\/v1\/get-by-uid.+ - reject-dict
 ^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/floating-window\/v1\/get-show.+ - reject-dict
-# 微信公众号去除商品推广
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info\?action - reject-dict
 # 网易新闻 - c.m.163.com
 ^https?:\/\/interface\.music\.163\.com\/eapi\/ad - reject
@@ -1670,9 +1667,6 @@ Blued = type = http-response, pattern = ^https?:\/\/social\.blued\.cn\/users\/.+
 百度贴吧 = type = http-response, pattern = ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$), script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js, requires-body = true
 百度贴吧 = type = http-response, pattern = ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd, script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body = true
 
-# 薄荷健康 - bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn, api.boohee.com
-薄荷健康 = type = http-response, pattern = ^https?:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/record_index, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = articles -> fmz200
-
 # 薄荷 - api.boohee.com, bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn, lego.boohee.com, status.boohee.com
 薄荷 = type = http-response, pattern = ^https:\/\/api\.boohee\.com\/meta-interface\/v2\/index\?, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js, requires-body = true
 薄荷 = type = http-response, pattern = ^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/plaza\?, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js, requires-body = true
@@ -1865,15 +1859,14 @@ soda = type = http-response, pattern = ^https?:\/\/api\.sodalife\.xyz\/v1\/poste
 # 腾讯新闻 - r.inews.qq.com, news.ssp.qq.com
 腾讯新闻 = type = http-response, pattern = ^https?:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList)|gw\/page\/event_detail|news_feed\/hot_module_list)), script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/qq-news.js, requires-body = true
 
-# vgTime - app02.vgtime.com
-vgtime = type = http-response, pattern = ^https?:\/\/app02\.vgtime\.com:8080\/vgtime-app\/api\/v2\/init\/ad\.json, script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/vgtime.js, requires-body = true
+# 游戏时光 - app02.vgtime.com
+游戏时光 = type = http-response, pattern = ^https?:\/\/app02\.vgtime\.com:8080\/vgtime-app\/api\/v2\/init\/ad\.json, script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/vgtime.js, requires-body = true
 
 # 万达电影小程序 - misc-api-prd-mx.wandafilm.com
 万达电影小程序 = type = http-response, pattern = ^https?:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api\?bannerInfos=%5B%7B%22cinemaI, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = "WX_index_mp-&-boxAD" -> "WX_index_mp-&-boxAD0"
 
 # 微信 - mp.weixin.qq.com, weixin110.qq.com, security.wechat.com
 微信 = type = http-response, pattern = ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = advertisement -> fmz200
-
 # 微信跳过中间界面，支付宝链接、被封禁链接进行通知弹窗跳转，在微信中用快照显示被封禁的链接（可选），在微信中进行强制重定向（可选），群聊 / 扫码均可使用，可选项可在脚本 2、3 行更改，也可在 BoxJs 中更改。
 微信跳过中间界面 = type = http-response, pattern = ^https?:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?, script-path = https://raw.githubusercontent.com/zZPiglet/Task/master/asset/UnblockURLinWeChat.js, requires-body = true
 
