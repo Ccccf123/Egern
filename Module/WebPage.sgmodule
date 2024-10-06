@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdOff.png
 #!category=去广告, RuCu6, limbopro, ddgksf2013
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-09-22 15:25
+#!date=2024-10-06 23:20
 
 [URL Rewrite]
 # -----------可莉🅥----------- #
@@ -47,7 +47,7 @@ PornHub@RuCu6 = type=http-response, pattern=^https:\/\/(\w{0,3}(\.){0,1}(pornhub
 JavBus@RuCu6 = type=http-response, pattern=^https:\/\/(\w{0,3}(\.){0,1}(javbus)(\.)\w{0,3})(?!.*?(\/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/javbusQX.js, requires-body=true
 
 # JavDB (https://javdb.com/)
-JavDB@RuCu6 = type=http-response, pattern=^https:\/\/javdb\.com\/, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/javdb.js, requires-body=true
+JavDB@RuCu6 = type=http-response, pattern=^https:\/\/javdb\.com\/(?!over18\?), script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/javdb.js, requires-body=true
 
 # Avple (https://avple.tv/)
 Avple@RuCu6 = type=http-response, pattern=^https:\/\/(\w{0,3}(\.){0,1}(avple)(\.)\w{0,3})(?!.*?(\/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/avpleQX.js, requires-body=true
