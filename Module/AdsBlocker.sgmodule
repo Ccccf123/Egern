@@ -1655,13 +1655,13 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do - reject-
 51job = type = http-response, pattern = ^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/recommend\/job-tab-dynamic, script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/51job.js, requires-body = true
 
 # 阿里云盘 - api.alipan.com, member.alipan.com
-阿里云盘 = type = http-response, pattern = ^https:\/\/api\.alipan\.com\/apps\/v2\/users\/home\/(news|widgets), script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js, requires-body = true
-阿里云盘 = type = http-response, pattern = ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list, script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js, requires-body = true
+阿里云盘 = type = http-response, pattern = ^https:\/\/api\.alipan\.com\/apps\/v2\/users\/home\/(news|widgets), script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/adrive/adrive.js, requires-body = true
+阿里云盘 = type = http-response, pattern = ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/adrive/adrive.js, requires-body = true
 
 # 阿里巴巴 - acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
-菜鸟 = type = http-response, pattern = ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow, script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body = true
-淘宝 = type = http-response, pattern = ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true
-淘宝 = type = http-response, pattern = ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true
+菜鸟 = type = http-response, pattern = ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body = true
+淘宝 = type = http-response, pattern = ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body = true
+淘宝 = type = http-response, pattern = ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body = true
 
 # Blued - social.blued.cn
 Blued = type = http-response, pattern = ^https?:\/\/social\.blued\.cn\/users\/.+\/more\/ios\?v=2, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/blued.js, requires-body = true
@@ -1686,16 +1686,16 @@ Blued = type = http-response, pattern = ^https?:\/\/social\.blued\.cn\/users\/.+
 哔哩哔哩漫画 = type = http-response, pattern = ^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/GetInitInfo, script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/bilibiliManga.js, requires-body = true
 
 # crunchyroll - beta-api.crunchyroll.com
-crunchyroll = type = http-response, pattern = ^https?:\/\/beta-api\.crunchyroll\.com\/cms, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = offset_ms":\d+ -> offset_ms":99999999999999
+crunchyroll = type = http-response, pattern = ^https?:\/\/beta-api\.crunchyroll\.com\/cms, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = offset_ms":\d+ -> offset_ms":99999999999999
 
 # 彩云天气 - wrapper.cyapi.cn, api.caiyunapp.com
-彩云天气 = type = http-request, pattern = ^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\?, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/echo-response.js, requires-body = true, argument = application/json&url=https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json
+彩云天气 = type = http-request, pattern = ^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\?, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/echo-response.js, requires-body = true, argument = application/json&url=https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json
 
 # 菜鸟裹裹 - cn-acs.m.cainiao.com, amdc.m.taobao.com
-菜鸟裹裹 = type = http-response, pattern = ^https?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$, script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, requires-body = true
-菜鸟裹裹 = type = http-response, pattern = ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn, script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body = true
-菜鸟裹裹 = type = http-response, pattern = ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(pickup\.empty\.page|protocol\.homepage)\.get\.cn, script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body = true
-菜鸟裹裹 = type = http-response, pattern = ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.nbfriend\.message\.conversation\.list\.cn, script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body = true
+菜鸟裹裹 = type = http-response, pattern = ^https?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/header.js, requires-body = true
+菜鸟裹裹 = type = http-response, pattern = ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body = true
+菜鸟裹裹 = type = http-response, pattern = ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(pickup\.empty\.page|protocol\.homepage)\.get\.cn, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body = true
+菜鸟裹裹 = type = http-response, pattern = ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.nbfriend\.message\.conversation\.list\.cn, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body = true
 
 # 财新 - gg.caixin.com
 财新 = type = http-response, pattern = ^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/caixin/caixinAd.js, requires-body = true
@@ -1717,10 +1717,10 @@ crunchyroll = type = http-response, pattern = ^https?:\/\/beta-api\.crunchyroll\
 滴滴出行 = type = http-response, pattern = ^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didi.js, requires-body = true
 
 # 大师兄 - sdk.alibaba.com.ailbaba.me, adservice.sigmob.cn
-大师兄 = type = http-response, pattern = ^https?:\/\/adservice\.sigmob\.cn\/extconfig, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = false -> true
+大师兄 = type = http-response, pattern = ^https?:\/\/adservice\.sigmob\.cn\/extconfig, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = false -> true
 
 # 叮咚买菜 - maicai.api.ddxq.mobi
-叮咚买菜 = type = http-response, pattern = ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/newDetails, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = suspension -> random_body
+叮咚买菜 = type = http-response, pattern = ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/newDetails, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = suspension -> random_body
 
 # 大众点评 - img.meituan.net
 大众点评 = type = http-response, pattern = ^https?:\/\/img\.meituan\.net\/dpmobile\/, script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/dianping.js, requires-body = true
@@ -1732,12 +1732,12 @@ crunchyroll = type = http-response, pattern = ^https?:\/\/beta-api\.crunchyroll\
 Flightradar24 = type = http-response, pattern = ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|subscribe), script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Flightradar24.js, requires-body = true
 
 # 飞客茶馆 - ptf.flyertrip.com, 47.100.65.202, www.flyert.com
-飞客茶馆 = type = http-response, pattern = ^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = adv -> fmz200
+飞客茶馆 = type = http-response, pattern = ^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = adv -> fmz200
 飞客茶馆 = type = http-response, pattern = ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fly.js, requires-body = true
 飞客茶馆 = type = http-response, pattern = ^https?:\/\/www\.flyert\.com(\.cn)?\/.*plugin, script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/flyert.js, requires-body = true
 
 # 粉笔 - tiku.fenbi.com
-粉笔 = type = http-response, pattern = ^https?:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\?, script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/fenbi.js, requires-body = true
+粉笔 = type = http-response, pattern = ^https?:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\?, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fenbi.js, requires-body = true
 
 # 航旅纵横 - home.umetrip.com, discardrp.umetrip.com, startup.umetrip.com,
 航旅纵横 = type = http-response, pattern = ^https?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$, script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Umetrip/Umetrip_remove_ads.js, requires-body = true
@@ -1750,24 +1750,24 @@ Flightradar24 = type = http-response, pattern = ^https?:\/\/mobile\.flightradar2
 汇付天下 = type = http-response, pattern = ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/huifutianxia_ads.js, requires-body = true
 
 # i3 - www.i3zh.com
-i3 = type = http-response, pattern = ^https?:\/\/www\.i3zh\.com, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = cm-pop-up-banners -> fmz200
+i3 = type = http-response, pattern = ^https?:\/\/www\.i3zh\.com, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = cm-pop-up-banners -> fmz200
 
 # IT之家 - napi.ithome.com
-IT之家 = type = http-response, pattern = ^https?:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds), script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js, requires-body = true
+IT之家 = type = http-response, pattern = ^https?:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds), script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ithome/ithome.js, requires-body = true
 
 # 建行生活 - yunbusiness.ccb.com
 建行生活 = type = http-response, pattern = ^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\?txcode=A3341AB04, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLife/ccbLifeAds.js, requires-body = true
-建行生活 = type = http-request, pattern = ^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\?txcode=A3341AB05, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/echo-response.js, requires-body = true, argument = application/json&url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLife/A3341AB05.json
-建行生活 = type = http-response, pattern = ^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\?, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = "TAG_AD_INFO" -> "fmz200"
+建行生活 = type = http-request, pattern = ^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\?txcode=A3341AB05, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/echo-response.js, requires-body = true, argument = application/json&url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLife/A3341AB05.json
+建行生活 = type = http-response, pattern = ^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\?, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = "TAG_AD_INFO" -> "fmz200"
 建行生活 = type = http-response, pattern = ^https?:\/\/g\.alicdn\.com\/.*o2o-ad, script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/alicdn.js, requires-body = true
-建行生活 = type = http-response, pattern = ^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.venus\.shopresourceservice\.getshopresource, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = posterList -> random_body
+建行生活 = type = http-response, pattern = ^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.venus\.shopresourceservice\.getshopresource, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = posterList -> random_body
 
 # 京东 - api.m.jd.com, dns.jd.com
-京东 = type = http-response, pattern = ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jingdong.js, requires-body = true
+京东 = type = http-response, pattern = ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jingdong.js, requires-body = true
 
 # 京喜 - api.m.jd.com
-京喜 = type = http-response, pattern = ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = jdLiteAdvertisingVO -> fmz200
-京喜 = type = http-response, pattern = ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = pushData -> fmz200
+京喜 = type = http-response, pattern = ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = jdLiteAdvertisingVO -> fmz200
+京喜 = type = http-response, pattern = ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = pushData -> fmz200
 京喜 = type = http-response, pattern = ^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingxiAd.js, requires-body = true
 
 # Keep - api.gotokeep.com, kad.gotokeep.com, static1.keepcdn.com
@@ -1784,11 +1784,11 @@ keep = type = http-response, pattern = ^https?:\/\/api\.gotokeep\.com\/sportpage
 夸克 = type = http-response, pattern = ^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/quark.js, requires-body = true
 
 # 酷我音乐 - audiobookpay.kuwo.cn, mgxhtj.kuwo.cn, nmobi.kuwo.cn, searchrecterm.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn
-酷我音乐 = type = http-response, pattern = ^https?:\/\/(mgxhtj|nmobi|searchrecterm)\.kuwo\.cn\/(mgxh|mobi|recterm)\.s, script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true
-酷我音乐 = type = http-response, pattern = ^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p, script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true
-酷我音乐 = type = http-response, pattern = ^https?:\/\/musicpay\.kuwo\.cn\/music\.pay, script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true
-酷我音乐 = type = http-response, pattern = ^https?:\/\/vip1\.kuwo\.cn\/vip\/(enc\/user\/vip\?op=ui|v\d\/theme\?op=gd), script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true
-酷我音乐 = type = http-response, pattern = ^https?:\/\/vip1\.kuwo\.cn\/vip\/v\d\/user\/vip\?op=ui, script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true
+酷我音乐 = type = http-response, pattern = ^https?:\/\/(mgxhtj|nmobi|searchrecterm)\.kuwo\.cn\/(mgxh|mobi|recterm)\.s, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body = true
+酷我音乐 = type = http-response, pattern = ^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body = true
+酷我音乐 = type = http-response, pattern = ^https?:\/\/musicpay\.kuwo\.cn\/music\.pay, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body = true
+酷我音乐 = type = http-response, pattern = ^https?:\/\/vip1\.kuwo\.cn\/vip\/(enc\/user\/vip\?op=ui|v\d\/theme\?op=gd), script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body = true
+酷我音乐 = type = http-response, pattern = ^https?:\/\/vip1\.kuwo\.cn\/vip\/v\d\/user\/vip\?op=ui, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body = true
 
 # 快手联盟,优量汇,穿山甲「广告联盟」 - api-access.pangolin-sdk-toutiao.com, mi.gdt.qq.com, open.e.kuaishou.com
 广告联盟 = type = http-response, pattern = ^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?), script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js, requires-body = true
@@ -1809,7 +1809,7 @@ keep = type = http-response, pattern = ^https?:\/\/api\.gotokeep\.com\/sportpage
 脉脉 = type = http-response, pattern = ^https:\/\/(h3\.)?open\.taou\.com\/maimai\/(feed|gossip)\/v\d\/(focus_feed|gossip_detail_comment|feed_detail_comment?)\?, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/maimai/maimai_ads.js, requires-body = true
 
 # 多多买菜 - mobile.yangkeduo.com
-多多买菜 = type = http-response, pattern = ^https?:\/\/mobile\.yangkeduo\.com\/proxy\/api\/api\/express\/post\/waybill\/red_packet\/goods_list$, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = "list":\[.+\] -> "list":[]
+多多买菜 = type = http-response, pattern = ^https?:\/\/mobile\.yangkeduo\.com\/proxy\/api\/api\/express\/post\/waybill\/red_packet\/goods_list$, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = "list":\[.+\] -> "list":[]
 
 # 朴朴超市 - j1.pupuapi.com
 朴朴超市 = type = http-response, pattern = ^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=2(%[A-Z0-9]+)+&store_id, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body = true
@@ -1836,9 +1836,9 @@ Reddit = type = http-response, pattern = ^https?:\/\/gql(-fed)?\.reddit\.com, sc
 人人视频 = type = http-response, pattern = ^https?:\/\/api\.rr\.tv\/user\/profile, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body = true
 
 # RARBG - dyncdn.me
-RARBG = type = http-response, pattern = ^https?:\/\/dyncdn\.me\/static\/\d{0,2}\/js\/showads\.js$, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = true -> false
-RARBG = type = http-response, pattern = ^https?:\/\/m\.lkcoffee\.com\/ecapi\/resource\/m\/member\/exchange\/page, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = \{.+\} -> {"status":"SUCCESS"}
-RARBG = type = http-response, pattern = ^https?:\/\/m\.lkcoffee\.com\/capi\/resource\/m\/growUp\/main, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = "popTitle":".+?" -> "popTitle":""
+RARBG = type = http-response, pattern = ^https?:\/\/dyncdn\.me\/static\/\d{0,2}\/js\/showads\.js$, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = true -> false
+RARBG = type = http-response, pattern = ^https?:\/\/m\.lkcoffee\.com\/ecapi\/resource\/m\/member\/exchange\/page, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = \{.+\} -> {"status":"SUCCESS"}
+RARBG = type = http-response, pattern = ^https?:\/\/m\.lkcoffee\.com\/capi\/resource\/m\/growUp\/main, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = "popTitle":".+?" -> "popTitle":""
 
 # 苏打校园APP - api.sodalife.xyz
 soda = type = http-response, pattern = ^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ATOP, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soda.js, requires-body = true
@@ -1858,15 +1858,15 @@ soda = type = http-response, pattern = ^https?:\/\/api\.sodalife\.xyz\/v1\/poste
 旅途随身听 = type = http-response, pattern = ^https?:\/\/www\.1314zhilv\.com\/ltsstnew\/(common\/getJGQIconNew|city\/getAllBannelByCity), script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lvtusuishenting/ltsst-ad.js, requires-body = true
 
 # 天府市民云 - tfsmy.chengdu.gov.cn, tft-app.cdtft.cn
-天府市民云 = type = http-response, pattern = ^https?:\/\/tft-app\.cdtft\.cn\/gateway-customer\/tftapp\/tft-ams\/api\/appAd, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = officialAdvertResultVo -> random-response
-天府市民云 = type = http-response, pattern = ^https?:\/\/chl\.tf\.cn\/channelmg\/sys\/socso\/order\/queryOrderInfo, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = "imgUrl" -> "imgUrl0"
+天府市民云 = type = http-response, pattern = ^https?:\/\/tft-app\.cdtft\.cn\/gateway-customer\/tftapp\/tft-ams\/api\/appAd, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = officialAdvertResultVo -> random-response
+天府市民云 = type = http-response, pattern = ^https?:\/\/chl\.tf\.cn\/channelmg\/sys\/socso\/order\/queryOrderInfo, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = "imgUrl" -> "imgUrl0"
 
 # 途家民宿 - client.tujia.com
-途家民宿 = type = http-response, pattern = ^https?:\/\/client\.tujia\.com\/bnbapp-node\/app\/portal\/getportalconfig\/bnb\/v2, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = "banners":\[.+\] -> "banners":[]
+途家民宿 = type = http-response, pattern = ^https?:\/\/client\.tujia\.com\/bnbapp-node\/app\/portal\/getportalconfig\/bnb\/v2, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = "banners":\[.+\] -> "banners":[]
 
 # 淘宝 - acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
-淘宝 = type = http-response, pattern = ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true
-淘宝 = type = http-response, pattern = ^https?:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true
+淘宝 = type = http-response, pattern = ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body = true
+淘宝 = type = http-response, pattern = ^https?:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body = true
 
 # 腾讯新闻 - r.inews.qq.com, news.ssp.qq.com
 腾讯新闻 = type = http-response, pattern = ^https?:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList)|gw\/page\/event_detail|news_feed\/hot_module_list)), script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/qq-news.js, requires-body = true
@@ -1875,10 +1875,10 @@ soda = type = http-response, pattern = ^https?:\/\/api\.sodalife\.xyz\/v1\/poste
 游戏时光 = type = http-response, pattern = ^https?:\/\/app02\.vgtime\.com:8080\/vgtime-app\/api\/v2\/init\/ad\.json, script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/vgtime.js, requires-body = true
 
 # 万达电影小程序 - misc-api-prd-mx.wandafilm.com
-万达电影小程序 = type = http-response, pattern = ^https?:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api\?bannerInfos=%5B%7B%22cinemaI, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = "WX_index_mp-&-boxAD" -> "WX_index_mp-&-boxAD0"
+万达电影小程序 = type = http-response, pattern = ^https?:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api\?bannerInfos=%5B%7B%22cinemaI, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = "WX_index_mp-&-boxAD" -> "WX_index_mp-&-boxAD0"
 
 # 微信 - mp.weixin.qq.com, weixin110.qq.com, security.wechat.com
-微信 = type = http-response, pattern = ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = advertisement -> fmz200
+微信 = type = http-response, pattern = ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = advertisement -> fmz200
 # 微信跳过中间界面，支付宝链接、被封禁链接进行通知弹窗跳转，在微信中用快照显示被封禁的链接（可选），在微信中进行强制重定向（可选），群聊 / 扫码均可使用，可选项可在脚本 2、3 行更改，也可在 BoxJs 中更改。
 微信跳过中间界面 = type = http-response, pattern = ^https?:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?, script-path = https://raw.githubusercontent.com/zZPiglet/Task/master/asset/UnblockURLinWeChat.js, requires-body = true
 
@@ -1889,10 +1889,10 @@ soda = type = http-response, pattern = ^https?:\/\/api\.sodalife\.xyz\/v1\/poste
 温尼伯站 = type = http-response, pattern = ^https:\/\/vue3-api\.zhixiny\.cn\/v1\/initui\?key=index, script-path = https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/AdBlock/xmApp/wnbz.js, requires-body = true
 
 # 小米商城 - api.m.mi.com
-小米商城 = type = http-response, pattern = ^https?:\/\/api\.m\.mi\.com\/v1\/app\/start, script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true
+小米商城 = type = http-response, pattern = ^https?:\/\/api\.m\.mi\.com\/v1\/app\/start, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body = true
 
 # 小特- 首选特斯拉中文社区 - lcen.xiaote.net
-小特 = type = http-response, pattern = ^https?:\/\/lcen\.xiaote\.net\/api\/graphql, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = screenSplashAd -> random-response
+小特 = type = http-response, pattern = ^https?:\/\/lcen\.xiaote\.net\/api\/graphql, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = screenSplashAd -> random-response
 
 # 小兔充充 - ad.xiaotucc.com, mapi.xiaotucc.com
 小兔充充 = type = http-response, pattern = ^https?:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity), script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaotucc.js, requires-body = true
@@ -1919,10 +1919,10 @@ soda = type = http-response, pattern = ^https?:\/\/api\.sodalife\.xyz\/v1\/poste
 # 转转 - app.zhuanzhuan.com
 转转 = type = http-response, pattern = ^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getfeedflowinfo\?, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhuanzhuan/zhuanzhuan.js, requires-body = true
 转转 = type = http-response, pattern = ^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhuanzhuan/zhuanzhuan.js, requires-body = true
-转转 = type = http-response, pattern = ^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = infoData -> fmz200
+转转 = type = http-response, pattern = ^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = infoData -> fmz200
 
 # 郑好办 - app-izz.zhengzhou.gov.cn
-郑好办 = type = http-response, pattern = ^https?:\/\/app-izz\.zhengzhou\.gov\.cn:10019\/bizgw\/gateway\.do, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = "imgUrl19_5x9":".+?" -> "imgUrl19_5x9":""
+郑好办 = type = http-response, pattern = ^https?:\/\/app-izz\.zhengzhou\.gov\.cn:10019\/bizgw\/gateway\.do, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = "imgUrl19_5x9":".+?" -> "imgUrl19_5x9":""
 
 # 中国人保 人保头条- zgrb.epicc.com.cn
 中国人保-主页面 = type = http-response, pattern = ^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/a\/config\/homeInit\/v, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/picc/picc_ads.js, requires-body = true

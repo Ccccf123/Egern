@@ -11,7 +11,10 @@
 阿里云盘签到🅒 = type=http-request, pattern=^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token, script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body=true, timeout=60
 
 # 微博 - api.weibo.cn
-微博每日签到🅒 = type=http-request, pattern=^https?:\/\/api\.weibo\.cn\/\d\/users\/show, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/WeiboCookieTask.js, timeout=60
+微博每日签到🅒 = type=http-request, pattern=^https?:\/\/api\.weibo\.cn\/\d\/users\/show, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CookieTask/WeiboCookieTask.js, timeout=60
+
+# 爱奇艺 - passport.iqiyi.com
+爱奇艺每日签到🅒 = type=http-request, pattern=^https:\/\/passport\.iqiyi\.com\/apis\/user\/, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CookieTask/IQIYICookieTask.js, timeout = 60
 
 [MITM]
-hostname = %APPEND% auth.alipan.com, auth.aliyundrive.com, api.weibo.cn
+hostname = %APPEND% auth.alipan.com, auth.aliyundrive.com, api.weibo.cn, passport.iqiyi.com
