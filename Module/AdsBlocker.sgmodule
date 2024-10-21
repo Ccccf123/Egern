@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
 #!category=去广告, fmz200
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-10-18 20:50
+#!date=2024-10-21 19:40:00
 
 [URL Rewrite]
 # 12123 - gab.122.gov.cn
@@ -1740,7 +1740,7 @@ Flightradar24 = type = http-response, pattern = ^https?:\/\/mobile\.flightradar2
 粉笔 = type = http-response, pattern = ^https?:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\?, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fenbi.js, requires-body = true
 
 # 航旅纵横 - home.umetrip.com, discardrp.umetrip.com, startup.umetrip.com,
-航旅纵横 = type = http-response, pattern = ^https?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$, script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Umetrip/Umetrip_remove_ads.js, requires-body = true
+航旅纵横 = type = http-response, pattern = ^https?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/Umetrip_remove_ads.js, requires-body = true
 
 # 盒马 - acs.m.taobao.com, acs-m.freshippo.com
 盒马 = type = http-response, pattern = ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.query(index|my)page, script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/freshippo.js, requires-body = true
