@@ -68,7 +68,7 @@ IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT,no-resolve
 知乎会员弹窗 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/bazaar\/vip_tab\/header\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhihu/zhihu.js, requires-body=true
 
 # 搜索页 - 关键词、猜你想搜
-搜索页关键词 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\?, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body=true, argument=""recommend_queries":\{.+\}->"recommend_queries":{}"
+搜索页关键词 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\?, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body=true, argument=""recommend_queries":\{.+\}->"recommend_queries":{}"
 
 # 回答详情页 - 评论区顶部、下一个回答
 回答详情页 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/next-(bff|data|render)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhihu/zhihu.js, requires-body=true

@@ -33,7 +33,7 @@ DOMAIN-SUFFIX,v.smtcdns.com,REJECT
 
 [Script]
 # 移除阿里巴巴通用广告请求
-阿里巴巴通用广告 = type=http-response, pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js
+阿里巴巴通用广告 = type=http-response, pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/header.js
 
 # 导航详情页 - 路线规划、地点详情页、搜索详情页、导航结束页
 导航详情页 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/aos\/perception\/publicTravel\/beforeNavi\?, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Amap/Amap.js, requires-body=true
