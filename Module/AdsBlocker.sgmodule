@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
 #!category=去广告, fmz200
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-10-25 21:30
+#!date=2024-10-29 22:30
 
 [URL Rewrite]
 # 12123 - gab.122.gov.cn
@@ -1710,17 +1710,17 @@ crunchyroll = type = http-response, pattern = ^https?:\/\/beta-api\.crunchyroll\
 动画疯 = type = http-response, pattern = ^https?:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v\d/(token|m3u8).php\?, script-path = https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutAnimeAds.js, requires-body = true
 
 # 滴滴出行 - res.xiaojukeji.com, common.diditaxi.com.cn, hd.xiaojukeji.com, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, conf.diditaxi.com.cn
-滴滴出行 = type = http-response, pattern = ^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds, script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body = true
-滴滴出行 = type = http-response, pattern = ^https?:\/\/freight\.xiaojukeji\.com\/gateway, script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body = true
-滴滴出行 = type = http-response, pattern = ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget, script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body = true
-滴滴出行 = type = http-response, pattern = ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget, script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body = true
-滴滴出行 = type = http-response, pattern = ^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast, script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body = true
-滴滴出行 = type = http-response, pattern = ^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core, script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body = true
-滴滴出行 = type = http-response, pattern = ^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf, script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body = true
-滴滴出行 = type = http-response, pattern = ^https?:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me, script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body = true
-滴滴出行 = type = http-response, pattern = ^https?:\/\/daijia\.kuaidadi\.com\/gateway, script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body = true
-滴滴出行 = type = http-response, pattern = ^https?:\/\/daijia\.kuaidadi\.com:443\/gateway, script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body = true
-滴滴出行 = type = http-response, pattern = ^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didi.js, requires-body = true
+滴滴出行 = type = http-response, pattern = ^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body = true
+滴滴出行 = type = http-response, pattern = ^https?:\/\/freight\.xiaojukeji\.com\/gateway, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body = true
+滴滴出行 = type = http-response, pattern = ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body = true
+滴滴出行 = type = http-response, pattern = ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body = true
+滴滴出行 = type = http-response, pattern = ^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body = true
+滴滴出行 = type = http-response, pattern = ^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body = true
+滴滴出行 = type = http-response, pattern = ^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body = true
+滴滴出行 = type = http-response, pattern = ^https?:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body = true
+滴滴出行 = type = http-response, pattern = ^https?:\/\/daijia\.kuaidadi\.com\/gateway, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body = true
+滴滴出行 = type = http-response, pattern = ^https?:\/\/daijia\.kuaidadi\.com:443\/gateway, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body = true
+滴滴出行 = type = http-response, pattern = ^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5, script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body = true
 
 # 大师兄 - sdk.alibaba.com.ailbaba.me, adservice.sigmob.cn
 大师兄 = type = http-response, pattern = ^https?:\/\/adservice\.sigmob\.cn\/extconfig, script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, argument = false -> true
