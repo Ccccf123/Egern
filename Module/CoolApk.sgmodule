@@ -12,11 +12,11 @@
 
 [Script]
 # RuCu6
-移除酷安广告@RuCu6 = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\?, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Coolapk/Coolapk.js, requires-body=true
+移除酷安广告@RuCu6 = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\?, script-path=https://kelee.one/Resource/Script/CoolApk/CoolApk_remove_ads.js, requires-body=true
 
-移除酷安广告@RuCu6 = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init), script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Coolapk/Coolapk.js, requires-body=true
+移除酷安广告@RuCu6 = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init), script-path=https://kelee.one/Resource/Script/CoolApk/CoolApk_remove_ads.js, requires-body=true
 
-移除酷安广告@RuCu6 = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\?, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Coolapk/Coolapk.js, requires-body=true
+移除酷安广告@RuCu6 = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\?, script-path=https://kelee.one/Resource/Script/CoolApk/CoolApk_remove_ads.js, requires-body=true
 
 # ZenmoFeiShi
 移除酷安广告@ZenmoFeiShi = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/main\/init, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.js, requires-body=true
