@@ -4,11 +4,11 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Advertising.png
 #!category=去广告, ddgksf2013
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-11-02 17:00
+#!date=2024-11-04 22:00
 
 [URL Rewrite]
 # Version
-^https?:\/\/2024.11.02/c352/v2.0.542 - reject-200
+^https?:\/\/2024.11.03/c352/v2.0.545 - reject-200
 
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer - reject-200
