@@ -26,7 +26,7 @@
 
 [Script]
 # 555电影
-555电影@可莉🅥 = type=http-response, pattern=^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/movie\/index_recommend\?, script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/555DY/555DY_remove_ads.js, requires-body = true
+555电影@可莉🅥 = type=http-response, pattern=^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/movie\/index_recommend\?, script-path = https://kelee.one/Resource/Script/555DY/555DY_remove_ads.js, requires-body = true
 
 # 百度防跳转
 百度防跳转@RuCu6 = type=http-response, pattern=^https:\/\/boxer\.baidu\.com\/scheme\?scheme, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduNoRedirect.js, requires-body=true
