@@ -4,11 +4,11 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Advertising.png
 #!category=去广告, ddgksf2013
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2024-11-06 12:40
+#!date=2024-11-08 20:40
 
 [URL Rewrite]
 # Version
-^https?:\/\/2024.11.06/c353/v2.0.546 - reject-200
+^https?:\/\/2024.11.08/c353/v2.0.547 - reject-200
 
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer - reject-200
@@ -49,6 +49,7 @@
 
 # 阿里巴巴
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv\/ - reject-200
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.cbu\.app\.homepage\.startup - reject-200
 
 # AASTOCKS
 ^https?:\/\/.*aastocks\.com\/ad\/ - reject-200
