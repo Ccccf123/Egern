@@ -1,5 +1,7 @@
 # Egern
-自用模块（Egern与Shadowrocket均可用），由Script Hub转换而来，不保证有效性。（随缘维护）
+自用模块（Egern与Shadowrocket均可用），由Script Hub转换而来，不保证有效性。（不再维护）
+
+建议查看[QingRex](https://github.com/QingRex)的[LoonKissSurge](https://github.com/QingRex/LoonKissSurge)项目，其网站为https://surge.qingr.moe
 
 ![Alt](https://repobeats.axiom.co/api/embed/86ba7b2c2643544a7f58764f067961b960afba52.svg "Repobeats analytics image")
 
