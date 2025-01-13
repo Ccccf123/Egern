@@ -1,4 +1,4 @@
-# 引用链接: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/%E4%B8%83%E7%8C%AB%E5%B0%8F%E8%AF%B4%E5%8E%BB%E5%B9%BF%E5%91%8A.sgmodule
+# 引用链接: https://raw.githubusercontent.com/QingRex/LoonKissSurge/main/Surge/%E4%B8%83%E7%8C%AB%E5%B0%8F%E8%AF%B4%E5%8E%BB%E5%B9%BF%E5%91%8A.sgmodule
 #!name=七猫小说去广告
 #!desc=移除大部分七猫小说广告，但受限于七猫小说自身对MitM和VPN状态的检测，部分页面广告无法移除。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]

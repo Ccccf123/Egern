@@ -1,4 +1,4 @@
-# 引用链接: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/%E8%87%AA%E5%8A%A8%E5%8A%A0%E5%85%A5TF.sgmodule
+# 引用链接: https://raw.githubusercontent.com/QingRex/LoonKissSurge/main/Surge/%E8%87%AA%E5%8A%A8%E5%8A%A0%E5%85%A5TF.sgmodule
 #!name=自动加入TestFlight
 #!desc=自动监控TestFlight名额，一旦有新的名额即刻加入。
 #!author=DecoAri[https://github.com/DecoAri],xream[https://github.com/xream]
