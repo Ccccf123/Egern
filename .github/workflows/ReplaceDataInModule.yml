@@ -1,0 +1,45 @@
+name: Replace data in .module Files
+
+on:
+  workflow_dispatch:
+  # schedule:
+    # - cron: "30 * * * *"
+
+permissions:
+  actions: write  
+  contents: write  
+
+jobs:
+  replace-date:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+        with:
+          repository: sooyaaabo/Egern
+          path: Egern
+          token: ${{ secrets.GITHUB_TOKEN }} 
+        
+      - name: Set timezone to China/Shanghai
+        run: |
+          sudo timedatectl set-timezone Asia/Shanghai
+
+      - name: Find and update .module files
+        run: |
+          cd Egern
+          # 查找所有的 .module 文件
+          find . -name "*.module" -print0 | while IFS= read -r -d '' file; do
+            # 删除特定行并替换首页
+            sed -i '/#!loon_version=3.2.5(805)/d' "$file"
+            sed -i 's|#!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md|#!homepage=https://github.com/sooyaaabo/Egern|' "$file"
+          done
+          
+      - name: Commit changes
+        run: |
+          cd Loon
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "Routine Updates" || echo "No changes to commit"
+          git push
