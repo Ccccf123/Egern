@@ -1,0 +1,95 @@
+#!name=WebPage
+#!desc=网页去广告
+#!author=@RuCu6 @limbopro @ddgksf2013 @可莉🅥
+#!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdOff.png
+#!category=去广告, RuCu6, limbopro, ddgksf2013
+#!homepage=https://github.com/sooyaaabo/Egern
+#!date=2024-10-06 23:20
+
+[URL Rewrite]
+# -----------可莉🅥----------- #
+# 555电影
+^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/advert\/config reject-dict
+
+# -----------Rucu6----------- #
+# 谷歌服务重定向 //*.google.cn
+^https?:\/\/www\.google\.cn https://www.google.com 302
+^https?:\/\/translate\.google\.cn https://translate.google.com 302
+# PornHub //*.pornhub.com
+^https:\/\/(cn|www)\.pornhub\.com\/_xa\/ads(_batch)?\? - reject
+# 禁漫天堂 //18comic.org, 18comic.vip
+^https:\/\/18comic\.(org|vip)\/templates\/frontend\/airav\/js\/jquery.avs.*?\.js.* - reject
+# Avple 弹窗跳转
+^https:\/\/asserts\.avple\.tv\/file\/avple-images\/ad\.js - reject
+# PornHub - https://cn.pornhub.com
+^https?:\/\/(cn|www)\.pornhub\.com\/_xa\/ads - reject-dict
+
+[Script]
+# 555电影
+555电影@可莉🅥 = type=http-response, pattern=^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/movie\/index_recommend\?, script-path = https://kelee.one/Resource/Script/555DY/555DY_remove_ads.js, requires-body = true
+
+# 百度防跳转
+百度防跳转@RuCu6 = type=http-response, pattern=^https:\/\/boxer\.baidu\.com\/scheme\?scheme, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduNoRedirect.js, requires-body=true
+
+# 百度首页
+百度首页@RuCu6 = type=http-response, pattern=^https:\/\/(www|m)\.baidu\.com(\/|\/\?(tn=&)?from=\d+\w)?$, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduIndex.js, requires-body=true
+
+# 百度知道
+百度知道@RuCu6 = type=http-response, pattern=^https:\/\/zhidao\.baidu\.com\/(question|index|\?fr|\?word), script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduZhidao.js, requires-body=true
+
+# JavDB (https://javdb.com/)
+JavDB@RuCu6 = type=http-response, pattern=^https:\/\/javdb\.com\/(?!over18\?), script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/WebPage/JavDB.js, requires-body=true
+
+# 在线之家 - https://www.zxzjhd.com/
+在线之家@ddgksf2013 = type=http-response, pattern=^https?:\/\/www\.zxzjhd\.com\/($|[0-9a-zA-Z=_/-]+\.html$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/adguard.js, requires-body=true
+
+# FreeOk - https://www.freeok.vip
+FreeOk@ddgksf2013 = type=http-response, pattern=^https?:\/\/www\.freeok\.(vip|pro)(\/$|\/[0-9a-zA-Z=_/-]+\.html$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/adguard.js, requires-body=true
+
+# 哔嘀影视 - https://www.bdys01.com 
+哔嘀影视@ddgksf2013 = type=http-response, pattern=^https?:\/\/.*bdys.*com\/($|([a-z]+)\/(play\/)?\d+.*$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/bdys.js, requires-body=true
+
+# PornHub - https://cn.pornhub.com
+PornHub@ddgksf2013 = type=http-response, pattern=^https?:/\/(cn|www)\.pornhub\.com\/($|(view|video).*$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pornhub.js, requires-body=true
+
+# Bimi - https://www.bimi.net
+Bimi@ddgksf2013 = type=http-response, pattern=^https?:/\/.*bimi.*net\/($|(vodshow|bangumi|type)\/[0-9a-z-\/]+\/$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/bimi.js, requires-body=true
+
+# 禁漫天堂 - https://18comic.org
+禁漫天堂@ddgksf2013 = type=http-response, pattern=^https?:\/\/.*18comic\.org\/($|(album|photo).*$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/18comic.js, requires-body=true
+
+# 剧迷 - https://gimys.app
+剧迷@ddgksf2013 = type=http-response, pattern=^https?:\/\/.*gimy.*\/($|[0-9a-zA-Z=_/-]+\.html$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/gimytv.js, requires-body=true
+
+# 厂长电影 - https://czzy.art/
+厂长电影@ddgksf2013 = type=http-response, pattern=^https?:\/\/.*czzy.*\/($|\?btwaf=\w+$|[0-9a-zA-Z=_/-]+\.html), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/qianoo.js, requires-body=true
+
+# 茶杯狐 - https://cupfox.app
+茶杯狐@ddgksf2013 = type=http-response, pattern=^https?:/\/.*cupfox\.*\/($|[\u4E00-\u9FFFa-zA-Z0-9%=_/-]+$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/cupbox.js, requires-body=true
+
+# Cokemv - https://cokemv.me 
+Cokemv@ddgksf2013 = type=http-response, pattern=^https?:/\/cokemv\.me\/($|vod.*$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/cokemv.js, requires-body=true
+
+# 555影视 - https://555yy6.com
+555影视@ddgksf2013 = type=http-response, pattern=^https?:\/\/.*5y.*\/($|[0-9a-zA-Z=_/-]+\.html$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/555.js, requires-body=true
+
+# 泥巴影视 - https://m.nivod4.tv
+泥巴影视@ddgksf2013 = type=http-response, pattern=^https?:\/\/.*nivod.*\/($|[0-9a-zA-Z=_/-]+\.html), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/nivod.js, requires-body=true
+
+# 奈飞鸭 - https://yanetflix.com
+奈飞鸭@ddgksf2013 = type=http-response, pattern=^https?:\/\/.*netflix.*\/($|[0-9a-zA-Z=_/-]+\.html$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/netflix.js, requires-body=true
+
+# LeZhu - http://www.lezhutv.com
+LeZhu@ddgksf2013 = type=http-response, pattern=^https?:/\/.*lezhutv\.com\/($|(type|detail|play|index).*$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/lezhu.js, requires-body=true
+
+# 天空影视 - https://tkznp.com/
+天空影视@ddgksf2013 = type=http-response, pattern=^https?:\/\/.*tkznp.*com\/($|[0-9a-zA-Z=_/-]+\.html$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/tkys.js, requires-body=true
+
+# 真不卡 - https://www.ikandy.fun
+真不卡@ddgksf2013 = type=http-response, pattern=^https?:\/\/.*ikandy.*fun\/($|(vod|top).*$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/zhenbuka.js, requires-body=true
+
+# libvio - https://www.libvio.me
+libvio@ddgksf2013 = type=http-response, pattern=^https?:\/\/.*libvio.*me\/($|[0-9a-zA-Z=_/-]+\.html$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/libvio.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% app-v1.ecoliving168.com, boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, *.pornhub.com, 18comic.org, 18comic.vip, www.javbus.com, javdb.com, *.avple.tv, jable.tv, www.zxzjhd.com, m.nivod4.tv, *.freeok.*, *netflix*, *bdys*, *cupfox*, *cokemv*, *lezhutv*, *bimi*, *5y*, *gimy*, *tkznp*, *czzy*, *ikandy*, *libvio*
