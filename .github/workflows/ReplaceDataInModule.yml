@@ -1,4 +1,4 @@
-name: Replace data in .module Files
+name: Update data in .module Files
 
 on:
   workflow_dispatch:
@@ -41,5 +41,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add .
-          git commit -m "Routine Updates" || echo "No changes to commit"
+          git commit -m "Update Data In Module" || echo "No changes to commit"
           git push
