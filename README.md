@@ -1,7 +1,19 @@
 # Egern
-自用模块（Egern与Shadowrocket均可用），由Script Hub转换而来，不保证有效性。（不再维护）
+**禁止Fork! 禁止Fork! 禁止Fork!**
 
-建议查看[QingRex](https://github.com/QingRex)的[LoonKissSurge](https://github.com/QingRex/LoonKissSurge)项目，其网站为https://surge.qingr.moe
+>  [!CAUTION]
+>
+> - 禁止在中华人民共和国境内平台公开传播本仓库内的任何内容或以此牟利！
+
+## 仓库说明
+
+- **module**
+
+  该文件夹下模块文件引用自[sooyaaabo/Loon](https://github.com/sooyaaabo/Loon/tree/main/Plugin)中的插件，经Script-Hub转换而生成。模块文件的有效性请自行测试，不保证均适用于Egern、Surge、Shadworockets。
+
+- **sgmodule**
+
+  该文件夹下模块文件引用自[QingRex/LoonKissSurge](https://surge.qingr.moe/)，感谢原作者[QingRex](https://github.com/QingRex)的辛苦付出。
 
 ![Alt](https://repobeats.axiom.co/api/embed/86ba7b2c2643544a7f58764f067961b960afba52.svg "Repobeats analytics image")
 
