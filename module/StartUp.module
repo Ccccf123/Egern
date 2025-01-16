@@ -4,11 +4,11 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/AdReject.png
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-01-09 18:00
+#!date=2025-01-16 19:15
 
 [URL Rewrite]
 # Version
-^https?:\/\/2025.01.09/c364/v2.0.564 - reject-200
+^https?:\/\/2025.01.16/c365/v2.0.565 - reject-200
 # 58同城
 ^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv) - reject-200
 # 555电影
@@ -721,6 +721,8 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do - reject-
 ^https?:\/\/.*zhangyuyidong\.cn\/api\/ - reject-200
 # 站酷zcool
 ^https?:\/\/api\.zcool\.com\.cn\/.*common\/open-screen - reject-200
+# 纵横小说
+^https?:\/\/.*zongheng\.com\/iosapi\/system\/startup - reject-200
 
 [Script]
 body_rewrite_83 = type=http-response, pattern=^https?:\/\/beta-api\.crunchyroll\.com\/cms, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22replace-regex%22%2C%5B%5B%22offset_ms%5C%22%3A%5C%5Cd%2B%22%2C%22offset_ms%5C%22%3A99999999999999%22%5D%5D%5D%5D
