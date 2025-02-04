@@ -28,11 +28,11 @@ jobs:
       - name: Replace #!date
         run: |
           cd Egern
-          CURRENT_DATE="#!date = 2025-02-04 17:00"
+          CURRENT_DATE="#!date=2025-02-04 17:00"
           
           # 查找并替换文件内容
           find . -type f -name "*.module" -exec sed -i \
-            -e "s/^#!date =.*/$CURRENT_DATE/" \
+            -e "s/^#!date=.*/$CURRENT_DATE/" \
           
       - name: Commit changes
         run: |
