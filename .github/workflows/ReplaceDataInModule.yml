@@ -1,4 +1,4 @@
-name: Update data in .module Files
+name: Replace data in .module Files
 
 on:
   workflow_dispatch:
@@ -25,15 +25,14 @@ jobs:
         run: |
           sudo timedatectl set-timezone Asia/Shanghai
 
-      - name: Find and update .module files
+      - name: Replace #!date
         run: |
           cd Egern
-          # 查找所有的 .module 文件
-          find . -name "*.module" -print0 | while IFS= read -r -d '' file; do
-            # 删除特定行并替换首页
-            sed -i '/#!loon_version=3.2.5(805)/d' "$file"
-            sed -i 's|#!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md|#!homepage=https://github.com/sooyaaabo/Egern|' "$file"
-          done
+          CURRENT_DATE="#!date = 2025-02-04 17:00"
+          
+          # 查找并替换文件内容
+          find . -type f -name "*.module" -exec sed -i \
+            -e "s/^#!date =.*/$CURRENT_DATE/" \
           
       - name: Commit changes
         run: |
