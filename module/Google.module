@@ -5,7 +5,7 @@ ame=Google
 #!openUrl=https://apps.apple.com/app/id284815942
 #!tag=功能增强
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-01-01 00:00
+#!date=2025-02-04 17:00
 
 [URL Rewrite]
 # ^https?:\/\/(www.)?(g|google)\.(cn|com\.hk) 307 https://www.google.com

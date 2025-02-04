@@ -5,7 +5,7 @@
 #!openUrl=https://apps.apple.com/app/id444934666
 #!tag=功能增强
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-01-01 00:00
+#!date=2025-02-04 17:00
 
 [URL Rewrite]
 (^https:\/\/c\.pc\.qq\.com\/middlem\.html\?pfurl=)(http.*)(&pfuin=.*) $2 307
