@@ -25,14 +25,14 @@ jobs:
         run: |
           sudo timedatectl set-timezone Asia/Shanghai
 
-      - name: Replace #!date
+      - name: Find and replace date in .module files
         run: |
-          cd Egern
-          CURRENT_DATE="#!date=2025-02-04 17:00"
-          
-          # 查找并替换文件内容
-          find . -type f -name "*.module" -exec sed -i \
-            -e "s/^#!date=.*/$CURRENT_DATE/" \
+          #!/bin/bash
+          # 使用 find 命令查找所有 .module 文件
+          find . -type f -name "*.module" | while read file; do
+            # 使用 sed 替换文件中的 #!date= 开头的行
+            sed -i 's|#!date=.*|#!date=2025-02-04 17:00|' "$file"
+          done
           
       - name: Commit changes
         run: |
