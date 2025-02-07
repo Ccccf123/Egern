@@ -34,10 +34,10 @@ dns:
       value: Domestic-DNS
 policy_groups:
 - external:
-    name: SubName //替换为你的机场名称
+    name: SubName 
     type: select
-    urls: // 下方替换为你的订阅链接
-    - http://your-service-provider 
+    urls: 
+    - http://your-service-provider
     filter: ''
     icon: https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Egern-02.png
     hidden: false
