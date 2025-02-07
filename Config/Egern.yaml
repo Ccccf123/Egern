@@ -101,6 +101,7 @@ policy_groups:
     name: Final
     policies:
     - Proxy
+    - DIRECT
     - Hong Kong
     - Macao
     - TaiWan
@@ -244,58 +245,58 @@ policy_groups:
     icon: https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Conflux.png
 rules:
 - rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Direct.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Direct.yaml
     policy: DIRECT
 - rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Reject.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Reject.yaml
     policy: REJECT
 - rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/AI.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/AI.yaml
     policy: OpenAI
 - rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Github.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Github.yaml
     policy: GitHub
 - rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Microsoft.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Microsoft.yaml
     policy: Microsoft
 - rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Google.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Google.yaml
     policy: Google
 - rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Telegram.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Telegram.yaml
     policy: Telegram
 - rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Twitter.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Twitter.yaml
     policy: X
 - rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Emby.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Emby.yaml
     policy: Emby
 - rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/YouTube.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/YouTube.yaml
     policy: YouTube
 - rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Netflix.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Netflix.yaml
     policy: Netflix
 - rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/TikTok.yaml
-    policy: 国际媒体
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/TikTok.yaml
+    policy: TikTok
 - rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/AppleProxy.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/AppleProxy.yaml
     policy: AppleProxy
 - rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/ProxyGFW.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/ProxyGFW.yaml
     policy: Proxy
 - rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Apple.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Apple.yaml
     policy: DIRECT
 - rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Lan.yaml
+    match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Lan.yaml
     policy: DIRECT
 - geoip:
     match: CN
     policy: DIRECT
 - default:
-    policy: 兜底分流
+    policy: Final
 mitm:
   enabled: true
 modules:
