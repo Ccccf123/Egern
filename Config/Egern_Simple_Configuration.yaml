@@ -1,3 +1,5 @@
+# 2025-02-07 17:30
+
 # TUN模式
 vif_only: true
 # IPv6
@@ -301,142 +303,142 @@ mitm:
   enabled: true
 modules:
 - name: WebPage
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/WebPage.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/WebPage.module
   enabled: true
 - name: 银行
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/Bank.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Bank.module
   enabled: true
 - name: 中国移动
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/ChinaMobile.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/ChinaMobile.module
   enabled: true
 - name: Redirect
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/Redirect.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Redirect.module
   enabled: true
 - name: AppRaven
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/AppRaven.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/AppRaven.module
   enabled: true
 - name: RevenueCat
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/RevenueCat.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/RevenueCat.module
   enabled: true
 - name: iTunes
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/iTunes.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/iTunes.module
   enabled: false
 - name: Google
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/Google.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Google.module
   enabled: true
 - name: QQ
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/QQ.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/QQ.module
   enabled: true
 - name: 微信
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/WeChat.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/WeChat.module
   enabled: true
 - name: 夸克
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/Quark.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Quark.module
   enabled: true
 - name: 阿里云盘
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/Alipan.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Alipan.module
   enabled: true
 - name: 百度网盘
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/BaiduNetDisk.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/BaiduNetDisk.module
   enabled: true
 - name: 123云盘
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/123Pan.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/123Pan.module
   enabled: true
 - name: 迅雷
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/ThunderCloudDisk.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/ThunderCloudDisk.module
   enabled: true
 - name: 高德地图
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/Amap.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Amap.module
   enabled: true
 - name: 小红书
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/RedNote.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/RedNote.module
   enabled: true
 - name: VVebo
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/VVebo.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/VVebo.module
   enabled: true
 - name: 微博
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/Weibo.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Weibo.module
   enabled: true
 - name: 微博轻享版
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/Weibo_intl.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Weibo_intl.module
   enabled: false
 - name: QQ音乐
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/QQMusic.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/QQMusic.module
   enabled: true
 - name: 网易云音乐
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/NeteaseMusic.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/NeteaseMusic.module
   enabled: true
 - name: 酷我音乐
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/KuwoMusic.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/KuwoMusic.module
   enabled: true
 - name: 喜马拉雅
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/Ximalaya.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Ximalaya.module
   enabled: true
 - name: Listenify
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/Listenify.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Listenify.module
   enabled: true
 - name: 腾讯视频
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/TencentVideo.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/TencentVideo.module
   enabled: true
 - name: 爱奇艺
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/IQIYI.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/IQIYI.module
   enabled: true
 - name: 优酷视频
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/YoukuVideo.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/YoukuVideo.module
   enabled: true
 - name: 芒果TV
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/MangoTV.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/MangoTV.module
   enabled: true
 - name: 哔哩哔哩
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/BiliBili.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/BiliBili.module
   enabled: true
 - name: 萤石云视频
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/Ezviz.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Ezviz.module
   enabled: true
 - name: XPTV
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/XPTV.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/XPTV.module
   enabled: true
 - name: CMS Adblocker
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/CMS_Adblock.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/CMS_Adblock.module
   enabled: true
 - name: 铁路12306
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/Railway12306.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Railway12306.module
   enabled: true
 - name: 淘宝
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/Taobao.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Taobao.module
   enabled: true
 - name: 闲鱼
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/Goofish.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Goofish.module
   enabled: true
 - name: 京东
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/Jingdong.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Jingdong.module
   enabled: true
 - name: 什么值得买
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/Zhidemai.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Zhidemai.module
   enabled: true
 - name: 菜鸟
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/Cainiao.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Cainiao.module
   enabled: true
 - name: 酷安
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/CoolApk.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/CoolApk.module
   enabled: true
 - name: IT之家
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/IThome.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/IThome.module
   enabled: true
 - name: 知乎
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/Zhihu.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Zhihu.module
   enabled: true
 - name: Soul
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/Soul.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Soul.module
   enabled: true
 - name: MyBlockAds
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/MyBlockAds.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/MyBlockAds.module
   enabled: true
 - name: 墨鱼去开屏
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/StartUp.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/StartUp.module
   enabled: true
 - name: 广告拦截合集
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/module/AdsBlocker.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/AdsBlocker.module
   enabled: true
 - name: BoxJS
   url: https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.surge.sgmodule
