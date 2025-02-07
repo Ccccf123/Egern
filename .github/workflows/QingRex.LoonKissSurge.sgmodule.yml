@@ -43,7 +43,7 @@ jobs:
 
     - name: Egern模块
       run: |
-        mkdir -p Egern/sgmodule
+        mkdir -p Egern/Sgmodule
         # 定义模块
         declare -A sgmodules=(
             [BlockAdvertisers]="https://raw.githubusercontent.com/QingRex/LoonKissSurge/main/Surge/%E5%B9%BF%E5%91%8A%E5%B9%B3%E5%8F%B0%E6%8B%A6%E6%88%AA%E5%99%A8.sgmodule"
@@ -209,15 +209,14 @@ jobs:
         # 下载模块并在文件中添加原链接
         for sgmodule_name in "${!sgmodules[@]}"; do
             url="${sgmodules[$sgmodule_name]}"
-            curl -A -L -o "Egern/sgmodule/${sgmodule_name}.sgmodule" "$url"
+            curl -A -L -o "Egern/Sgmodule/${sgmodule_name}.sgmodule" "$url"
             
             # 将原链接添加到文件开头
-            # echo "# 原链接 : $url" | cat - "Egern/Plugin/$plugin_name.plugin" > temp && mv temp "Egern/Plugin/$plugin_name.plugin"
-            sed -i "1s|^|# 引用链接: $url\n|" "Egern/sgmodule/$sgmodule_name.sgmodule"  # 在文件开头添加原链接
+            sed -i "1s|^|# 引用链接: $url\n|" "Egern/Sgmodule/$sgmodule_name.sgmodule"  # 在文件开头添加原链接
         done
 
         # 删除 error.log 文件
-        # rm -f Egern/Plugin/error.log || echo "No error log to delete"
+        # rm -f Egern/Sgmodule/error.log || echo "No error log to delete"
 
 
 ###### Commit
