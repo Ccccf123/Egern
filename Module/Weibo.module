@@ -1,11 +1,11 @@
 #!name=微博
 #!desc=微博全面净化
-#!author=RuCu6[https://github.com/RuCu6], fmz200[https://github.com/fmz200], zmqcherish[https://github.com/zmqcherish], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author=RuCu6[https://github.com/RuCu6], fmz200[https://github.com/fmz200], zmqcherish[https://github.com/zmqcherish], neishe321[https://github.com/neishe321], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Weibo.png
 #!openUrl=https://apps.apple.com/app/id350962117
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-02-08 22:00
+#!date=2025-02-11 10:00
 
 [Rule]
 # 请求放行
@@ -18,6 +18,7 @@ URL-REGEX,"^https?:\/\/api\.weibo\.cn\/2\/(push\/active|client\/addlog_batch|ad\
 URL-REGEX,"^https?:\/\/api-cloudim\.api\.weibo\.com\/v1\/log\/",REJECT-DROP
 # 微博开屏广告
 DOMAIN,bootpreload.uve.weibo.com,REJECT
+DOMAIN,bootrealtime.uve.weibo.com,REJECT
 # 其他广告
 DOMAIN-SUFFIX,fastimage.uve.weibo.com,REJECT
 DOMAIN-SUFFIX,adimg.vue.weibo.com,REJECT
@@ -74,8 +75,13 @@ DOMAIN,adpinpai.video.weibocdn.com,REJECT
 # 微博长文章推广
 ^https:\/\/card\.weibo\.com\/article\/m\/aj\/(?:reward|uvead) - reject-dict
 ^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(?:reward|uvead) - reject-dict
+# 推广内容
+^https?:\/\/api\.weibo\.cn\/\d\/(push\/active|client\/addlog_batch|container\/asyn|shproxy\/chaohua\/discovery\/searchactive|checkin\/show|!\/live\/media_homelist|statuses\/container_positive|!\/was\/finder\/searchbarchange) - reject
 
 [Script]
+# 微博净化
+微博净化@neishe321 = type=http-response, pattern=^https?:\/\/api\.weibo\.cn\/\d\/(guest\/statuses_extend|statuses\/extend|statuses\/show|comments\/build_comments|search\/(finder|container_timeline|container_discover)|searchall|statuses\/container_timeline(_.*)?(\?.*)?$|profile\/container_timeline|messageflow\/notice|statuses\/repost_timeline|flowlist), script-path=https://raw.githubusercontent.com/neishe321/My_Scripts/main/Scripts/weibo_remove_ads.js, requires-body=true
+
 # 首页 - 签到、发布按钮、侧边栏、右上角红包、顶部标签页、侧边栏提醒、超话标签页悬浮、顶部直播
 移除首页推广 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/(?:checkin\/show|client\/publisher_list|push\/active), script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body=true
 
