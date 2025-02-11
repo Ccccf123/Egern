@@ -76,7 +76,15 @@ DOMAIN,adpinpai.video.weibocdn.com,REJECT
 ^https:\/\/card\.weibo\.com\/article\/m\/aj\/(?:reward|uvead) - reject-dict
 ^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(?:reward|uvead) - reject-dict
 # 推广内容
-^https?:\/\/api\.weibo\.cn\/\d\/(push\/active|client\/addlog_batch|container\/asyn|shproxy\/chaohua\/discovery\/searchactive|checkin\/show|!\/live\/media_homelist|statuses\/container_positive|!\/was\/finder\/searchbarchange) - reject
+# 各种推广
+^https?:\/\/api\.weibo\.cn\/\d+\/push\/active - reject-dict
+^https?:\/\/api\.weibo\.cn\/\d+\/client\/addlog_batch - reject-dict
+^https?:\/\/api\.weibo\.cn\/\d+\/container\/asyn - reject-dict
+^https?:\/\/api\.weibo\.cn\/\d+\/shproxy\/chaohua\/discovery\/searchactive - reject-dict
+^https?:\/\/api\.weibo\.cn\/\d+\/checkin\/show - reject-dict
+^https?:\/\/api\.weibo\.cn\/\d+\/!\/live\/media_homelist - reject-dict
+^https?:\/\/api\.weibo\.cn\/\d+\/statuses\/container_positive - reject-dict
+^https?:\/\/api\.weibo\.cn\/\d+\/!\/was\/finder\/searchbarchange - reject-dict
 
 [Script]
 # 微博净化
