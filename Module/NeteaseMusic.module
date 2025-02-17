@@ -5,7 +5,7 @@
 #!openUrl=https://apps.apple.com/app/id590338362
 #!tag=去广告, 解锁会员
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-02-08 21:00
+#!date=2025-02-17 10:00
 
 [Rule]
 DOMAIN,httpdns.n.netease.com,REJECT
@@ -17,7 +17,7 @@ DOMAIN,ipv4.music.163.com,REJECT
 DOMAIN,ipv6.music.163.com,REJECT
 
 [Header Rewrite]
-http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/e?api\/(?:batch|v\d\/resource\/comment\/floor\/get|homepage\/block\/page|link\/page\/rcmd\/(block\/resource\/multi\/refresh|resource\/show)|user\/follow\/users\/mixed\/get|link\/home\/framework\/tab|link\/position\/show\/resource|link\/page\/discovery\/resource\/show) header-del x-aeapi
+# http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/e?api\/(?:batch|v\d\/resource\/comment\/floor\/get|homepage\/block\/page|link\/page\/rcmd\/(block\/resource\/multi\/refresh|resource\/show)|user\/follow\/users\/mixed\/get|link\/home\/framework\/tab|link\/position\/show\/resource|link\/page\/discovery\/resource\/show) header-del x-aeapi
 
 [URL Rewrite]
 # 开屏广告
