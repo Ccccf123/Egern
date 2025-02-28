@@ -5,20 +5,21 @@
 #!openUrl=https://apps.apple.com/app/id350962117
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-02-22 22:00
+#!date=2025-03-01 01:00
 
 [Rule]
 # 请求放行
 DOMAIN-SUFFIX,uve.weibo.com,DIRECT
-# 拦截广告
-DOMAIN,huodong.weibo.cn,REJECT
-DOMAIN-SUFFIX,biz.weibo.com,REJECT
-# 收集用户信息，上传用户日志的请求
-URL-REGEX,"^https?:\/\/api\.weibo\.cn\/2\/(push\/active|client\/addlog_batch|ad\/preload)",REJECT-DROP
-URL-REGEX,"^https?:\/\/api-cloudim\.api\.weibo\.com\/v1\/log\/",REJECT-DROP
 # 微博开屏广告
 DOMAIN,bootpreload.uve.weibo.com,REJECT
 DOMAIN,bootrealtime.uve.weibo.com,REJECT
+DOMAIN,huodong.weibo.cn,REJECT
+DOMAIN-SUFFIX,biz.weibo.com,REJECT
+# 收集用户信息，上传用户日志的请求
+DOMAIN,datacollection.uve.weibo.com,REJECT
+DOMAIN,adpinpai.video.weibocdn.com,REJECT
+URL-REGEX,"^https?:\/\/api\.weibo\.cn\/2\/(push\/active|client\/addlog_batch|ad\/preload)",REJECT-DROP
+URL-REGEX,"^https?:\/\/api-cloudim\.api\.weibo\.com\/v1\/log\/",REJECT-DROP
 # 其他广告
 DOMAIN-SUFFIX,fastimage.uve.weibo.com,REJECT
 DOMAIN-SUFFIX,adimg.vue.weibo.com,REJECT
@@ -47,9 +48,6 @@ DOMAIN-SUFFIX,alitui.weibo.com.cn,REJECT
 DOMAIN-SUFFIX,tui.weibo.com,REJECT
 DOMAIN-SUFFIX,wax.weibo.com.cn,REJECT
 DOMAIN-SUFFIX,ad.weibo.com,REJECT
-# 屏蔽信息收集
-DOMAIN,datacollection.uve.weibo.com,REJECT
-DOMAIN,adpinpai.video.weibocdn.com,REJECT
 
 [URL Rewrite]
 # 首页 - 签到、发布按钮、侧边栏、右上角红包、顶部标签页、侧边栏提醒、超话标签页悬浮、顶部直播
