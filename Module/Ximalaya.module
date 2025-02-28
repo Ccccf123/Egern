@@ -5,7 +5,7 @@
 #!openUrl=https://apps.apple.com/app/id876336838
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-02-04 17:00
+#!date=2025-02-28 22:00
 
 [Rule]
 DOMAIN,adse.ximalaya.com,REJECT
@@ -162,8 +162,9 @@ DOMAIN,adx.halomobi.com,REJECT
 ^https:\/\/(?:mobile|mobilehera|mobwsa)\.ximalaya\.com\/subscribe\/v\d\/subscribe\/tagAlbumList$ - reject-dict
 # 订阅 - 追更 -追更推荐
 ^https:\/\/(?:mobile|mobilehera|mobwsa)\.ximalaya\.com\/track-feed\/v\d\/chase\/recommend\/ - reject-dict
-# 订阅 - 圈子 - 圈子推荐
+# 订阅 - 关注 - 精选节目推荐
 ^https:\/\/(?:mobile|mobilehera|mobwsa)\.ximalaya\.com\/social-web\/follow-stream\/category\/\d+$ - reject-dict
+# 播放器 - 推荐
 ^https:\/\/(?:mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-playpage\/playpage\/recommendContentV\d\/ - reject-dict
 # 播放器 - 推广
 ^https:\/\/(?:mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-playpage\/playpage\/recommend\/resource\/allocation\/ - reject-dict
@@ -172,7 +173,7 @@ DOMAIN,adx.halomobi.com,REJECT
 ^https:\/\/(?:mobile|mobilehera|mobwsa)\.ximalaya\.com\/business-sale-promotion-guide-mobile-web\/popup\/ - reject-dict
 # 皮肤配置
 ^https:\/\/(?:mobile|mobilehera|mobwsa)\.ximalaya\.com\/app-skin-service\/skin\/setting\/info\/ - reject-dict
-# 我的页面 - 关注
+# 我的页面 - 直播提醒气泡
 ^https:\/\/livewsa\.ximalaya\.com\/lamia\/v1\/subscribe\/status$ - reject-dict
 # 我的页面 - 本地 - 你可能感兴趣的内容
 ^https:\/\/(?:mobile|mobilehera|mobwsa)\.ximalaya\.com\/subscribe\/v\d\/subscribe\/recommend\? - reject-dict
