@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/RevenueCat.png
 #!tag=解锁会员
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-02-04 17:00
+#!date=2025-03-03 18:30
 
 [URL Rewrite]
 ^https:\/\/api\.lianjiu\.fun\/app\/api\/v1\/profile - reject
@@ -16,9 +16,9 @@ RevenueCat解锁 = type=http-response, pattern=^https:\/\/api\.(revenuecat|rc-ba
 RevenueCat解锁 = type=http-request, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js
 
 # Guding88
-Revenuecat合集 = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js, requires-body=true
+Revenuecat合集 = type=http-response, pattern=^https?:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js, requires-body=true
 
-Revenuecat清除缓存 = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js
+Revenuecat清除缓存 = type=http-request, pattern=^https?:\/\/api\.(revenuecat|rc-backup)\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js
 
 # ddgksf2013
 RevenueCatVip = type=http-response, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js, requires-body=true
@@ -26,9 +26,9 @@ RevenueCatVip = type=http-response, pattern=^https:\/\/api\.(revenuecat|rc-backu
 RevenueCatDeleteHeader = type=http-request, pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/deleteHeader.js
 
 # Yu9191
-RevenueCat修改 = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js, requires-body=true
+RevenueCat修改 = type=http-response, pattern=^https:\/\/(api\.revenuecat\.com|api\.rc-backup\.com)\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js, requires-body=true
 
-RevenueCat清理 = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js
+RevenueCat清理 = type=http-request, pattern=^https:\/\/(api\.revenuecat\.com|api\.rc-backup\.com)\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js
 
 [MITM]
 hostname = %APPEND% api.revenuecat.com, api.rc-backup.com, api.lianjiu.fun
