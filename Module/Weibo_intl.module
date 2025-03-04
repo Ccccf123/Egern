@@ -5,20 +5,22 @@
 #!openUrl=https://apps.apple.com/app/id1215210046
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-02-04 17:00
+#!date=2025-03-05 01:00
 
-[URL Rewrite]
-#  开屏广告
-^https?:\/\/open\.e\.kuaishou\.com\/rest\/e\/v\d\/open - reject-dict
-^https?:\/\/mi\.gdt\.qq\.com\/ - reject
-^https?:\/\/tqt\.weibo\.cn\/ - reject
-^https?:\/\/adstrategy\.biz\.weibo\.com\/v\d\/strategy\/ad - reject-dict
-^https?:\/\/boot(?:preload|realtime)\.uve\.weibo\.com\/v\d\/ad\/(?:preload|realtime) - reject-dict
+[Map Local]
 # 热门视频、热推荐
-^https?:\/\/api\.weibo\.c(n|om)\/\d\/(cardlist\?v_f=\d|ad\/weibointl\?) - reject-dict
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users - reject-dict
+^https?:\/\/api\.weibo\.c(n|om)\/\d\/(cardlist\?v_f=\d|ad\/weibointl\?) data-type=text data="{}" status-code=200
+
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users data-type=text data="{}" status-code=200
+
 # 私信中绿洲的擦边诱导推广
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=treehole&auth= - reject-dict
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=treehole&auth= data-type=text data="{}" status-code=200
+
+^https?:\/\/api\.weibo\.cn\/2\/ad\/weibointl\? data-type=text data="{}" status-code=200
+
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_searching_info& data-type=text data="{"retcode":0,"info":"","data":{"expiration_time":"86400","cards":[{"tip":"搜索微博","word":""}]}}" header="Content-Type:text/plain"
+
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?ct=feed&a=search_topic& data-type=text data="{"retcode":0,"info":"","data":[],"ext":{}}" header="Content-Type:text/plain"
 
 [Script]
 # 趋势页、开屏广告、用户中心、热搜置顶、我的页面 尊享专属、瀑布流去广告
@@ -29,4 +31,4 @@
 微博轻享版去广告 = type=http-response, pattern=^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php, script-path=https://raw.githubusercontent.com/Keywos/rule/master/script/weibo_us/js/index.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% open.e.kuaishou.com, mi.gdt.qq.com, tqt.weibo.cn, *biz.weibo.com, *uve.weibo.com, *api.weibo.cn
+hostname = %APPEND% api.weibo.cn, weibointl.api.weibo.cn, open.e.kuaishou.com, mi.gdt.qq.com, tqt.weibo.cn, *biz.weibo.com, *uve.weibo.com, *api.weibo.cn
