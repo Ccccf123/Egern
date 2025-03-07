@@ -4,7 +4,12 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Alook.png
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-02-04 17:00
+#!date=2025-03-06 00:00
+
+[Rule]
+DOMAIN-SUFFIX, creative.myavlive.com, REJECT
+DOMAIN-SUFFIX, trackwilltrk.com, REJECT
+DOMAIN-SUFFIX, tsyndicate.com, REJECT
 
 [URL Rewrite]
 # 谷歌服务重定向 //*.google.cn
@@ -18,6 +23,9 @@
 ^https?:\/\/(cn|www)\.pornhub\.com\/_xa\/ads - reject-dict
 
 [Script]
+# MissAV
+MissAV = type=http-response, pattern=^https:\/\/missav\.(?:ai|ws)\/(?!(build|fonts|img|js|api|cdn-cgi)\/)., script-path=https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/missav.html.js, requires-body=true 
+
 # 黑料网
 黑料不打烊 = type=http-response, pattern=^https:\/\/18hlw\.com\/?$, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/18hlw.js, requires-body=true
 
@@ -87,4 +95,4 @@ LeZhu = type=http-response, pattern=^https?:/\/.*lezhutv\.com\/($|(type|detail|p
 Libvio = type=http-response, pattern=^https?:\/\/.*libvio.*me\/($|[0-9a-zA-Z=_/-]+\.html$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/libvio.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% 18hlw.com, boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, asserts.avple.tv, javdb.com, *.pornhub.com, www.zxzjhd.com, m.nivod4.tv, *.freeok.*, *netflix*, *bdys*, *cupfox*, *cokemv*, *pornhub.com, *lezhutv*, *bimi*, 18comic.org, *5y*, *gimy*, *tkznp*, *czzy*, *ikandy*, *libvio*
+hostname = %APPEND% missav.ai, missav.ws, 18hlw.com, boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, asserts.avple.tv, javdb.com, *.pornhub.com, www.zxzjhd.com, m.nivod4.tv, *.freeok.*, *netflix*, *bdys*, *cupfox*, *cokemv*, *pornhub.com, *lezhutv*, *bimi*, 18comic.org, *5y*, *gimy*, *tkznp*, *czzy*, *ikandy*, *libvio*

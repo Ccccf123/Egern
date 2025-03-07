@@ -1,10 +1,10 @@
 #!name=MyBlockAds
 #!desc=去广告插件，以下app请使用单独插件：高德地图，哔哩哔哩，网易云音乐，微博，YouTube (Music)，知乎。
-#!author=RuCu6[https://github.com/RuCu6], zZPiglet[https://github.com/zZPiglet], app2smile[https://github.com/app2smile], ZenmoFeiShi[https://github.com/ZenmoFeiShi]
+#!author=RuCu6[https://github.com/RuCu6], zZPiglet[https://github.com/zZPiglet], app2smile[https://github.com/app2smile], ZenmoFeiShi[https://github.com/ZenmoFeiShi], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/MyBlockAds.png
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-02-04 17:00
+#!date=2025-03-06 23:40
 
 [Rule]
 # 12306
