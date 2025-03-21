@@ -31,7 +31,7 @@ jobs:
           # 使用 find 命令查找所有 .module 文件
           find . -type f -name "*.module" | while read file; do
             # 使用 sed 替换文件中的 #!date= 开头的行
-            sed -i 's|#!date=.*|#!date=2025-02-04 17:00|' "$file"
+            sed -i 's|#!date=.*|#!date=2025-02-21 23:00|' "$file"
           done
           
       - name: Commit changes
