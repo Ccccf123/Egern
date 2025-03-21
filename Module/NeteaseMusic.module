@@ -5,7 +5,7 @@
 #!openUrl=https://apps.apple.com/app/id590338362
 #!tag=去广告, 解锁会员
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-02-28 22:00
+#!date=2025-02-21 23:00
 
 [Rule]
 DOMAIN,iadmat.nosdn.127.net,REJECT

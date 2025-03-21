@@ -5,7 +5,7 @@
 #!openUrl=https://apps.apple.com/app/id547166701
 #!tag=去广告, 解锁会员
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-02-17 20:30
+#!date=2025-02-21 23:00
 
 [Rule]
 AND,((DOMAIN-KEYWORD,api100-core-quic-),(DOMAIN-SUFFIX,amemv.com)),REJECT
