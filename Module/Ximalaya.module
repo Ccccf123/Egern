@@ -5,10 +5,11 @@
 #!openUrl=https://apps.apple.com/app/id876336838
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-02-21 23:00
+#!date=2025-02-26 14:00
 
 [Rule]
 DOMAIN,adse.ximalaya.com,REJECT
+DOMAIN,adsehera.ximalaya.com,REJECT
 DOMAIN,adse.wsa.ximalaya.com,REJECT
 DOMAIN,adbehavior.ximalaya.com,REJECT
 DOMAIN,adbehavior.wsa.ximalaya.com,REJECT
