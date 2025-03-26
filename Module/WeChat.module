@@ -5,7 +5,7 @@
 #!openUrl=https://apps.apple.com/app/id414478124
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-02-21 23:00
+#!date=2025-03-27 00:00
 
 [Rule]
 # WeChat用户请走代理，微信用户直连
@@ -243,6 +243,21 @@ DOMAIN,e.jparking.cn,REJECT
 # 滴滴代驾 //daijia.kuaidadi.com, as.xiaojukeji.com
 ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/conf\?ns=daijia-front&name= - reject-dict
 ^https:\/\/daijia\.kuaidadi\.com\/gateway\?api=prado\.cms\.delivery\.batch&apiVe - reject-dict
+# 腾讯手机充值 //chong.qq.com
+ ^https:\/\/wx\.online-cmcc\.cn\/contactpoint\/customer\/api\/list\? reject-dict
+ ^https:\/\/wx\.10086\.cn\/qwhdhub\/activity\/info reject-dict
+
+[Body Rewrite]
+http-response-jq ^https:\/\/mcsp\.cloudpnr\.com\/api\/miniapp\/popular\/T_MINIAPP$ 'delpaths([["data"]])'
+http-response-jq ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad$ 'delpaths([["data",0]])'
+http-response-jq ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad$ 'delpaths([["data",1]])'
+http-response-jq ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad$ 'delpaths([["data",2]])'
+http-response-jq ^https:\/\/rms\.meituan\.com\/api\/v1\/rmsmina\/c\/queryShopPortalInfo\? 'delpaths([["data","popUpWindows"]])'
+http-response-jq ^https:\/\/chong\.qq\.com\/tws\/wxmobile\/GetProduct4App\? del(.respInfo.reserveProductList) | .respInfo.shortcut |= map(select(.name != "充流量" and .name != "领话费券"))
+http-response-jq ^https:\/\/chong\.qq\.com\/tws\/usernumberinfo\/GetUserInfo\? 'delpaths([["data","request","number","markSeat","servicehallOperList"]])'
+http-response-jq ^https:\/\/chong\.qq\.com\/tws\/usernumberinfo\/GetUserInfo\? 'delpaths([["data","request","number","servicehallOperList"]])'
+http-response-jq ^https:\/\/chong\.qq\.com\/tws\/usernumberinfo\/GetUserInfo\? 'delpaths([["data","request","number","markSeat","servicehallFuncList"]])'
+http-response-jq ^https:\/\/chong\.qq\.com\/tws\/usernumberinfo\/GetUserInfo\? 'delpaths([["data","request","number","servicehallFuncList"]])'
 
 [Script]
 body_rewrite_273 = type=http-response, pattern=^https:\/\/mcsp\.cloudpnr\.com\/api\/miniapp\/popular\/T_MINIAPP$, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22json-del%22%2C%5B%22data%22%5D%5D%5D
@@ -291,4 +306,4 @@ T3出行去广告 = type=http-response, pattern=^https:\/\/passenger\.t3go\.cn\/
 古茗去广告 = type=http-response, pattern=^https:\/\/newton\.gumingnc\.com\/newton-buyer\/newton\/buyer\/(ump|touch|external\/front), script-path=https://kelee.one/Resource/Script/WexinMiniPrograms/ming/ming.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, 3pp.starbucks.com.cn, aag.enmonster.com, activity.yonghuivip.com, ad.maoyan.com, ad.xiaotucc.com, ads.ishansong.com, alittle-tea.oss-cn-shanghai.aliyuncs.com, api-fouth-mem.huazhu.com, api-marketing.zhinengxiyifang.cn, api.hellobike.com, api.hengdianfilm.com, api.hongyibo.com.cn, api.kuaidihelp.com, api.maoyan.com, api.mcd.cn, api.pinduoduo.com, api.prod.dj.mstand.cn, api.songguo7.com, api.yonghuivip.com, apiproxy.zuche.com, apis.alenable.com, app.95504.net, app.homeinns.com, applets.jtexpress.com.cn, appuser-static.huolala.cn, as.xiaojukeji.com, capis*.didapinche.com, cappapi.alittle-tea.com, cbd-gateway-service-applets.hualala.com, ccmsupport-sz.tenpay.com, coco-com.e.verystar.net, creditcardapp.bankcomm.com, customer-app.sto.cn, daijia.kuaidadi.com, dock.tenchii.com, dsp.fcbox.com, file.dian.so, flow.dmall.com, fscdn.zto.com, gw-passenger-wap.01zhuanche.com, hdgateway.zto.com, htwkop.xiaojukeji.com, images.qmai.cn, lawsonapi.yorentown.com, m.ctrip.com, mapi.xiaotucc.com, mbmodule-openapi.paas.cmbchina.com, member.lxjchina.com.cn, miniapp.sexytea2013.com, minicap.caocaokeji.cn, minifm.maxxipoint.com, minipro.95504.net, miniprogram.ishansong.com, mkt-gateway.tuhu.cn, mobile-api.imlaidian.com, mxsa.mxbc.net, newton.gumingnc.com, passenger.t3go.cn, passengerapi.saicmobility.com, plt.yorentown.com, qapi.huolala.cn, r2.gzyct.com, res.hongyibo.com.cn, res.pizzahut.com.cn, s.jiediankeji.com, saas-ad.cloudpnr.com, sauron-report.yonghuivip.com, smarket.dian.so, sto-customer-app.oss-cn-shanghai.aliyuncs.com, supplier-api.imdada.cn, suyun-guest.daojia.com, tbgapplet.carlsberg.asia, tm-api.pin-dao.cn, ucmp.sf-express.com, ump.ems.com.cn, vod-movie.maoyan.com, webapi.qmai.cn, webchatapp.fcbox.com, wechat-api.i-xiaoma.com.cn, www.deppon.com, wx.bthhotels.com, wx.maoyan.com, wxapp.bestwehotel.com, wxproj.seeyouyima.com, wxs-weixin.sd.zhumanggroup.com, mcsp.cloudpnr.com, api.szbgcx.cn, rms.meituan.com
+hostname = %APPEND% mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, 3pp.starbucks.com.cn, aag.enmonster.com, activity.yonghuivip.com, ad.maoyan.com, ad.xiaotucc.com, ads.ishansong.com, alittle-tea.oss-cn-shanghai.aliyuncs.com, api-fouth-mem.huazhu.com, api-marketing.zhinengxiyifang.cn, api.hellobike.com, api.hengdianfilm.com, api.hongyibo.com.cn, api.kuaidihelp.com, api.maoyan.com, api.mcd.cn, api.pinduoduo.com, api.prod.dj.mstand.cn, api.songguo7.com, api.yonghuivip.com, apiproxy.zuche.com, apis.alenable.com, app.95504.net, app.homeinns.com, applets.jtexpress.com.cn, appuser-static.huolala.cn, as.xiaojukeji.com, capis*.didapinche.com, cappapi.alittle-tea.com, cbd-gateway-service-applets.hualala.com, ccmsupport-sz.tenpay.com, coco-com.e.verystar.net, creditcardapp.bankcomm.com, customer-app.sto.cn, daijia.kuaidadi.com, dock.tenchii.com, dsp.fcbox.com, file.dian.so, flow.dmall.com, fscdn.zto.com, gw-passenger-wap.01zhuanche.com, hdgateway.zto.com, htwkop.xiaojukeji.com, images.qmai.cn, lawsonapi.yorentown.com, m.ctrip.com, mapi.xiaotucc.com, mbmodule-openapi.paas.cmbchina.com, member.lxjchina.com.cn, miniapp.sexytea2013.com, minicap.caocaokeji.cn, minifm.maxxipoint.com, minipro.95504.net, miniprogram.ishansong.com, mkt-gateway.tuhu.cn, mobile-api.imlaidian.com, mxsa.mxbc.net, newton.gumingnc.com, passenger.t3go.cn, passengerapi.saicmobility.com, plt.yorentown.com, qapi.huolala.cn, r2.gzyct.com, res.hongyibo.com.cn, res.pizzahut.com.cn, s.jiediankeji.com, saas-ad.cloudpnr.com, sauron-report.yonghuivip.com, smarket.dian.so, sto-customer-app.oss-cn-shanghai.aliyuncs.com, supplier-api.imdada.cn, suyun-guest.daojia.com, tbgapplet.carlsberg.asia, tm-api.pin-dao.cn, ucmp.sf-express.com, ump.ems.com.cn, vod-movie.maoyan.com, webapi.qmai.cn, webchatapp.fcbox.com, wechat-api.i-xiaoma.com.cn, www.deppon.com, wx.bthhotels.com, wx.maoyan.com, wxapp.bestwehotel.com, wxproj.seeyouyima.com, wxs-weixin.sd.zhumanggroup.com, mcsp.cloudpnr.com, api.szbgcx.cn, rms.meituan.com, chong.qq.com, wx.online-cmcc.cn, wx.10086.cn
