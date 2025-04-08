@@ -8,7 +8,7 @@
 
 [URL Rewrite]
 # Version
-^https?:\/\/2025.04.08/c377/v2.0.582- reject-200
+^https?:\/\/2025.04.08/c377/v2.0.582 - reject-200
 
 # 58 TongCheng
 ^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv) - reject-200
