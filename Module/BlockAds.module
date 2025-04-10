@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/ShieldReject.png
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-04-09 21:00
+#!date=2025-04-10 22:00
 
 [Rule]
 # 开屏广告
@@ -699,7 +699,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 # 华彩生活 - static.creditcard.hxb.com.cn
 ^https?:\/\/static\.creditcard\.hxb\.com\.cn\/mcube\/apps\/group\d\/M00\/00\/2[A-Z0-9]{1}\/amRG7WO.+\.jpg - reject-200
 # 华尔街见闻 - api-one-wscn.awtmt.com, api.wallstreetcn.com
-^https?:\/\/api-one-wscn\.awtmt\.com\/apiv1\/advertising\/ads\/13424\/materials - reject-dict
+^https?:\/\/api-one-wscn\.awtmt\.com\/apiv1\/advertising\/ads\/[0-9]+\/materials - reject-dict
 ^https?:\/\/api\.wallstreetcn\.com\/apiv\d\/advertising\/ - reject
 # 虎牙直播 - cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com
 ^https?:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$ - reject
