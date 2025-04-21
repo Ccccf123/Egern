@@ -1,11 +1,13 @@
 #!name=京东
-#!desc=1.过滤京东广告；2.历史比价信息（提供[嵌入版]和[通知版]，任选其一即可），仅支持京东标准模式，具体适用App版本请自行测试。
+#!desc=1.过滤京东广告；2.历史比价信息，任选其一即可。（首次使用请先打开【慢慢买App-我的】，提示【获取ck成功🎉】即可正常比价。）仅支持京东标准模式。
 #!author=RuCu6[https://github.com/RuCu6], MuTu[https://github.com/githubdulong], 苍井灰灰[https://github.com/wf021325], mw418[https://github.com/mw418], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Jingdong.png
 #!openUrl=https://apps.apple.com/app/id414245413
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-04-17 11:00
+#!arguments=MMMCK_SCRIPT_NAME:获取慢慢买Cookie
+#!arguments-desc=[参数设置]\n1. MMMCK_SCRIPT_NAME:获取慢慢买Cookie\n2.避免不必要的重写，禁用请设置为"#"
+#!date=2025-04-21 22:00
 
 [Rule]
 DOMAIN,dns.jd.com,REJECT
@@ -15,11 +17,16 @@ URL-REGEX,"^http:\/\/\w{32}\.jddebug\.com\/diagnose\?",REJECT
 
 [URL Rewrite]
 ^http:\/\/\w{32}\.jddebug\.com\/diagnose\? - reject
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:searchBoxWord|stationPullService|uniformRecommend[06]) - reject-dict
+
+[Body Rewrite]
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising jdLiteAdvertisingVO sooyaaabo
+
+[Map Local]
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs data-type=text data=" " status-code=200
+
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:searchBoxWord|stationPullService|uniformRecommend[06]) data-type=text data="{}" status-code=200
 
 [Script]
-body_rewrite_28 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js, requires-body=true, max-size=-1, timeout=30, argument=%5B%5B%22replace-regex%22%2C%5B%5B%22jdLiteAdvertisingVO%22%2C%22sooyaaabo%22%5D%5D%5D%5D
-
 # 京东
 移除京东广告 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path=https://kelee.one/Resource/Script/JD/JD_remove_ads.js, requires-body=true
 
@@ -27,7 +34,9 @@ body_rewrite_28 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client
 移除京东极速版广告 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body=true, argument=jdLiteAdvertisingVO -> sooyaaabo
 
 # 京东比价
-京东比价（嵌入版） = type=http-response, pattern=^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html, script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js, requires-body=true
+{{{MMMCK_SCRIPT_NAME}}} = type=http-request,pattern=^https?:\/\/apapia-sqk-weblogic\.manmanbuy\.com\/baoliao\/center\/menu$,requires-body=1,max-size=0,binary-body-mode=0,script-path=https://raw.githubusercontent.com/mw418/Loon/main/script/jd_price.js
+
+京东比价-详情嵌入版 = type=http-response, pattern=^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html, script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js, requires-body=true, timeout=60
 
 [MITM]
-hostname = %APPEND% api.m.jd.com, in.m.jd.com
+hostname = %APPEND% api.m.jd.com, in.m.jd.com, apapia-sqk-weblogic.manmanbuy.com, m.360buyimg.com
