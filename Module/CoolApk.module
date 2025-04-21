@@ -5,7 +5,7 @@
 #!openUrl=https://apps.apple.com/app/id1422581869
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-03-27 08:00
+#!date=2025-04-17 11:00
 
 [Body Rewrite]
 http-response-jq ^https:\/\/api\.coolapk\.com\/v6\/feed\/detail\? '.data.hotReplyRows |= if . then map(select(.id?)) else . end | .data.topReplyRows |= if . then map(select(.id?)) else . end | reduce ("detailSponsorCard", "include_goods", "include_goods_ids") as $key (.; .data[$key] = [])'

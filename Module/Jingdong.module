@@ -5,7 +5,7 @@
 #!openUrl=https://apps.apple.com/app/id414245413
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-04-11 22:30
+#!date=2025-04-17 11:00
 
 [Rule]
 DOMAIN,dns.jd.com,REJECT
