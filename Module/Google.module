@@ -1,4 +1,4 @@
-ame=Google
+#!name=Google
 #!desc=1.Google Redirect（如遇频繁跳转请禁用本插件）；2.Google CAPTCHA（需要在插件参数处填写策略/策略组名的正则表达式）。
 #!author=NobyDa[https://github.com/NobyDa], sooyaaabo[https://github.com/sooyaaabo]
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Google.png
