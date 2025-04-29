@@ -7,7 +7,7 @@
 #!homepage=https://github.com/sooyaaabo/Egern
 #!arguments=MMMCK_SCRIPT_NAME:获取慢慢买Cookie
 #!arguments-desc=[参数设置]\n1. MMMCK_SCRIPT_NAME:获取慢慢买Cookie\n2.避免不必要的重写，禁用请设置为"#"
-#!date=2025-04-26 08:00
+#!date=2025-04-30 00:30
 
 [Rule]
 DOMAIN,dns.jd.com,REJECT
@@ -20,13 +20,15 @@ URL-REGEX,"^http:\/\/\w{32}\.jddebug\.com\/diagnose\?",REJECT
 ^http:\/\/\w{32}\.jddebug\.com\/diagnose\? - reject
 
 [Body Rewrite]
-http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising jdLiteAdvertisingVO sooyaaabo
+http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising jdLiteAdvertisingVO sooyaaabo
 http-response-jq ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=basicConfig 'if (getpath(["data","JDMessage","socketmonitor"]) | has("isSocketEstablishedAhead")) then (setpath(["data","JDMessage","socketmonitor","isSocketEstablishedAhead"]; 0)) else . end'
 http-response-jq ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=basicConfig 'if (getpath(["data","JDMessage","socketmonitor"]) | has("isSocketReport")) then (setpath(["data","JDMessage","socketmonitor","isSocketReport"]; 0)) else . end'
 http-response-jq ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=basicConfig 'if (getpath(["data","JDHttpToolKit","httpdns"]) | has("httpdns")) then (setpath(["data","JDHttpToolKit","httpdns","httpdns"]; 0)) else . end'
 
 [Map Local]
 ^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs data-type=text data=" " status-code=200
+
+^https:\/\/api\.m\.jd\.com\/\?loginType=11 data-type=text data=" " status-code=200
 
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:searchBoxWord|stationPullService|uniformRecommend[06]) data-type=text data="{}" status-code=200
 
