@@ -18,6 +18,7 @@ URL-REGEX,"^http:\/\/\w{32}\.jddebug\.com\/diagnose\?",REJECT
 
 [URL Rewrite]
 ^http:\/\/\w{32}\.jddebug\.com\/diagnose\? - reject
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 - reject
 
 [Body Rewrite]
 http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising jdLiteAdvertisingVO sooyaaabo
