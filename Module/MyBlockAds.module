@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/MyBlockAds.png
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-05-07 12:00
+#!date=2025-05-08 11:00
 
 [Rule]
 # 12306
@@ -497,6 +497,14 @@ http-response-jq ^https:\/\/api\.m\.mi\.com\/v1\/order\/expressView 'delpaths([[
 
 # 小宇宙 //api.xiaoyuzhoufm.com
 ^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/flash-screen\/list data-type=text data="{}" status-code=200
+
+^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/ai-summary data-type=text data="{}" status-code=200
+
+^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/membership\/platform data-type=text data="{}" status-code=200
+
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/search data-type=text data="{}" status-code=200
+
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/category\/list-daily-suggestion data-type=text data="{}" status-code=200
 
 ^https:\/\/api\.m\.mi\.com\/(?:v1\/(?:app\/popup_info|home\/page_feed|misearch\/search_input)|v2\/search\/search_default) data-type=text data="{}" status-code=200
 
