@@ -5,7 +5,7 @@
 #!openUrl=https://apps.apple.com/app/id414478124
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-05-08 16:00
+#!date=2025-05-10 16:00
 
 [Rule]
 # WeChat用户请走代理，微信用户直连
@@ -362,6 +362,63 @@ http-response-jq ^https:\/\/chong\.qq\.com\/tws\/usernumberinfo\/GetUserInfo\? '
 
 ^https:\/\/daijia\.kuaidadi\.com\/gateway\?api=prado\.cms\.delivery\.batch&apiVe data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
+# 同程旅行 //wx.17u.cn, a1d5b283e-wx621112590b635086.sh.wxgateway.com
+^https:\/\/wx\.17u\.cn\/xcxhomeapi\/aggregator\/index data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/wx\.17u\.cn\/mytourapi\/mytrip\/blankflight data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/wx\.17u\.cn\/membermessageuserapi\/message\/list data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/wx\.17u\.cn\/wechatmypubapi\/myInfo\/messageBox data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/wx\.17u\.cn\/membermessageuserapi\/category\/getCategory data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/wx\.17u\.cn\/homemarketapi\/search\/recommend data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/wx\.17u\.cn\/mytourapi\/blankpage\/recommendList data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/wx\.17u\.cn\/homemarketapi\/aggregator\/index data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/wx\.17u\.cn\/wxocbdapi\/adService\/getAd data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/wx\.17u\.cn\/wechatmypubapi\/myInfo\/orderRemind data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/wx\.17u\.cn\/wechatmypubapi\/myInfo\/icons data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/wx\.17u\.cn\/wechatmypubapi\/myInfo\/memberShow data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/wx\.17u\.cn\/xcxhomeapi\/home\/converge data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/wx\.17u\.cn\/platformpubapi\/customer\/lead\/getInfo data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/wx\.17u\.cn\/mytourapi\/mytrip\/toptips data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/wx\.17u\.cn\/vacation\/webapp\/tailor\/miniHomeConfig data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/wx\.17u\.cn\/mytourapi\/recommendation\/arriveCity data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/wx\.17u\.cn\/wechatmypubapi\/myInfo\/memberInfo data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/wx\.17u\.cn\/wireless\/monitor\/wx\/common\/compressevent data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/a1d5b283e-wx621112590b635086\.sh\.wxgateway\.com\/xcxhomeapi\/home\/screen data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/mapi\.dianping\.com\/baymax\/adrec\/getrecads data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/mapi\.dianping\.com\/baymax\/getSlotAds data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/web\.meituan\.com\/api\/miniprogram\/my\/novelZone data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/web\.meituan\.com\/api\/miniprogram\/my\/resources data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/npay\.meituan\.com\/conch\/flow\/mypage-wallet-info data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/web\.meituan\.com\/newUser\/returnMoney\/popWindow data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/npay\.meituan\.com\/conch\/walletv3\/wechat-pop-window data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/apimobile\.meituan\.com\/group\/v1\/deal\/searchpage\/defaultword data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
 ^https:\/\/wx\.online-cmcc\.cn\/contactpoint\/customer\/api\/list\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 ^https:\/\/wx\.10086\.cn\/qwhdhub\/activity\/info data-type=text data="{}" status-code=200 header="Content-Type:application/json"
@@ -435,5 +492,10 @@ http-response-jq ^https:\/\/chong\.qq\.com\/tws\/usernumberinfo\/GetUserInfo\? '
 # 古茗 //newton.gumingnc.com
 [微信]移除古茗广告 = type=http-response, pattern=^https:\/\/newton\.gumingnc\.com\/newton-buyer\/newton\/buyer\/(ump|touch|external\/front), script-path=https://kelee.one/Resource/Script/WexinMiniPrograms/ming/ming.js, requires-body=true
 
+# 美团 //web.meituan.com
+[微信]移除美团广告 = type=http-response, pattern=^https:\/\/web\.meituan\.com\/api\/miniprogram\/tabbar\/all\/query, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/MeiTuanNoAd.js, requires-body=true
+
+[微信]移除美团广告 = type=http-response, pattern=^https:\/\/web\.meituan\.com\/api\/miniprogram\/index\/aggregate, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/MeiTuanNoAd.js, requires-body=true
+
 [MITM]
-hostname = %APPEND% mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, 3pp.starbucks.com.cn, aag.enmonster.com, activity.yonghuivip.com, ad.maoyan.com, ad.xiaotucc.com, ads.ishansong.com, alittle-tea.oss-cn-shanghai.aliyuncs.com, api-fouth-mem.huazhu.com, api-marketing.zhinengxiyifang.cn, api.hellobike.com, api.hengdianfilm.com, api.hongyibo.com.cn, api.kuaidihelp.com, api.maoyan.com, api.mcd.cn, api.pinduoduo.com, api.prod.dj.mstand.cn, api.songguo7.com, api.yonghuivip.com, apiproxy.zuche.com, apis.alenable.com, app.95504.net, app.homeinns.com, applets.jtexpress.com.cn, appuser-static.huolala.cn, as.xiaojukeji.com, capis*.didapinche.com, cappapi.alittle-tea.com, cbd-gateway-service-applets.hualala.com, ccmsupport-sz.tenpay.com, coco-com.e.verystar.net, creditcardapp.bankcomm.com, customer-app.sto.cn, daijia.kuaidadi.com, dock.tenchii.com, dsp.fcbox.com, file.dian.so, flow.dmall.com, fscdn.zto.com, gw-passenger-wap.01zhuanche.com, hdgateway.zto.com, htwkop.xiaojukeji.com, images.qmai.cn, lawsonapi.yorentown.com, m.ctrip.com, mapi.xiaotucc.com, mbmodule-openapi.paas.cmbchina.com, member.lxjchina.com.cn, miniapp.sexytea2013.com, minicap.caocaokeji.cn, minifm.maxxipoint.com, minipro.95504.net, miniprogram.ishansong.com, mkt-gateway.tuhu.cn, mobile-api.imlaidian.com, mxsa.mxbc.net, newton.gumingnc.com, passenger.t3go.cn, passengerapi.saicmobility.com, plt.yorentown.com, qapi.huolala.cn, r2.gzyct.com, res.hongyibo.com.cn, res.pizzahut.com.cn, s.jiediankeji.com, saas-ad.cloudpnr.com, sauron-report.yonghuivip.com, smarket.dian.so, sto-customer-app.oss-cn-shanghai.aliyuncs.com, supplier-api.imdada.cn, suyun-guest.daojia.com, tbgapplet.carlsberg.asia, tm-api.pin-dao.cn, mcs-mimp-web.sf-express.com, ucmp-static.sf-express.com, ucmp.sf-express.com, ump.ems.com.cn, ec.ems.com.cn, vod-movie.maoyan.com, webapi.qmai.cn, webchatapp.fcbox.com, wechat-api.i-xiaoma.com.cn, www.deppon.com, wx.bthhotels.com, wx.maoyan.com, wxapp.bestwehotel.com, wxproj.seeyouyima.com, wxs-weixin.sd.zhumanggroup.com, mcsp.cloudpnr.com, api.szbgcx.cn, rms.meituan.com, chong.qq.com, wx.online-cmcc.cn, wx.10086.cn, elife.icbc.com.cn, ocrifs.ejoy.sinopec.com, web-stable-cdn.ykccn.com, gw3.ykccn.com, clubmed.bd.clubmedmnp.com, gugongmini.dpm.org.cn, service.haiersmarthomes.com, cdb.meituan.com
+hostname = %APPEND% mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, 3pp.starbucks.com.cn, aag.enmonster.com, activity.yonghuivip.com, ad.maoyan.com, ad.xiaotucc.com, ads.ishansong.com, alittle-tea.oss-cn-shanghai.aliyuncs.com, api-fouth-mem.huazhu.com, api-marketing.zhinengxiyifang.cn, api.hellobike.com, api.hengdianfilm.com, api.hongyibo.com.cn, api.kuaidihelp.com, api.maoyan.com, api.mcd.cn, api.pinduoduo.com, api.prod.dj.mstand.cn, api.songguo7.com, api.yonghuivip.com, apiproxy.zuche.com, apis.alenable.com, app.95504.net, app.homeinns.com, applets.jtexpress.com.cn, appuser-static.huolala.cn, as.xiaojukeji.com, capis*.didapinche.com, cappapi.alittle-tea.com, cbd-gateway-service-applets.hualala.com, ccmsupport-sz.tenpay.com, coco-com.e.verystar.net, creditcardapp.bankcomm.com, customer-app.sto.cn, daijia.kuaidadi.com, dock.tenchii.com, dsp.fcbox.com, file.dian.so, flow.dmall.com, fscdn.zto.com, gw-passenger-wap.01zhuanche.com, hdgateway.zto.com, htwkop.xiaojukeji.com, images.qmai.cn, lawsonapi.yorentown.com, m.ctrip.com, mapi.xiaotucc.com, mbmodule-openapi.paas.cmbchina.com, member.lxjchina.com.cn, miniapp.sexytea2013.com, minicap.caocaokeji.cn, minifm.maxxipoint.com, minipro.95504.net, miniprogram.ishansong.com, mkt-gateway.tuhu.cn, mobile-api.imlaidian.com, mxsa.mxbc.net, newton.gumingnc.com, passenger.t3go.cn, passengerapi.saicmobility.com, plt.yorentown.com, qapi.huolala.cn, r2.gzyct.com, res.hongyibo.com.cn, res.pizzahut.com.cn, s.jiediankeji.com, saas-ad.cloudpnr.com, sauron-report.yonghuivip.com, smarket.dian.so, sto-customer-app.oss-cn-shanghai.aliyuncs.com, supplier-api.imdada.cn, suyun-guest.daojia.com, tbgapplet.carlsberg.asia, tm-api.pin-dao.cn, mcs-mimp-web.sf-express.com, ucmp-static.sf-express.com, ucmp.sf-express.com, ump.ems.com.cn, ec.ems.com.cn, vod-movie.maoyan.com, webapi.qmai.cn, webchatapp.fcbox.com, wechat-api.i-xiaoma.com.cn, www.deppon.com, wx.bthhotels.com, wx.maoyan.com, wxapp.bestwehotel.com, wxproj.seeyouyima.com, wxs-weixin.sd.zhumanggroup.com, mcsp.cloudpnr.com, api.szbgcx.cn, rms.meituan.com, mapi.dianping.com, web.meituan.com, npay.meituan.com, apimobile.meituan.com, chong.qq.com, wx.online-cmcc.cn, wx.10086.cn, elife.icbc.com.cn, ocrifs.ejoy.sinopec.com, web-stable-cdn.ykccn.com, gw3.ykccn.com, clubmed.bd.clubmedmnp.com, gugongmini.dpm.org.cn, service.haiersmarthomes.com, cdb.meituan.com, wx.17u.cn, a1d5b283e-wx621112590b635086.sh.wxgateway.com
