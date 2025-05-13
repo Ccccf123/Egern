@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/MyBlockAds.png
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-05-12 12:30
+#!date=2025-05-13 09:00
 
 [Rule]
 # 阿里巴巴
@@ -205,6 +205,20 @@ URL-REGEX,"^http:\/\/\w{32}\.jddebug\.com\/diagnose\?",REJECT
 
 [Body Rewrite]
 http-response-jq ^https:\/\/(app-v1\.ecoliving168\.com|852b95d36\.xwlpk\.cn)\/api\/v1\/movie\/index_recommend\? '.data[].list |= map(select(.type != 3)) | .data |= map(select(.layout != "advert_self"))'
+http-response-jq ^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile$ 'delpaths([["recom_naws_list"]])'
+http-response-jq ^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile$ 'delpaths([["namoaixud_entry"]])'
+http-response-jq ^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile$ 'delpaths([["custom_grid"]])'
+http-response-jq ^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile$ 'delpaths([["duxiaoman_entry"]])'
+http-response-jq ^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile$ 'delpaths([["finance_tab"]])'
+http-response-jq ^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile$ 'if (getpath(["user","shake_ad_switch"]) | has("is_show")) then (setpath(["user","shake_ad_switch","is_show"]; 0)) else . end'
+http-response-jq ^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile$ '.zone_info |= map(select(.type as $t | ["commerce","banner","game"] | index($t) | not))'
+http-response-jq ^https:\/\/tiebac\.baidu\.com\/c\/f\/sidebar\/home$ 'delpaths([["task_list"]])'
+http-response-jq ^https:\/\/tiebac\.baidu\.com\/c\/f\/sidebar\/home$ 'delpaths([["game_center"]])'
+http-response-jq ^https:\/\/tiebac\.baidu\.com\/c\/f\/sidebar\/home$ 'delpaths([["tools"]])'
+http-response-jq ^https:\/\/tiebac\.baidu\.com\/c\/f\/sidebar\/home$ 'delpaths([["tools","yunying_tools_list"]])'
+http-response-jq ^https:\/\/tiebac\.baidu\.com\/c\/f\/sidebar\/home$ 'delpaths([["tools","show_tools_list"]])'
+http-response-jq ^https:\/\/tiebac\.baidu\.com\/c\/f\/sidebar\/home$ '.tools.show_tools_list |= map(.tools_list |= map(select(.title != "度小满钱包")))'
+http-response-jq ^https:\/\/tiebac\.baidu\.com\/c\/f\/frs\/frsBottom$ 'delpaths([["card_activity"]])'
 http-response-jq ^http:\/\/ad\.5tao5ai\.com\/common\/getReceipt\? 'delpaths([["payload","adInfo"]])'
 http-response-jq ^https:\/\/www\.washpayer\.com\/common\/getReceipt 'delpaths([["payload","adInfo"]])'
 http-response-jq ^https:\/\/emdcadvertise(?:pj)?\.eastmoney\.com\/infoService\/v2 'if (getpath(["data"]) | has("adpositionidlist")) then (setpath(["data","adpositionidlist"]; [])) else . end'
@@ -241,11 +255,9 @@ http-response-jq ^https:\/\/api\.m\.mi\.com\/v1\/order\/expressView 'delpaths([[
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.shot\.resources\.load\/1\.0\/\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # 百度贴吧 //tiebac.baidu.com
-^https:\/\/tiebac\.baidu\.com\/c\/u\/chat\/getChatSubscriptionList data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/tieba\.baidu\.com\/c\/f\/member\/getMemberPopups$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/tiebac\.baidu\.com\/c\/f\/search\/discover data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
-^https:\/\/tiebac\.baidu\.com\/c\/f\/forum\/forumGuide data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/tiebac\.baidu\.com\/c\/f\/search\/discover$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 ^https:\/\/www\.washpayer\.com\/(?:ad\/getBannerAd|ad\/user-adword|user\/getBannerList) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
@@ -363,17 +375,7 @@ http-response-jq ^https:\/\/api\.m\.mi\.com\/v1\/order\/expressView 'delpaths([[
 
 [Script]
 # 百度贴吧 //tiebac.baidu.com
-[MyBlockAds]百度贴吧首页 = type=http-response, pattern=^https:\/\/tiebac\.baidu\.com\/livefeed\/feed, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduTieba.js, requires-body=true
-
-[MyBlockAds]百度贴吧侧拉抽屉 = type=http-response, pattern=^https:\/\/tiebac\.baidu\.com\/c\/f\/sidebar\/home, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduTieba.js, requires-body=true
-
-[MyBlockAds]百度贴吧我的页面 = type=http-response, pattern=^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduTieba.js, requires-body=true
-
-[MyBlockAds]百度贴吧首页 = type=http-response, pattern=^https:\/\/tieba\.baidu\.com\/c\/f\/frs\/frsBottom, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduTieba.js, requires-body=true
-
-[MyBlockAds]百度贴吧JSON处理 = type=http-response, pattern=^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(?:frs\/(?:page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$), script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduTiebaJson.js, requires-body=true, timeout=10
-
-[MyBlockAds]百度贴吧Proto处理 = type=http-response, pattern=^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(?:frs\/(?:page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduTiebaProto.js, requires-body=true, binary-body-mode=true, timeout=10
+[MyBlockAds]百度贴吧 = type=http-response, pattern=^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/TB.js, requires-body=true, binary-body-mode=true, timeout=10
 
 # 昌原云充 五代十路 //www.washpayer.com
 [MyBlockAds]昌原云充 五代十路 = type=http-response, pattern=^https:\/\/www\.washpayer\.com\/user\/message\/equipmentPara\?, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/Changyuan.js, requires-body=true
