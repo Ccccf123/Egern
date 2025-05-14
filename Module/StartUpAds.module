@@ -4,11 +4,11 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/AdReject.png
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-05-13 22:00
+#!date=2025-05-14 10:00
 
 [URL Rewrite]
 # Version
-^https?:\/\/2025.05.10/c379/v2.0.590 - reject-200
+^https?:\/\/2025.05.14/c380/v2.0.594 - reject-200
 
 # 58 TongCheng
 ^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv) - reject-200
@@ -575,6 +575,10 @@
 # NanFangHangKong
 ^https?:\/\/3g\.csair\.com\/CSMBP\/bookProcess\/homepopup\/queryAdvertisement - reject-200
 ^https?:\/\/careapi\.oclean\.com\/mall\/v\d\/Temporary\/SafetyGetStartAdvert - reject-200
+
+# NanTaiHuHao
+^https?:\/\/.*zhijianmedia\.cn\/streamAd\/ad\/getAd\?position=SplashScreen - reject-200
+^https?:\/\/.*zhijianmedia\.cn\/streamAd\/ad\/getAd\?position=HomepageNewsPosition - reject
 
 # omofun YingHuaDongMan
 ^https?:\/\/103\.91\.210\.141\:2515\/xgapp\.php\/v2\/top_notice - reject-200
