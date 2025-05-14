@@ -1,11 +1,11 @@
 #!name=网易云音乐
-#!desc=网易云音乐全面净化
+#!desc=网易云音乐全面净化，会员功能请确保App版本≤9.2.95以便正常使用。
 #!author=RuCu6[https://github.com/RuCu6], Keywos[https://github.com/Keywos], qiuxiuya[https://github.com/qiuxiuya], anyehttp[https://github.com/anyehttp], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/NeteaseMusic.png
 #!openUrl=https://apps.apple.com/app/id590338362
 #!tag=去广告, 解锁会员
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-05-13 22:00
+#!date=2025-05-14 15:00
 
 [Rule]
 DOMAIN,iadmat.nosdn.127.net,REJECT
