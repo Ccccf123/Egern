@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/HTTPDNS.png
 #!tag=DNS
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-04-22 14:25:47
+#!date=2025-05-14 22:00
 
 [Rule]
 DOMAIN,yyapp-httpdns.gslb.yy.com,REJECT,extended-matching,pre-matching

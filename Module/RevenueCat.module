@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/RevenueCat.png
 #!tag=解锁会员
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-05-03 09:00
+#!date=2025-05-14 22:00
 
 [URL Rewrite]
 ^https:\/\/api\.lianjiu\.fun\/app\/api\/v1\/profile - reject
