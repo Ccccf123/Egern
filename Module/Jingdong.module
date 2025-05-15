@@ -7,7 +7,7 @@
 #!homepage=https://github.com/sooyaaabo/Egern
 #!arguments=MMMCK_SCRIPT_NAME:获取慢慢买Cookie
 #!arguments-desc=[参数设置]\n1. MMMCK_SCRIPT_NAME:获取慢慢买Cookie\n2.避免不必要的重写，禁用请设置为"#"
-#!date=2025-05-13 22:00
+#!date=2025-05-15 10:00
 
 [Rule]
 AND,((PROTOCOL,TCP),(DOMAIN,api.m.jd.com)),REJECT-NO-DROP
