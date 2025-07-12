@@ -5,13 +5,20 @@
 #!openUrl=https://apps.apple.com/app/id584660358
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-05-13 22:00
+#!date=2025-06-15 00:00
 
-[URL Rewrite]
-^https:\/\/tiku\.fenbi\.com\/activity\/app\/launcher - reject-dict
-^https:\/\/keapi\.fenbi\.com\/app\/iphone\/\w+\/popup - reject-dict
-^https:\/\/market-api\.fenbi\.com\/iphone\/v1\/assistant\/info - reject-dict
-^https:\/\/market-api\.fenbi\.com\/iphone\/v1\/assistant\/entrance\/show - reject-dict
+[Map Local]
+# 开屏广告
+^https:\/\/tiku\.fenbi\.com\/activity\/app\/launcher data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 首页 - 弹窗
+^https:\/\/keapi\.fenbi\.com\/app\/iphone\/\w+\/popup data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 首页 - 新用户注册送好礼全屏弹窗
+^https:\/\/market-api\.fenbi\.com\/iphone\/v1\/assistant\/info data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 首页 - 悬浮窗 - 笔面常备资料
+^https:\/\/market-api\.fenbi\.com\/iphone\/v1\/assistant\/entrance\/show data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [MITM]
 hostname = %APPEND% keapi.fenbi.com, market-api.fenbi.com, tiku.fenbi.com

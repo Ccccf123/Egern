@@ -5,16 +5,16 @@
 #!openUrl=https://apps.apple.com/app/id1597682672
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-05-13 22:00
+#!date=2025-06-15 00:00
 
-[URL Rewrite]
+[Map Local]
 # 横幅广告
-^https:\/\/www\.123pan\.com\/api\/config\/get - reject-dict
+^https:\/\/www\.123pan\.com\/api\/config\/get data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-123pan.Ads = type=http-response, pattern=^https?:\/\/www\.123pan\.com\/s\/[0-9a-zA-Z=_/-]+\.html, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/123pan.js, requires-body=true, timeout=60
+[123云盘]移除广告 = type=http-response, pattern=^https?:\/\/www\.123pan\.com\/s\/[0-9a-zA-Z=_/-]+\.html, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/123pan.js, requires-body=true, timeout=60
 
-123pan.Enhance = type=http-request, pattern=^https?:\/\/www\.123pan\.com\/b\/api\/share\/download\/info, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/123pan.js, timeout=60
+[123云盘]解除下载限制 = type=http-request, pattern=^https?:\/\/www\.123pan\.com\/b\/api\/share\/download\/info, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/123pan.js, timeout=60
 
 [MITM]
 hostname = %APPEND% www.123pan.com
