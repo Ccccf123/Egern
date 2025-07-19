@@ -5,11 +5,13 @@
 #!openUrl=https://apps.apple.com/app/id952694580
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-06-15 00:00
+#!date=2025-07-19 10:00
 
 [Rule]
 # 信息流广告
 DOMAIN,kad.gotokeep.com,REJECT
+DOMAIN,hc-ssp.sm.cn,REJECT
+DOMAIN,httpdns.calorietech.com,REJECT
 
 [Body Rewrite]
 http-response-jq ^https:\/\/api\.gotokeep\.com\/op-engine-webapp\/v1\/configs$ 'delpaths([["data","adTimeoutReport"]])'

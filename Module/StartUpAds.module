@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/AdReject.png
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-07-12 17:00
+#!date=2025-07-20 00:00
 
 [URL Rewrite]
 ^https?:\/\/.*zhijianmedia\.cn\/streamAd\/ad\/getAd\?position=HomepageNewsPosition - reject
@@ -25,10 +25,11 @@ http-response ^https?:\/\/tft-app\.cdtft\.cn\/gateway-customer\/tftapp\/tft-ams\
 http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad advertisement ddgksf2013
 http-response ^https?:\/\/lcen\.xiaote\.net\/api\/graphql screenSplashAd ddgksf2013
 http-response ^https?:\/\/apps\.workair\.cn\/app\/version ads" ddgksf2013"
+http-response-jq ^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/discovery-feed\/list '.data |= map(select(.type != "DISCOVERY_BANNER"))'
 
 [Map Local]
 # Version
-^https?:\/\/2025.07.12/c386/v2.0.602 data-type=text data=" " status-code=200
+^https?:\/\/2025.07.19/c387/v2.0.606 data-type=text data=" " status-code=200
 
 # 58 TongCheng
 ^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv) data-type=text data=" " status-code=200
@@ -1019,6 +1020,9 @@ http-response ^https?:\/\/apps\.workair\.cn\/app\/version ads" ddgksf2013"
 
 # XiaoHeiHe
 ^https?:\/\/api\.xiaoheihe\.cn\/.*get_ads_info data-type=text data=" " status-code=200
+
+# XiaoYuZhou
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/(search\/get-(express|preset)|category\/list-daily-suggestion|flash-screen\/list) data-type=text data=" " status-code=200
 
 # YiQiFengTian
 ^https?:\/\/newsuperapp\.ftms\.com\.cn\/app-bff\/.*openScreenPicture data-type=text data=" " status-code=200
