@@ -3,7 +3,7 @@
 #!author=RuCu6[https://github.com/RuCu6], MuTu[https://github.com/githubdulong], 苍井灰灰[https://github.com/wf021325], mw418[https://github.com/mw418], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Jingdong.png
 #!openUrl=https://apps.apple.com/app/id414245413
-#!tag=去广告
+#!tag=去广告, 功能增强
 #!homepage=https://github.com/sooyaaabo/Egern
 #!arguments=MMMCK_SCRIPT_NAME:获取慢慢买Cookie
 #!arguments-desc=[参数设置]\n1. MMMCK_SCRIPT_NAME:获取慢慢买Cookie\n2.避免不必要的重写，禁用请设置为"#"
