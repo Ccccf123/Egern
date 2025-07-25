@@ -5,7 +5,7 @@
 #!openUrl=https://apps.apple.com/app/id736536022
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-07-25 08:30
+#!date=2025-07-25 19:00
 
 [Rule]
 # 阻止B站备用域名访问
@@ -51,7 +51,6 @@ http-response-jq ^https:\/\/api\.live\.bilibili\.com\/xlive\/(app-interface\/v2\
 
 [Script]
 [哔哩哔哩]移除直播间半屏网页广告 = type=http-response, pattern=^https:\/\/live\.bilibili\.com\/blackboard/era/.+\.html\?is_live_half_webview=1, script-path=https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/webpage.bilibili.js, requires-body=true
-
 
 [哔哩哔哩]空降助手 = type=http-request, pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile$, script-path=https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.request.js, requires-body=true, binary-body-mode=true, argument=[{logLevel}]
 
