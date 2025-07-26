@@ -5,7 +5,7 @@
 #!openUrl=https://apps.apple.com/app/id458318329
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-06-15 00:00
+#!date=2025-07-26 18:00
 
 [Rule]
 AND,((IP-CIDR,0.0.0.0/0,no-resolve),(USER-AGENT,"live4iphoneRel*")),REJECT-DROP
@@ -42,7 +42,10 @@ DOMAIN-KEYWORD,trace.qq.com,REJECT
 DOMAIN-KEYWORD,pgdt.gtimg.cn,REJECT
 DOMAIN-KEYWORD,trace.video.qq.com,REJECT
 DOMAIN-KEYWORD,1258344696.file.myqcloud.com,REJECT
-IP-CIDR,"183.201.213.194/24, , REJECT",REJECT,no-resolve
+IP-CIDR,"183.201.213.194/24, REJECT",REJECT,no-resolve
+IP-CIDR, "183.201.213.194/32, REJECT", no-resolve
+IP-CIDR, "120.222.144.64/32, REJECT", no-resolve
+IP-CIDR, "111.6.166.107/32, REJECT", no-resolve
 
 [URL Rewrite]
 ^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ - reject
