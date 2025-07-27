@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Alook.png
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-07-24 23:30
+#!date=2025-07-27 19:00
 
 [Rule]
 DOMAIN-SUFFIX,creative.myavlive.com,REJECT
@@ -12,6 +12,7 @@ DOMAIN-SUFFIX,trackwilltrk.com,REJECT
 DOMAIN-SUFFIX,tsyndicate.com,REJECT
 
 DOMAIN-SUFFIX, jads.co, REJECT
+DOMAIN-SUFFIX, juicyads.com, REJECT
 DOMAIN-SUFFIX, mnaspm.com, REJECT
 
 [URL Rewrite]

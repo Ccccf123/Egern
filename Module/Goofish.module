@@ -5,9 +5,10 @@
 #!openUrl=https://apps.apple.com/app/id510909506
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-07-26 18:00
+#!date=2025-07-26 23:00
 
 [Rule]
+DOMAIN-SUFFIX,iyes.youku.com,REJECT
 AND,((URL-REGEX,"^http:\/\/.+\/amdc\/mobileDispatch"),(USER-AGENT,"%E9%97%B2%E9%B1%BC*")),REJECT
 
 [Body Rewrite]
