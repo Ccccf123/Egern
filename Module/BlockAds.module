@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/ShieldReject.png
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-07-21 20:00
+#!date=2025-07-29 11:00
 
 [Rule]
 # 韩剧TV
@@ -711,6 +711,7 @@ IP-CIDR,115.236.121.195/32,REJECT,no-resolve
 ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/agent_ad - reject
 # ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/newcomer_ad reject-dict
 ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/activity\/show - reject
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/client\/urban\/activity\/index\/data\?agentId=12 - reject
 ^https?:\/\/statistic\.live\.126\.net\/statics\/report\/common\/form - reject
 # 厦门航空 - mobileapi.xiamenair.com
 ^https:\/\/mobileapi\.xiamenair\.com\/mobile-starter - reject
