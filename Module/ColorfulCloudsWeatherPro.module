@@ -5,7 +5,7 @@
 #!openUrl=https://apps.apple.com/app/id1067198688
 #!tag=去广告, 解锁会员
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-06-15 00:00
+#!date=2025-08-02 16:00
 
 [Rule]
 DOMAIN,abyss.cyapi.cn,REJECT
@@ -13,9 +13,13 @@ DOMAIN,ad.cyapi.cn,REJECT
 DOMAIN,gather.colorfulclouds.net,REJECT
 
 [Map Local]
+^https?:\/\/api\.caiyunapp\.com\/v1\/activity data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
 ^https:\/\/biz\.cyapi\.cn\/(p\/v1\/entries|p\/v1\/trial_card\/info|v2\/product) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 ^https:\/\/starplucker\.cyapi\.cn\/v3\/(config\/cypage\/\w+\/conditions|notification\/message_center|operation\/homefeatures) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? data-type=file data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json" header="Content-Type: application/json" status-code=200
 
 [Script]
 # 共享会员
@@ -27,4 +31,4 @@ DOMAIN,gather.colorfulclouds.net,REJECT
 [彩云天气]移除广告 = type=http-response, pattern=^https:\/\/(wrapper\.cyapi\.cn|api\.caiyunapp\.com|cdn-w\.caiyunapp\.com)\/v1\/activity\?, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ColorfulCloudsWeatherPro/ColorfulCloudsWeatherPro.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% biz.cyapi.cn, starplucker.cyapi.cn, api.caiyunapp.com, cdn-w.caiyunapp.com, *.cyapi.cn
+hostname = %APPEND% biz.cyapi.cn, starplucker.cyapi.cn, api.caiyunapp.com, cdn-w.caiyunapp.com, wrapper.cyapi.cn

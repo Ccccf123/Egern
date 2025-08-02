@@ -5,7 +5,7 @@
 #!openUrl=https://apps.apple.com/app/id1044283059
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-07-19 10:00
+#!date=2025-08-02 11:30
 
 [Rule]
 AND,((URL-REGEX,"^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/d(\d)?"),(USER-AGENT,"*com.xunmeng.pinduoduo*")),REJECT
@@ -46,6 +46,10 @@ http-response-jq ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? 'de
 http-response-jq ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? '.result.bottom_tabs? |= map(select(.link | IN("index.html", "chat_list.html", "personal.html"))) | .result.buffer_bottom_tabs? |= map(select(.link | IN("index.html", "chat_list.html", "personal.html")))'
 
 [Map Local]
+^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/unrated_order_for_unreceived_tab data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/query_order_list_tabs_element data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
 ^https:\/\/api\.(?:pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/goods\/back_up\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
