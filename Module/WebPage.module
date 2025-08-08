@@ -4,36 +4,37 @@
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Alook.png
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-07-27 19:00
+#!date=2025-08-07 23:00
 
 [Rule]
+# MissAV
 DOMAIN-SUFFIX,creative.myavlive.com,REJECT
 DOMAIN-SUFFIX,trackwilltrk.com,REJECT
 DOMAIN-SUFFIX,tsyndicate.com,REJECT
 
+# Hanime
 DOMAIN-SUFFIX, jads.co, REJECT
 DOMAIN-SUFFIX, juicyads.com, REJECT
 DOMAIN-SUFFIX, mnaspm.com, REJECT
 
 [URL Rewrite]
 # 谷歌服务重定向 //*.google.cn
-^https?:\/\/www\.google\.cn https://www.google.com 307
+^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 307
 ^https?:\/\/translate\.google\.cn https://translate.google.com 307
 # PornHub (https://cn.pornhub.com/) //*.pornhub.com
 ^https:\/\/(?:cn|www)\.pornhub\.com\/_xa\/ads(_batch)?\? - reject
 # Avple 跳转弹窗 //asserts.avple.tv
 ^https:\/\/asserts\.avple\.tv\/file\/avple-images\/ad\.js - reject
 
-[Map Local]
-# PornHub - https://cn.pornhub.com
-^https?:\/\/(cn|www)\.pornhub\.com\/_xa\/ads data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
 [Script]
 # MissAV
 [WebPage]MissAV = type=http-response, pattern=^https:\/\/missav\.(?:ai|ws)\/(?!favicon)(?!(build|fonts|img|js|api|cdn-cgi)\/)., script-path=https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/webpage.missav.js, requires-body=true
 
 # Hanime
-[WebPage]Hanime = type=http-response, pattern=^https:\/\/hanime1\.me\/(?!(favicon|css|js|cdn-cgi|load)), script-path=https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/webpage.hanime.js, requires-body = true
+[WebPage]Hanime = type=http-response, pattern=^https:\/\/hanime1\.me\/(?!(favicon|css|js|cdn-cgi|load)), script-path=https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/webpage.hanime.js, requires-body=true
+
+# E-Hentai
+[WebPage]E-Hentai = type=http-response, pattern=^https:\/\/e-hentai\.org\/g\/,script-path=https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/webpage.ehentai.js, requires-body=true
 
 # 黑料网
 [WebPage]黑料不打烊 = type=http-response, pattern=^https:\/\/18hlw\.com\/?$, script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/18hlw.js, requires-body=true
@@ -55,7 +56,7 @@ DOMAIN-SUFFIX, mnaspm.com, REJECT
 # 草榴社区 //2023.redircdn.com
 [WebPage]草榴社区 = type=http-response, pattern=^https:\/\/2023\.redircdn\.com\/web\/mob_post\.js\?, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/MyBlockAds.js, requires-body=true
 
-# 在线之家 - https://www.zxzjhd.com/
+# 在线之家 - https://www.zxzjhd.com
 [WebPage]在线之家 = type=http-response, pattern=^https?:\/\/www\.zxzjhd\.com\/($|[0-9a-zA-Z=_/-]+\.html$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/adguard.js, requires-body=true
 
 # FreeOk - https://www.freeok.vip
@@ -76,7 +77,7 @@ DOMAIN-SUFFIX, mnaspm.com, REJECT
 # 剧迷 - https://gimys.app
 [WebPage]剧迷 = type=http-response, pattern=^https?:\/\/.*gimy.*\/($|[0-9a-zA-Z=_/-]+\.html$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/gimytv.js, requires-body=true
 
-# 厂长电影 - https://czzy.art/
+# 厂长电影 - https://czzy.art
 [WebPage]厂长电影 = type=http-response, pattern=^https?:\/\/.*czzy.*\/($|\?btwaf=\w+$|[0-9a-zA-Z=_/-]+\.html), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/qianoo.js, requires-body=true
 
 # 茶杯狐 - https://cupfox.app
@@ -97,7 +98,7 @@ DOMAIN-SUFFIX, mnaspm.com, REJECT
 # LeZhu - http://www.lezhutv.com
 [WebPage]LeZhu = type=http-response, pattern=^https?:/\/.*lezhutv\.com\/($|(type|detail|play|index).*$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/lezhu.js, requires-body=true
 
-# 天空影视 - https://tkznp.com/
+# 天空影视 - https://tkznp.com
 [WebPage]天空影视 = type=http-response, pattern=^https?:\/\/.*tkznp.*com\/($|[0-9a-zA-Z=_/-]+\.html$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/tkys.js, requires-body=true
 
 # 真不卡 - https://www.ikandy.fun
@@ -107,4 +108,4 @@ DOMAIN-SUFFIX, mnaspm.com, REJECT
 [WebPage]Libvio = type=http-response, pattern=^https?:\/\/.*libvio.*me\/($|[0-9a-zA-Z=_/-]+\.html$), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/libvio.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% missav.ai, missav.ws, 18hlw.com, boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, asserts.avple.tv, javdb.com, 2023.redircdn.com, *.pornhub.com, www.zxzjhd.com, m.nivod4.tv, *.freeok.*, *netflix*, *bdys*, *cupfox*, *cokemv*, *pornhub.com, *lezhutv*, *bimi*, 18comic.org, *5y*, *gimy*, *tkznp*, *czzy*, *ikandy*, *libvio*
+hostname = %APPEND% e-hentai.org, exhentai.org, hanime1.me, missav.ai, missav.ws, 18hlw.com, boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, asserts.avple.tv, javdb.com, 2023.redircdn.com, *.pornhub.com, www.zxzjhd.com, m.nivod4.tv, *.freeok.*, *netflix*, *bdys*, *cupfox*, *cokemv*, *pornhub.com, *lezhutv*, *bimi*, 18comic.org, *5y*, *gimy*, *tkznp*, *czzy*, *ikandy*, *libvio*
