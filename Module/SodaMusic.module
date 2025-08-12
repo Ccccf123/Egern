@@ -5,7 +5,7 @@
 #!openUrl=https://apps.apple.com/app/id1605585211
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-06-15 00:00
+#!date=2025-08-12 15:00
 
 [Body Rewrite]
 http-response-jq ^https:\/\/beta-luna\.douyin\.com\/luna\/me\? 'delpaths([["reward_ad_banner"]])'
@@ -41,6 +41,9 @@ http-response-jq ^https:\/\/beta-luna\.douyin\.com\/luna\/more-panel\? '.blocks 
 
 # 邀请开通会员弹窗
 ^https:\/\/beta-luna\.douyin\.com\/luna\/commerce\/v2\/commerce_info\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 抖音看过悬浮窗
+^https:\/\/beta-luna\.douyin\.com\/luna\/listen-video\/reminder\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
 # 播放页面 - 视频流[响应体太大]
