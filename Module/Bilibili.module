@@ -5,7 +5,7 @@
 #!openUrl=https://apps.apple.com/app/id736536022
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-08-11 23:00
+#!date=2025-08-15 17:00
 
 [Rule]
 # 阻止B站备用域名访问
@@ -16,7 +16,7 @@ DOMAIN,app.biliapi.net,REJECT
 AND,((DOMAIN-SUFFIX,chat.bilibili.com),(OR,((DOMAIN-KEYWORD,stun),(DOMAIN-KEYWORD,tracker)))),REJECT
 
 [URL Rewrite]
-^(https:\/\/api\.bilibili\.com\/pgc\/page\/channel\?.*)(&mobi_app=iphone)(&.*)$ $1$2_i$3 307
+^(https:\/\/api\.bilibili\.com\/pgc\/page\/channel\?.*)(&mobi_app=iphone)(&.*)$ $1$2_i$3 header
 
 [Body Rewrite]
 http-response-jq ^https:\/\/api\.bilibili\.com\/x\/pd-proxy\/tracker\? '.data[][]?="stun.chat.bilibili.com:3478"'
