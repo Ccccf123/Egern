@@ -1,5 +1,5 @@
 #!name=Google
-#!desc=1.Google Redirect（如遇频繁跳转请禁用本插件）；2.Google CAPTCHA（需要在插件参数处填写策略/策略组名的正则表达式）。
+#!desc=将Google搜索重定向至.com域名，如遇频繁跳转请禁用本插件。
 #!author=NobyDa[https://github.com/NobyDa], sooyaaabo[https://github.com/sooyaaabo]
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Google.png
 #!openUrl=https://apps.apple.com/app/id284815942
@@ -13,8 +13,5 @@
 ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 307
 ^https?:\/\/translate\.google\.cn https://translate.google.com 307
 
-[Script]
-[Google]人机验证 = type=http-response, pattern=^https:\/\/www\.google\.com(?:\.[a-z]+|)\/(?:search\?(?:|.+?&)q=|$), script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Google_CAPTCHA.js, requires-body=true, timeout=30
-
 [MITM]
-hostname = %APPEND% *.google.cn, *.g.cn, www.google.com*
+hostname = %APPEND% *.google.cn, *.g.cn
