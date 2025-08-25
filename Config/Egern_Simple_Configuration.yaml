@@ -1,4 +1,4 @@
-# 2025-02-07 17:30
+# 2025-08-25 16:00
 
 # TUN模式
 vif_only: true
@@ -29,6 +29,7 @@ dns:
     Domestic-DNS:
     - 223.5.5.5
     - 119.29.29.29
+    - 114.114.114.114
   # DNS 转发规则
   forward:
   - wildcard: # 通配符规则
@@ -36,73 +37,88 @@ dns:
       value: Domestic-DNS
 policy_groups:
 - external:
-    name: SubName 
+    name: SubName1 
     type: select
     urls: 
-    - http://your-service-provider
-    filter: ''
+    - http://your-service-provider1
+    filter: '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|总计|到期|机场|下次|重置|重新|设置|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|超时|收藏|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic)(\d+)?\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$'
+    icon: https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Egern-02.png
+    hidden: false
+- external:
+    name: SubName2
+    type: select
+    urls: 
+    - http://your-service-provider2
+    filter: '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|总计|到期|机场|下次|重置|重新|设置|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|超时|收藏|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author|Traffic)(\d+)?\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$'
     icon: https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Egern-02.png
     hidden: false
 - auto_test:
     name: Hong Kong
     policies:
-    - SubName
+    - SubName1
+    - SubName2
     flatten: true
-    filter: ^(?=.*((?i)🇭🇰|香港|(\b(HK|HKG|Hong|Hong Kong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$
+    filter: ^(?=.*((?i)🇭🇰|香港|(\b(HK|HKG|Hong|Hong Kong)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$
     icon: https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag-Icon/HongKong.png
 - auto_test:
     name: Macao
     policies:
-    - SubName
+    - SubName1
+    - SubName2
     flatten: true
-    filter: ^(?=.*((?i)🇲🇴|澳门|(\b(MO|MAC|Oman|Macau|Macao)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$
+    filter: ^(?=.*((?i)🇲🇴|澳门|(\b(MO|MAC|Oman|Macau|Macao)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$
     icon: https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag-Icon/Macao.png
 - auto_test:
     name: TaiWan
     policies:
-    - SubName
+    - SubName1
+    - SubName2
     flatten: true
-    filter: ^(?=.*((?i)🇹🇼|🇨🇳|台湾|台北|(\b(TW|TWN|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$
+    filter: ^(?=.*((?i)🇹🇼|🇨🇳|台湾|台北|(\b(TW|TWN|Tai|Taiwan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$
     icon: https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag-Icon/Taiwan.png
 - auto_test:
     name: Japan
     policies:
-    - SubName
+    - SubName1
+    - SubName2
     flatten: true
-    filter: ^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|JPN|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$
+    filter: ^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|JPN|Japan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$
     icon: https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag-Icon/Japan.png
 - auto_test:
     name: South Korea
     policies:
-    - SubName
+    - SubName1
+    - SubName2
     flatten: true
-    filter: ^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|KOR|Korea|Seoul)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$
+    filter: ^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|KOR|Korea|Seoul)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$
     icon: https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag-Icon/SouthKorea.png
 - auto_test:
     name: Singapore
     policies:
-    - SubName
+    - SubName1
+    - SubName2
     flatten: true
-    filter: ^(?=.*((?i)🇸🇬|新加坡|新国|狮|(\b(SG|SGP|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$
+    filter: ^(?=.*((?i)🇸🇬|新加坡|新国|狮|(\b(SG|SGP|Singapore)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$
     icon: https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag-Icon/Singapore.png
 - auto_test:
     name: United States
     policies:
-    - SubName
+    - SubName1
+    - SubName2
     flatten: true
-    filter: ^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|USA|United States|America)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$
+    filter: ^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|USA|United States|America)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$
     icon: https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag-Icon/UnitedStates.png
 - select:
     name: Remaining
     policies:
-    - SubName
+    - SubName1
+    - SubName2
     flatten: true
-    filter: ^(?=.*(.*))(?!.*((?i)🇭🇰|🇲🇴|🇹🇼|🇯🇵|🇰🇷|🇸🇬|🇺🇸|香港|澳门|台湾|日本|川日|东京|大阪|泉日|埼玉|韩国|韓|首尔|新加坡|狮|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|贩卖|通知|倒卖|防止|国内|总计|重新|设置🎮|(\b(HK|HKG|Hong|Hong Kong|MO|MAC|Oman|Macau|Macao|TW|TWN|Tai|Taiwan|JP|JPN|Japan|KR|KOR|Korea|SG|SGP|Singapore|US|USA|United States|America|GAME|USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$
+    filter: ^(?=.*(.*))(?!.*((?i)🇭🇰|🇲🇴|🇹🇼|🇯🇵|🇰🇷|🇸🇬|🇺🇸|🇬🇧|香港|澳门|台湾|日本|川日|东京|大阪|泉日|埼玉|韩国|韓|首尔|新加坡|狮|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|英国|伦敦|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|总计|到期|机场|下次|重置|重新|设置|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|超时|收藏|回国|校园|游戏|🎮|(\b(HK|HKG|Hong|Hong Kong|MO|MAC|Oman|Macau|Macao|TW|TWN|Tai|Taiwan|JP|JPN|Japan|KR|KOR|Korea|SG|SGP|Singapore|US|USA|United States|America|UK|GB|GBR|United Kingdom|Britain|USE|USED|TOTAL|EXPIRE|EMAIL|GAME|Panel|Channel|Author|Traffic)(\d+)?\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$
     icon: https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag-Icon/UnitedNations.png
 - select:
     name: Final
     policies:
-    - Proxy
     - DIRECT
     - Hong Kong
     - Macao
@@ -112,17 +128,6 @@ policy_groups:
     - Singapore
     - United States
     icon: https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Final.png
-- select:
-    name: Proxy
-    policies:
-    - Hong Kong
-    - Macao
-    - TaiWan
-    - Japan
-    - South Korea
-    - Singapore
-    - United States
-    icon: https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Egern-02.png
 - select:
     name: OpenAI
     policies:
@@ -159,7 +164,6 @@ policy_groups:
 - select:
     name: Microsoft
     policies:
-    - DIRECT
     - Hong Kong
     - Macao
     - TaiWan
@@ -287,7 +291,7 @@ rules:
     policy: AppleProxy
 - rule_set:
     match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/ProxyGFW.yaml
-    policy: Proxy
+    policy: Final
 - rule_set:
     match: https://raw.githubusercontent.com/Repcz/Tool/X/Egern/Rules/Apple.yaml
     policy: DIRECT
@@ -414,7 +418,7 @@ modules:
   url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Jingdong.module
   enabled: true
 - name: 什么值得买
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Zhidemai.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/smzdm.module
   enabled: true
 - name: 菜鸟
   url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Cainiao.module
