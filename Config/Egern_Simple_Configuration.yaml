@@ -1,4 +1,4 @@
-# 2025-08-25 16:00
+# 2025-08-25 17:00
 
 # TUN模式
 vif_only: true
@@ -394,7 +394,7 @@ modules:
   url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/MangoTV.module
   enabled: true
 - name: 哔哩哔哩
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/BiliBili.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Bilibili.module
   enabled: true
 - name: 萤石云视频
   url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/Ezviz.module
@@ -439,10 +439,10 @@ modules:
   url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/MyBlockAds.module
   enabled: true
 - name: 墨鱼去开屏
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/StartUp.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/StartUpAds.module
   enabled: true
 - name: 广告拦截合集
-  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/AdsBlocker.module
+  url: https://raw.githubusercontent.com/sooyaaabo/Egern/main/Module/BlockAds.module
   enabled: true
 - name: BoxJS
   url: https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.surge.sgmodule
