@@ -215,12 +215,11 @@ IP-CIDR,115.236.121.195/32,REJECT,no-resolve
 ^https?:\/\/fcvbjbcebos\.baidu\.com\/.+.mp4 - reject
 ^https?:\/\/cover\.baidu\.com\/cover\/page\/dspSwitchAds\/ - reject
 ^https?:\/\/baichuan\.baidu\.com\/rs\/adpmobile\/launch - reject
-^https?:\/\/afd\.baidu\.com\/afd\/entry - reject
 ^https?:\/\/als\.baidu\.com\/clog\/clog - reject
 ^https?:\/\/mobads\.baidu\.com\/cpro\/ui\/mads.+ - reject
 ^https?:\/\/update\.pan\.baidu\.com\/statistics - reject
 ^https?:\/\/log.+?baidu\.com - reject
-^https?:\/\/www.baidu.com\/?action=static&ms=1&version=css_page_2@0.*? - reject
+^https?:\/\/www\.baidu\.com\/?action=static&ms=1&version=css_page_2@0.*? - reject
 ^https?:\/\/dss0\.bdstatic\.com\/.+/tam-ogel\/.+\.(jpg|mp4) - reject
 ^https?:\/\/tb1\.bdstatic\.com\/tb\/cms\/ngmis\/adsense\/*.jpg - reject
 # 百度输入法 - r6.mo.baidu.com, res.mi.baidu.com, mime.baidu.com, mbd.baidu.com

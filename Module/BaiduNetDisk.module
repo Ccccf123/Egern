@@ -31,30 +31,6 @@
 # 广告配置
 ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adv data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-# 启动弹窗
-^https?:\/\/.*baidu\.com\/rest\/.*\/membership\/proxy\/guide data-type=text data=" " status-code=200
-
-# 设置信息流
-^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list data-type=text data=" " status-code=200
-
-# 通用广告
-^https?:\/\/pan\.baidu\.com\/rest\/.*\/pcs\/ad data-type=text data=" " status-code=200
-
-# 活动推广
-^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry data-type=text data=" " status-code=200
-
-# 热搜list
-^https:\/\/pan\.baidu\.com\/feed\/hotlist data-type=text data=" " status-code=200
-
-# 活动推广
-^https?:\/\/.*zhangyuyidong\.cn\/api\/zysdk data-type=text data=" " status-code=200
-
-# 搜索填词
-^https:\/\/pan\.baidu\.com\/queryintent\/queryhint data-type=text data=" " status-code=200
-
-# 金币乐园
-^https:\/\/pan\.baidu\.com\/coins\/center\/notice data-type=text data=" " status-code=200
-
 [Script]
 # chxm1023
 [百度网盘]会员权益@chxm1023 = type=http-response, pattern=^https?:\/\/pan\.baidu\.com\/(youai\/(user\/.+\/getminfo|membership\/.+\/adswitch)|(rest\/.+\/membership\/user|act\/.+\/(bchannel|welfare)\/list|api\/usercfg)), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/bdcloud.js, requires-body=true
@@ -62,23 +38,7 @@
 # WeiGiegie
 [百度网盘]会员权益@WeiGiegie = type=http-response, pattern=^https?:\/\/pan\.baidu\.com\.+(rest\/.+\/membership\/user|api\/user\/getinfo|act\/v2\/welfare\/list|api\/taskscore\/tasklist)\?, script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/panda.js, requires-body=true
 
-# RuCu6
-[百度网盘]移除广告@RuCu6 = type=http-response, pattern=^https:\/\/pan\.baidu\.com\/api\/getsyscfg\?, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduNetDisk.js, requires-body=true
-
-[百度网盘]移除广告@RuCu6 = type=http-response, pattern=^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduNetDisk.js, requires-body=true
-
-# 开屏广告
-[百度网盘]移除广告@ddgksf2013 = type=http-response, pattern=^https?:\/\/pan\.baidu\.com\/api\/getsyscfg, script-path=https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body=true
-
-# 广告推广
-[百度网盘]移除广告@ddgksf2013 = type=http-response, pattern=^https?:\/\/afd\.baidu\.com\/afd\/entry, script-path=https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body=true
-
-# 游戏广告
-[百度网盘]移除广告@ddgksf2013 = type=http-response, pattern=^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?method=gamecenter, script-path=https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body=true
-
-# 首页信息流
-[百度网盘]移除广告@ddgksf2013 = type=http-response, pattern=^https:\/\/pan\.baidu\.com\/feed\/cardinfos, script-path=https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body=true
-
+# ddgksf2013
 # 视频倍速
 [百度网盘]视频倍速@ddgksf2013 = type=http-request, pattern=^https:\/\/pan\.baidu\.com\/api\/streaming\?app_id=\d+&type=M3U8_HQ_1080, script-path=https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js
 
