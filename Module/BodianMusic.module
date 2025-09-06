@@ -5,7 +5,7 @@
 #!openUrl=https://apps.apple.com/app/id1541981555
 #!tag=去广告, 解锁会员
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-08-31 09:00
+#!date=2025-09-06 09:00
 
 [Body Rewrite]
 http-response-jq ^https:\/\/bd-api\.kuwo\.cn\/api\/service\/conf\/all\? 'delpaths([["data","groupSign","adStartAppDialog"]])'
@@ -72,7 +72,7 @@ http-response-jq ^https:\/\/bd-api\.kuwo\.cn\/api\/voice\/room\/v2\/sidebar '(.d
 ^https:\/\/bd-api\.kuwo\.cn\/api\/pay\/h5\/common\/popup\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-[波点音乐]解锁会员 = type=http-response, pattern=^https?:\/\/bd-api\.kuwo\.cn\/api\/(ucenter\/users\/pub|play\/music\/v2\/(audioUrl|checkRight)|service\/home\/module|pay\/vip\/lowPriceText), script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/bdyy.js, requires-body=true, timeout=60
+[波点音乐]解锁会员 = type=http-response, pattern=^https?:\/\/(bd-api\.kuwo\.cn\/api\/(ucenter\/users\/(pub|login)|play\/music\/v2\/(audioUrl|checkRight)|service\/(home\/module|music\/download\/info|global/config\/scene)|pay\/vip\/lowPriceText)|us\.l\.qq\.com\/exapp\?adposcount), script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/bdyy.js, requires-body=true, timeout=60
 
 [MITM]
-hostname = %APPEND% bd-api.kuwo.cn, *.kuwo.*
+hostname = %APPEND% bd-api.kuwo.cn, *.kuwo.*, ad.tencentmusic.com
