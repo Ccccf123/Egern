@@ -5,15 +5,15 @@
 #!openUrl=https://apps.apple.com/app/id570610859
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-09-18 09:00
-#!arguments=removeBanners:true,removePinnedArticles:true
+#!date=2025-09-18 22:00
+#!arguments=removeAllBanners:true,removePinnedArticles:true
 
 [URL Rewrite]
 ^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao - reject
 ^https?:\/\/dat\.ruanmei\.com\/ithome\/money\/acd\.json$ - reject
 
 [Script]
-[IT之家]移除广告 = type=http-response, pattern=^https:\/\/napi\.ithome\.com\/api\/(?:news\/index|topmenu\/getfeeds\?|api\/douyin\/GetLiveInfo), script-path=https://kelee.one/Resource/JavaScript/IThome/IThome_remove_ads.js, requires-body=true, argument="[{{{removeBanners}}},{{{removePinnedArticles}}}]"
+[IT之家]移除广告 = type=http-response, pattern=^https:\/\/napi\.ithome\.com\/api\/(news\/indexv2\/iphone\/910$|topmenu\/getfeeds\?), script-path=https://kelee.one/Resource/JavaScript/IThome/IThome_remove_ads.js, requires-body=true, argument="[{{{removeAllBanners}}},{{{removePinnedArticles}}}]"
 
 [MITM]
 hostname = %APPEND% napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com
