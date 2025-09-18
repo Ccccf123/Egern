@@ -1,18 +1,19 @@
 #!name=IT之家
-#!desc=过滤IT之家广告，自定义移除置顶和轮播图。此插件仅支持8.30及以上版本客户端。
+#!desc=过滤IT之家广告，自定义移除置顶和轮播图，自定义移除项需在插件配置。
 #!author=Keywos[https://github.com/Keywos], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/IThome.png
 #!openUrl=https://apps.apple.com/app/id570610859
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-06-15 00:00
+#!date=2025-09-18 09:00
+#!arguments=removeBanners:true,removePinnedArticles:true
 
 [URL Rewrite]
 ^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao - reject
 ^https?:\/\/dat\.ruanmei\.com\/ithome\/money\/acd\.json$ - reject
 
 [Script]
-[IT之家]移除广告 = type=http-response, pattern=^https:\/\/napi\.ithome\.com\/api\/(?:news\/index|topmenu\/getfeeds\?|api\/douyin\/GetLiveInfo), script-path=https://kelee.one/Resource/JavaScript/IThome/IThome_remove_ads.js, requires-body=true, argument="[{removeTopSwitch},{removeBannerSwitch}]"
+[IT之家]移除广告 = type=http-response, pattern=^https:\/\/napi\.ithome\.com\/api\/(?:news\/index|topmenu\/getfeeds\?|api\/douyin\/GetLiveInfo), script-path=https://kelee.one/Resource/JavaScript/IThome/IThome_remove_ads.js, requires-body=true, argument="[{{{removeBanners}}},{{{removePinnedArticles}}}]"
 
 [MITM]
 hostname = %APPEND% napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com
