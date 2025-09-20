@@ -5,7 +5,7 @@
 #!tag=去广告
 #!loon_version=3.3.2(877)
 #!homepage=https://github.com/sooyaaabo/Loon/blob/main/README.md
-#!date=2025-09-16 10:00
+#!date=2025-09-20 19:00
 
 [Rule]
 # 韩剧TV
@@ -1170,7 +1170,7 @@ http-response ^https?:\/\/app-izz\.zhengzhou\.gov\.cn:10019\/bizgw\/gateway\.do 
 # 发现精彩 - static.95508.com
 ^https?:\/\/static\.95508\.com\/mmg\/images\/ads\/.+\/(.+1125?.+2436|.+%.+%|.+_.+_) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https?:\/\/static\.95508\.com\/mmg\/ciop\/sysabbr\/cmep\/images\/apppopupads data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/static\.95508\.com\/mmg\/ciop\/sysabbr\/cmep\/images\/(apppopupads|popupads)  data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # 福享太平 - ecloud.tppension.cntaiping.com
 ^https:\/\/ecloud\.tppension\.cntaiping\.com\/fxtpplatform\/common\/anonymous\/common\/page\/queryStartPageNew\?language=zh-CN data-type=text data="{}" status-code=200 header="Content-Type:application/json"
