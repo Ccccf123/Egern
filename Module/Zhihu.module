@@ -5,7 +5,7 @@
 #!openUrl=https://apps.apple.com/app/id432274380
 #!tag=去广告
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-06-15 00:00
+#!date=2025-09-30 09:00
 
 [Rule]
 DOMAIN,appcloud.zhihu.com,REJECT
@@ -16,6 +16,7 @@ DOMAIN,sugar.zhihu.com,REJECT
 DOMAIN,zxid-m.mobileservice.cn,REJECT
 IP-CIDR,103.41.167.237/32,REJECT,no-resolve
 IP-CIDR,118.89.204.198/32,REJECT,no-resolve
+IP-CIDR,182.61.194.7/32,REJECT,no-resolve
 IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT,no-resolve
 
 [URL Rewrite]
