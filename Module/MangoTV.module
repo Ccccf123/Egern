@@ -31,6 +31,8 @@ URL-REGEX,"^http:\/\/mobile-thor\.api\.mgtv\.com\/v1\/vod\/cms\/list\?",REJECT-T
 URL-REGEX,"^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\?",REJECT-TINYGIF
 
 [URL Rewrite]
+^https?:\/\/mobile\.da\.mgtv\.com\/m\/page - reject
+
 # 无用请求
 ^http:\/\/[\d\.]+:\d{5}\/\?cmd=indexes - reject
 
@@ -55,9 +57,9 @@ URL-REGEX,"^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\?",REJECT-TI
 
 [Script]
 # 会员解锁（国区，美区，平板端，Mac端）
-[芒果TV]会员解锁 = type=http-request, pattern=^https:\/\/mobile-stream\.api\.mgtv\.com\/v1\/video\/source\?, script-path=https://raw.githubusercontent.com/Yunxingz/Rewrite/main/MGTV.js
+[芒果TV]会员解锁 = type=http-request, pattern=^https?:\/\/mobile-stream\.api\.mgtv\.com\/v1\/video\/source\?, script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/mgtk.js
 
-[芒果TV]会员解锁 = type=http-request, pattern=^https:\/\/(mobile|pad|pcc)\.api\.mgtv\.com\/v8\/video\/getSource\?, script-path=https://raw.githubusercontent.com/Yunxingz/Rewrite/main/MGTV.js
+[芒果TV]会员解锁 = type=http-response, pattern=^https?:\/\/.*mgtv.com.*(GetUserInfo|module\/list\?_support|app\/bdboot|pullReleaseInfo|floor\/detail|video\/source|entry\?_support).*$, script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/mgtv.js
 
 # 我的页面
 [芒果TV]我的页面 = type=http-response, pattern=^https:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\?, script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body=true

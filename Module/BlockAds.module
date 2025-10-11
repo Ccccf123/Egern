@@ -5,7 +5,7 @@
 #!tag=去广告
 #!loon_version=3.3.2(877)
 #!homepage=https://github.com/sooyaaabo/Egern
-#!date=2025-10-07 18:00
+#!date=2025-10-09 23:00
 #!arguments=555dy_script:true,51xyk_script:true,51job_script:true,alibaba_script:true,blued_script:true,baidumap_script:true,baiduinput_script:true,baidutieba_script:true,boohee_script:true,bilibilimanga_script:true,caixin_script:true,donghuafeng_script:true,dianping_script:true,flightradar24_script:true,feikechaguan_script:true,umetrip_script:true,freshippo_script:true,huifutianxia_script:true,ccblife_script:true,jingxi_script:true,kuaishou_script:true,quark_script:true,adnetwork_script:true,lvtusuishenting_script:true,lawson_script:true,maidanba_script:true,maimai_script:true,mafengwo_script:true,meiyou_script:true,miguvideo_script:true,pupu_script:true,quda_script:true,reddit_script:true,qmai_script:true,renrentv_script:true,sodalife_script:true,qqnews_script:true,vgtime_script:true,youdao_script:true,winnipeg_script:true,mishop_script:true,xiaotucc_script:true,xiangjiao_script:true,xiaomang_script:true,usmile_script:true,youxi_script:true,zhaoshangzhengquan_script:true,zhangshanggongjiao_script:true,zhuanzhuan_script:true,picc_script:true,airchina_script:true
 
 [Rule]
@@ -42,7 +42,8 @@ AND,((DOMAIN-KEYWORD,ads),(DOMAIN-KEYWORD,-normal-lq),(DOMAIN-SUFFIX,zijieapi.co
 URL-REGEX,"^http:\/\/p\d+-be-pack-sign\.pglstatp-toutiao\.com\/(ad-app-package|web\.business\.image)\/",REJECT
 DOMAIN,mon.zijieapi.com,REJECT
 DOMAIN,lf-ad-ies.bytecdn.cn,REJECT
-DOMAIN,is.snssdk.com,REJECT
+# DOMAIN, i.snssdk.com, REJECT
+# DOMAIN,is.snssdk.com,REJECT
 DOMAIN,bds.snssdk.com,REJECT
 DOMAIN,dm.bytedance.com,REJECT
 DOMAIN,dm.pstatp.com,REJECT
@@ -644,7 +645,7 @@ IP-CIDR,115.236.121.195/32,REJECT,no-resolve
 ^https?:\/\/news\.ssp\.qq\.com\/app - reject
 ^https?:\/\/sports3\.gtimg\.com\/community\/20cf93884470434eaf38b2e77ab7796a\.png - reject
 # TruthSocial - truthsocial.com
-^https?:\/\/truthsocial\.com\/api\/v5\/truth\/ads - reject
+^https?:\/\/truthsocial\.com\/api\/v\d\/truth\/ads - reject
 # U净 - api-marketing.zhinengxiyifang.cn, adsoss.zhinengxiyifang.cn, ads.zhinengxiyifang.cn
 ^https?:\/\/api-marketing\.zhinengxiyifang\.cn\/api\/v2\/cloudcode\/wechat\/bid - reject
 ^https?:\/\/adsoss\.zhinengxiyifang\.cn\/ads - reject
