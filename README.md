@@ -8,11 +8,17 @@
 
 ## 仓库说明
 
+> [!IMPORTANT]
+>
+> **由于Egern模块已支持导入Loon插件，Egern仓库将停止更新。**
+> 
+> **如需使用最新插件，可前往[Loon插件仓库](https://loonlab.103516.xyz/Plugin/)导入使用，或复制插件链接后通过Script-Hub转换后使用。**
+
 - **module**
 
-  该文件夹下模块文件引用自[sooyaaabo/Loon](https://github.com/sooyaaabo/Loon/tree/main/Plugin)中的插件，经Script-Hub转换而生成。模块文件的有效性请自行测试，不保证均适用于Egern、Surge、Shadworockets。
+  该文件夹下模块文件引用自[Loon插件仓库](https://loonlab.103516.xyz/Plugin/)中的插件，经Script-Hub转换而生成。模块文件的有效性请自行测试，不保证均适用于Egern、Surge、Shadworockets。
 
-  本人无更多精力与时间，随缘维护。如有需求者，可前往[sooyaaabo/Loon](https://github.com/sooyaaabo/Loon)，自行通过Script-Hub转换后使用。
+  本人无更多精力与时间，随缘维护。如有需求者，可前往[Loon插件仓库](https://loonlab.103516.xyz/Plugin/)，自行通过Script-Hub转换后使用。
 
 - **sgmodule**
 
